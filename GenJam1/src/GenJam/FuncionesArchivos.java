@@ -35,6 +35,11 @@ public class FuncionesArchivos {
 					if(item.notes.get(i).equals(nota)){
 						return i.toString();
 					}
+					else{
+						if(i == item.notes.size() - 1){
+							return "?";
+						}
+					}
 					
 				}				
 				
@@ -77,6 +82,11 @@ public class FuncionesArchivos {
 				
 				String acorde = s.nextLine();
 				
+				if(acorde.contains("x") || acorde.contains("X")){
+					exit = 1;
+					break;
+				}
+				
 				idPhrase++;
 				
 				System.out.println("Ingrese la frase con id: " + idPhrase);
@@ -93,15 +103,8 @@ public class FuncionesArchivos {
 					
 					for(Integer j = 1; j <= 8; j++){
 						
-						String siguiente = s.next();
-						compas += numeroDeLaNota(acorde, siguiente);
+						compas += numeroDeLaNota(acorde, s.next());
 						
-						if(j == 1){
-							if(siguiente.contains("x") || siguiente.contains("X")){
-								exit = 1;
-								break;
-							}
-						}
 						
 						//debemos de cambiar la nota que ingresa por su respectivo numero
 						//de acuerdo a los mapeos de acordes vs escalas
