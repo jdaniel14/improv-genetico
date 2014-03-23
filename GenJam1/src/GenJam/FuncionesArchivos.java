@@ -93,10 +93,11 @@ public class FuncionesArchivos {
 					
 					for(Integer j = 1; j <= 8; j++){
 						
-						compas += numeroDeLaNota(acorde, s.next());
+						String siguiente = s.next();
+						compas += numeroDeLaNota(acorde, siguiente);
 						
 						if(j == 1){
-							if(compas.contains("x") || compas.contains("X")){
+							if(siguiente.contains("x") || siguiente.contains("X")){
 								exit = 1;
 								break;
 							}
