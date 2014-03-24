@@ -35,11 +35,6 @@ public class FuncionesArchivos {
 					if(item.notes.get(i).equals(nota)){
 						return i.toString();
 					}
-					else{
-						if(i == item.notes.size() - 1){
-							return "?";
-						}
-					}
 					
 				}				
 				
@@ -47,7 +42,7 @@ public class FuncionesArchivos {
 			
 		}
 		
-		return "";
+		return "?";
 	}
 	
 	public static void crearMeasureBD(){
