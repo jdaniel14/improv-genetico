@@ -22,7 +22,7 @@ public class GenJam {
 		note.setDuration(JMC.EIGHTH_NOTE);
 		Play.midi(note);
 
-	}
+	} 
 	
 	
 
