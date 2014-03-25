@@ -22,20 +22,20 @@ public class MapChordvsScale {
 		temp.notes = new ArrayList<String>();
 		
 		temp.notes.add("r");
-		temp.notes.add("c1");
-		temp.notes.add("d1");
-		temp.notes.add("e1");
-		temp.notes.add("g1");
-		temp.notes.add("a1");
-		temp.notes.add("b1");
-		temp.notes.add("c2");
-		temp.notes.add("d2");
-		temp.notes.add("e2");
-		temp.notes.add("g2");
-		temp.notes.add("a2");
-		temp.notes.add("b2");
-		temp.notes.add("c3");
-		temp.notes.add("d3");
+		temp.notes.add("c4");
+		temp.notes.add("d4");
+		temp.notes.add("e4");
+		temp.notes.add("g4");
+		temp.notes.add("a4");
+		temp.notes.add("b4");
+		temp.notes.add("c5");
+		temp.notes.add("d5");
+		temp.notes.add("e5");
+		temp.notes.add("g5");
+		temp.notes.add("a5");
+		temp.notes.add("b5");
+		temp.notes.add("c6");
+		temp.notes.add("d6");
 		temp.notes.add("h");		
 		
 		CvsS.add(temp);
