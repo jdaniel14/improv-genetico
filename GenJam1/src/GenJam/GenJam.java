@@ -15,7 +15,7 @@ public class GenJam {
 		
 		//System.out.println("Nota: " + map.CvsS.get(0).notes.get(5));
 		
-		FuncionesArchivos.crearMeasureBD();
+		//FuncionesArchivos.crearMeasureBD();
 		Note note = new Note();
 		note.setPitch(JMC.GS4);
 		note.setDynamic(JMC.PP);
