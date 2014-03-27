@@ -8,6 +8,8 @@ import Elements.MapNotevsSound;
 import jm.music.data.Note;
 import jm.util.Play;
 import jm.JMC;
+import jm.music.data.*;
+import jm.util.Write;
 
 public class GenJam {
 
@@ -50,7 +52,25 @@ public class GenJam {
 		
 		//System.out.println(JMC.C3);
 		
+		Part mypart = new Part(JMC.PIANO, 0);
 		
+		Phrase ph1 = new Phrase(2.0);
+		Note n1 = new Note(JMC.G4, JMC.HALF_NOTE);
+		ph1.addNote(n1);
+		mypart.addPhrase(ph1);
+		
+		Phrase ph2 = new Phrase(1.0);
+		Note n2 = new Note(JMC.E4, JMC.DOTTED_HALF_NOTE);
+		ph1.addNote(n2);
+		mypart.addPhrase(ph2);
+		
+		Phrase ph3 = new Phrase(0.0);
+		Note n3 = new Note(JMC.C4, JMC.WHOLE_NOTE);
+		ph1.addNote(n3);
+		mypart.addPhrase(ph3);
+		
+		Write.midi(mypart, "out.midi");
+		Play.midi(mypart);
 		
 		
 
