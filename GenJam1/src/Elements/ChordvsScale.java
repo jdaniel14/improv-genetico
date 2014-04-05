@@ -7,5 +7,4 @@ public class ChordvsScale {
 	public String chord;
 	public String scale;
 	public List<String> notes;
-	public List<String> frecuency;
 }
