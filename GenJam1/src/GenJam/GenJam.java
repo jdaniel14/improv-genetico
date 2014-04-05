@@ -17,7 +17,7 @@ public class GenJam {
 	
 	public static void main(String[] args) {
 		
-		//MapNotevsSound mapSonidos = new MapNotevsSound();
+		MapNotevsSound mapSonidos = new MapNotevsSound();
 		
 		MapChordvsScale map = new MapChordvsScale();
 		
