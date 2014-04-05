@@ -3,42 +3,42 @@ package Elements;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import DataBase.Conexion;
+
 public class MapChordvsScale {
 	public List <ChordvsScale> CvsS;
 	
 	//Constructor que carga todos los Acordes con su respectiva Escala
 	public MapChordvsScale (){
+		Conexion conexion = new Conexion();
 		
-		CvsS = new ArrayList<ChordvsScale>();
+		try{
+			conexion.abrirConexion();
+			
+			String sql = "SELECT idChordvsScale, chord, scale FROM chordvsscale ";
+						
+			PreparedStatement pst = conexion.conn.prepareStatement(sql);
+			
+			pst.execute();
+			
+			ResultSet rs = pst.getResultSet();
+			
+			while(rs.next()){
+				System.out.println(rs.getInt(1));
+				System.out.println(rs.getString(2));
+				System.out.println(rs.getString(3));
+			}
+						
+			conexion.cerrarConexion();
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
 		
-		//** Cmaj7 **
-		ChordvsScale temp = new ChordvsScale();
 		
-		temp.chord = "Cmaj7";
-		
-		temp.scale = "Major (avoid 4th)";
-		
-		//Notas del 0 al 14
-		temp.notes = new ArrayList<String>();
-		
-		temp.notes.add("r");
-		temp.notes.add("c4");
-		temp.notes.add("d4");
-		temp.notes.add("e4");
-		temp.notes.add("g4");
-		temp.notes.add("a4");
-		temp.notes.add("b4");
-		temp.notes.add("c5");
-		temp.notes.add("d5");
-		temp.notes.add("e5");
-		temp.notes.add("g5");
-		temp.notes.add("a5");
-		temp.notes.add("b5");
-		temp.notes.add("c6");
-		temp.notes.add("d6");
-		temp.notes.add("h");		
-		
-		CvsS.add(temp);
 		
 	}	
 }

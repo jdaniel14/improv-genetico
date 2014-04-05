@@ -6,4 +6,5 @@ import java.util.List;
 public class Phrase {
 	public int id;
 	public List<Integer> measureId;
+	public String genre;
 }

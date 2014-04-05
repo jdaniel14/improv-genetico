@@ -45,6 +45,10 @@ public class FuncionesArchivos {
 		return "?";
 	}
 	
+	
+	
+	
+	
 	public static void crearMeasureBD(){
 		
 		Integer idMeasure = 0;

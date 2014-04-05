@@ -17,13 +17,15 @@ public class GenJam {
 	
 	public static void main(String[] args) {
 		
-		MapNotevsSound mapSonidos = new MapNotevsSound();
+		//MapNotevsSound mapSonidos = new MapNotevsSound();
 		
-		//MapChordvsScale map = new MapChordvsScale();
+		MapChordvsScale map = new MapChordvsScale();
 		
 		//System.out.println("Nota: " + map.CvsS.get(0).notes.get(5));
 		
 		//FuncionesArchivos.crearMeasureBD();
+		
+		/*
 		
 		List<String> armonia = new ArrayList<String>();
 		armonia.add("Cmaj7");
@@ -72,7 +74,7 @@ public class GenJam {
 		Write.midi(mypart, "out.midi");
 		Play.midi(mypart);
 		
-		
+		*/
 
 	} 
 	
