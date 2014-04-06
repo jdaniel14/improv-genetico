@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import DataBase.Conexion;
 
 public class MapChordvsScale {
-	public List <ChordvsScale> CvsS;
+	public List <ChordvsScale> CvsS = new ArrayList<ChordvsScale>();
 	
 	public List<String> separarNotasEnUnaCadena(String notas){
 		String[] a = notas.split(" ");
@@ -43,12 +43,16 @@ public class MapChordvsScale {
 			
 			while(rs.next()){
 				ChordvsScale temp = new ChordvsScale();
-				System.out.println(rs.getInt(1));
+				
 				temp.chord = rs.getString(2);
 				temp.scale = rs.getString(3);
-				temp.notes = separarNotasEnUnaCadena(rs.getString(4));
+				temp.notes = separarNotasEnUnaCadena(rs.getString(5));
+				
+				CvsS.add(temp);
 			}
-						
+			
+			System.out.println("> 'MapChordvsScale' inicializado correctamente");
+			
 			conexion.cerrarConexion();
 		}
 		catch(Exception e){

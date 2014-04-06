@@ -18,17 +18,17 @@ import Elements.ChordvsScale;
 import Elements.MapChordvsScale;
 
 public class FuncionesArchivos {
+	public static MapChordvsScale escalas = new MapChordvsScale();
 
 	
 	public static String numeroDeLaNota(String acorde, String nota){
-		MapChordvsScale escalas = new MapChordvsScale();
-		
+				
 		Iterator<ChordvsScale> iter = escalas.CvsS.iterator();
 		
 		while(iter.hasNext()){
 			ChordvsScale item = iter.next();
 						
-			if (acorde.equals(item.chord)){
+			if (acorde.equalsIgnoreCase(item.chord)){
 				
 				for(Integer i = 0; i < item.notes.size();i++){
 					
@@ -45,7 +45,78 @@ public class FuncionesArchivos {
 		return "?";
 	}
 	
-	
+	public static void initMeasureBD(){
+		Integer idMeasure = 0;//inicializarlos desde BD
+		Integer idPhrase = 0;//inicialidar desde BD
+		int exit = 0;
+		
+		System.out.println("**Measure DataBase**");
+		System.out.println("Ingrese la letra 'x' para salir y concluir la creaci—n");
+		
+		try{
+			
+			while(exit != 1){
+				//Inicio de la lectura de una frase
+				
+				Scanner s = new Scanner(System.in);
+				
+				System.out.println("Ingrese el acorde en el que est‡ la frase");
+				
+				String acorde = s.nextLine();
+				
+				if(acorde.contains("x") || acorde.contains("X")){
+					exit = 1;
+					break;
+				}
+				
+				idPhrase++;//leer la frase
+				
+				System.out.println("Ingrese la frase con id: " + idPhrase);
+				
+				String frase = "";
+				
+				//Lectura de los 4 compases
+				for(Integer z = 1; z <=4 ; z++){
+					
+					idMeasure++;
+					String lecturaCompas;
+					String compas = "";
+					
+					System.out.println("Measure: " + z);
+					
+					lecturaCompas = s.nextLine();
+					String[] notasLeidas = lecturaCompas.split(" ");
+										
+					for(Integer j = 0; j <= 7; j++){
+						
+						compas += numeroDeLaNota(acorde, notasLeidas[j]);
+						
+						
+						//debemos de cambiar la nota que ingresa por su respectivo numero
+						//de acuerdo a los mapeos de acordes vs escalas
+						
+						if (j != 7) compas += " "; //para dejar espacio entre cada numero
+						
+						System.out.println(compas);
+						
+					}
+					//grabar compas, el cual tiene las notas del measure ya en numero
+					idMeasure++;
+					
+					frase += idMeasure; //guarda el id del measure(debo elegirlo)
+					if (z != 4) frase += " ";
+					
+				}
+					
+				//graba la frase que esta en "frase"
+				idPhrase++;
+				
+			}//fin while(1)
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
+	}
 	
 	
 	
