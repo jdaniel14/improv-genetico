@@ -21,6 +21,8 @@ public class GenJam {
 		
 		MapChordvsScale map = new MapChordvsScale();
 		
+		FuncionesArchivos.initMeasureBD();
+		
 		//System.out.println("Nota: " + map.CvsS.get(0).notes.get(5));
 		
 		//FuncionesArchivos.crearMeasureBD();
