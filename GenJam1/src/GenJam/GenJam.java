@@ -19,7 +19,7 @@ public class GenJam {
 		
 		MapNotevsSound mapSonidos = new MapNotevsSound();
 		
-		MapChordvsScale map = new MapChordvsScale();
+		//MapChordvsScale map = new MapChordvsScale();
 		
 		FuncionesArchivos.initMeasureBD();
 		
