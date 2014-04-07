@@ -69,7 +69,29 @@ public class MapNotevsSound {
 		NvsS.put("A#6",JMC.AS6);
 		NvsS.put("Bb6",JMC.BF6);
 		NvsS.put("B6",JMC.B6);
-		NvsS.put("B#6",JMC.BS6);	
+		NvsS.put("B#6",JMC.BS6);
+		NvsS.put("C7",JMC.C7);
+		NvsS.put("C#7",JMC.CS7);
+		NvsS.put("Db7",JMC.DF7);	
+		NvsS.put("D7",JMC.D7);		
+		NvsS.put("D#7",JMC.DS7);	
+		NvsS.put("Eb7",JMC.EF7);
+		NvsS.put("E7",JMC.E7);
+		NvsS.put("E#7",JMC.ES7);
+		NvsS.put("Fb7",JMC.FF7);
+		NvsS.put("F7",JMC.F7);
+		NvsS.put("F#7",JMC.FS7);
+		NvsS.put("Gb7",JMC.GF7);
+		NvsS.put("G7",JMC.G7);
+		NvsS.put("G#7",JMC.GS7);
+		NvsS.put("Ab7",JMC.AF7);
+		NvsS.put("A7",JMC.A7);
+		NvsS.put("A#7",JMC.AS7);
+		NvsS.put("Bb7",JMC.BF7);
+		NvsS.put("B7",JMC.B7);
+		NvsS.put("B#7",JMC.BS7);
+		
+		System.out.println("> MapNotevsSound inicializado correctamente");
 	}
 }
 

@@ -1,7 +1,11 @@
 package GenJam;
 
 import java.io.File;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -14,12 +18,81 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import DataBase.Conexion;
 import Elements.ChordvsScale;
 import Elements.MapChordvsScale;
+import Elements.Teclado;
 
 public class FuncionesArchivos {
 	public static MapChordvsScale escalas = new MapChordvsScale();
-
+	public static Teclado keyboard = new Teclado();
+	
+	public static String notaArriba(String nota){
+		Integer posicion = 0;
+		
+		for(posicion = 0; posicion < keyboard.notas.size(); posicion++){
+			if(keyboard.notas.get(posicion).equalsIgnoreCase(nota)){
+				break;
+			}
+		}
+		
+		if(posicion >= keyboard.notas.size() - 1){
+			return nota;
+		}
+		else{
+			return keyboard.notas.get(posicion + 1);
+		}
+		
+	}
+	
+	public static String notaAbajo(String nota){
+		Integer posicion = 0;
+		
+		for(posicion = 0; posicion < keyboard.notas.size(); posicion++){
+			if(keyboard.notas.get(posicion).equalsIgnoreCase(nota)){
+				break;
+			}
+		}
+		
+		if((posicion == keyboard.notas.size()) || (posicion == 0)){
+			return nota;
+		}
+		else{
+			return keyboard.notas.get(posicion - 1);
+		}
+		
+	}
+	
+	
+	public static String aproximarNota(String nota, List<String> notes){
+		
+		String notaArriba = nota;
+		String notaAbajo = nota;
+		Integer veces = 0;
+		
+		while(true){
+			
+			veces++;
+			
+			if(veces == 50){
+				return "?";
+			}
+			
+			for(Integer i = 0; i < notes.size(); i++){
+				if(notes.get(i).equalsIgnoreCase(notaArriba)){
+					return notaArriba;
+				}
+				if(notes.get(i).equalsIgnoreCase(notaAbajo)){
+					return notaAbajo;
+				}
+			}
+			
+			notaArriba = notaArriba(notaArriba);
+			notaAbajo = notaAbajo(notaAbajo);
+			
+		}
+		
+	}
 	
 	public static String numeroDeLaNota(String acorde, String nota){
 				
@@ -30,19 +103,98 @@ public class FuncionesArchivos {
 						
 			if (acorde.equalsIgnoreCase(item.chord)){
 				
+				nota = aproximarNota(nota, item.notes);
+				
 				for(Integer i = 0; i < item.notes.size();i++){
 					
-					if(item.notes.get(i).equals(nota)){
+					if(item.notes.get(i).equalsIgnoreCase(nota)){
 						return i.toString();
-					}
-					
-				}				
-				
+					}					
+				}
 			}
-			
 		}
 		
 		return "?";
+	}
+		
+	public static void grabarMeasureBD(Integer idMeasure, String measure){
+		
+		Conexion conexion = new Conexion();
+		
+		try{
+			conexion.abrirConexion();
+			
+			String sql = 	" INSERT INTO measures (id, notas) values ( " +
+							idMeasure + ",'" + measure + "') " ;
+						
+			PreparedStatement pst = conexion.conn.prepareStatement(sql);
+			
+			pst.execute();
+			
+			conexion.cerrarConexion();
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
+	}
+	
+	public static void grabarPhraseBD(Integer idPhrase, String phrase, String genre){
+		
+		Conexion conexion = new Conexion();
+		
+		try{
+			conexion.abrirConexion();
+			
+			String sql = 	" INSERT INTO phrases (id, measureId, genre) values ( " +
+							idPhrase + ",'" + phrase + "','" + genre + "') " ;
+						
+			PreparedStatement pst = conexion.conn.prepareStatement(sql);
+			
+			pst.execute();
+			
+			conexion.conn.commit();
+			
+			conexion.cerrarConexion();
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
+	}
+	
+	
+	
+	public static List<Integer> leerIds(){
+		List<Integer> dev = new ArrayList<Integer>();
+		
+		Conexion conexion = new Conexion();
+		
+		try{
+			conexion.abrirConexion();
+			
+			String sql = 	" SELECT A.idM, B.idP " +
+							" FROM " + 
+							" (select max(M.id) as idM from measures M) A, " +
+							" (select max(P.id) as idP from phrases P) B " ;
+						
+			PreparedStatement pst = conexion.conn.prepareStatement(sql);
+			
+			pst.execute();
+			
+			ResultSet rs = pst.getResultSet();
+			
+			rs.next();
+						
+			dev.add(rs.getInt(1));
+			dev.add(rs.getInt(2));
+			
+			conexion.cerrarConexion();
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
+		
+		
+		return dev;
 	}
 	
 	public static void initMeasureBD(){
@@ -50,15 +202,28 @@ public class FuncionesArchivos {
 		Integer idPhrase = 0;//inicialidar desde BD
 		int exit = 0;
 		
-		System.out.println("**Measure DataBase**");
+		List<Integer> aux = leerIds();
+		
+		idMeasure = aux.get(0);
+		idPhrase = aux.get(1);
+		
+		System.out.println("Last idMeasure: " + idMeasure);
+		System.out.println("Last idPhrase: " + idPhrase);
+		System.out.println();
+		
+		System.out.println("**Measure & Phrase DataBase**");
 		System.out.println("Ingrese la letra 'x' para salir y concluir la creación");
+		System.out.println();
 		
 		try{
 			
+			Scanner s = new Scanner(System.in);
+			
+			System.out.println("Ingrese el género");
+			String genre = s.nextLine();
+			
 			while(exit != 1){
 				//Inicio de la lectura de una frase
-				
-				Scanner s = new Scanner(System.in);
 				
 				System.out.println("Ingrese el acorde en el que está la frase");
 				
@@ -69,7 +234,7 @@ public class FuncionesArchivos {
 					break;
 				}
 				
-				idPhrase++;//leer la frase
+				idPhrase++;
 				
 				System.out.println("Ingrese la frase con id: " + idPhrase);
 				
@@ -91,151 +256,34 @@ public class FuncionesArchivos {
 						
 						compas += numeroDeLaNota(acorde, notasLeidas[j]);
 						
-						
-						//debemos de cambiar la nota que ingresa por su respectivo numero
-						//de acuerdo a los mapeos de acordes vs escalas
-						
 						if (j != 7) compas += " "; //para dejar espacio entre cada numero
 						
-						System.out.println(compas);
+						
 						
 					}
+					
+					System.out.println(compas);
+					
+					//grabarMeasureBD(idMeasure, compas);
 					//grabar compas, el cual tiene las notas del measure ya en numero
-					idMeasure++;
 					
 					frase += idMeasure; //guarda el id del measure(debo elegirlo)
 					if (z != 4) frase += " ";
 					
 				}
 					
+				//grabarPhraseBD(idPhrase,frase,genre);
 				//graba la frase que esta en "frase"
-				idPhrase++;
+				
+				System.out.println(frase);
+				
+				System.out.println();
 				
 			}//fin while(1)
 		}
 		catch(Exception e){
 			System.out.println(e.toString());
 		}
-	}
-	
-	
-	
-	public static void crearMeasureBD(){
-		
-		Integer idMeasure = 0;
-		Integer idPhrase = 0;
-		int exit = 0;
-		
-		System.out.println("**Creación de MeasureBD**");
-		System.out.println("Ingrese la letra 'x' para salir y concluir la creación");
-		
-		try{
-			
-			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-			
-			//root elements del XML
-			Document measureFile = docBuilder.newDocument();
-			Element measureBD = measureFile.createElement("measureBD");
-			measureFile.appendChild(measureBD);
-			
-			Document phraseFile = docBuilder.newDocument();
-			Element phraseBD = phraseFile.createElement("phraseBD");
-			phraseFile.appendChild(phraseBD);			
-			
-			while(exit != 1){
-				//Inicio de la lectura de una frase
-				
-				Scanner s = new Scanner(System.in);
-				//Falta leer el acorde
-				System.out.println("Ingrese el acorde en el que está la frase");
-				
-				String acorde = s.nextLine();
-				
-				if(acorde.contains("x") || acorde.contains("X")){
-					exit = 1;
-					break;
-				}
-				
-				idPhrase++;
-				
-				System.out.println("Ingrese la frase con id: " + idPhrase);
-				
-				String frase = "";
-				
-				//Lectura de los 4 compases
-				for(Integer z = 1; z <=4 ; z++){
-					
-					idMeasure++;
-					String compas = "";
-					
-					System.out.println("Nota por nota del Measure: " + z);
-					
-					for(Integer j = 1; j <= 8; j++){
-						
-						compas += numeroDeLaNota(acorde, s.next());
-						
-						
-						//debemos de cambiar la nota que ingresa por su respectivo numero
-						//de acuerdo a los mapeos de acordes vs escalas
-						
-						if (j != 8) compas += " "; //para dejar espacio entre cada numero
-						
-					}
-					
-					if(exit == 1) break;
-					
-					//measure element
-					Element measure = measureFile.createElement("Measure");
-					measureBD.appendChild(measure);
-					measure.setAttribute("id", idMeasure.toString());
-					
-					//notes element
-					Element notes = measureFile.createElement("Notes");
-					notes.appendChild(measureFile.createTextNode(compas));
-					measure.appendChild(notes);
-					
-					frase += idMeasure;
-					if (z != 4) frase += " ";
-					
-				}
-					
-				//phrase element
-				Element phrase = phraseFile.createElement("Phrase");
-				phraseBD.appendChild(phrase);
-				phrase.setAttribute("id", idPhrase.toString());
-				
-				//measure element
-				Element measures = phraseFile.createElement("Measures");
-				measures.appendChild(phraseFile.createTextNode(frase));
-				phrase.appendChild(measures);
-				
-			}//fin while(1)
-			
-			TransformerFactory transformerFactory = TransformerFactory.newInstance();
-			Transformer transformer = transformerFactory.newTransformer();
-			
-			
-			//Guardo en ambos archivos
-			DOMSource sourceM = new DOMSource(measureFile);
-			StreamResult resultM = new StreamResult(new File("../GenJam1/src/Files/MeasureDB.xml"));
-	 
-			DOMSource sourceP = new DOMSource(phraseFile);
-			StreamResult resultP = new StreamResult(new File("../GenJam1/src/Files/PhraseDB.xml"));
-			
-			// Output to console for testing
-			// StreamResult result = new StreamResult(System.out);
-	 
-			transformer.transform(sourceM, resultM);
-			transformer.transform(sourceP, resultP);
-	 
-			System.out.println("File saved!");
-			
-		}
-		catch(Exception e){
-			System.out.println(e.toString());
-		}
-		
 	}
 	
 }

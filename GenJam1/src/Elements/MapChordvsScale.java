@@ -15,13 +15,13 @@ public class MapChordvsScale {
 		String[] a = notas.split(" ");
 		
 		List<String> dev = new ArrayList<String>();
-		dev.add("r");
+		//dev.add("r");
 		
 		for(int i = 0; i < a.length; i++){
 			dev.add(a[i]);
 		}
 		
-		dev.add("h");
+		//dev.add("h");
 		
 		return dev;
 	}
