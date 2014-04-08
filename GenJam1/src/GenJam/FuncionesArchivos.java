@@ -130,7 +130,7 @@ public class FuncionesArchivos {
 			PreparedStatement pst = conexion.conn.prepareStatement(sql);
 			
 			pst.execute();
-			
+			conexion.conn.commit();
 			conexion.cerrarConexion();
 		}
 		catch(Exception e){
@@ -234,7 +234,9 @@ public class FuncionesArchivos {
 					break;
 				}
 				
-				idPhrase++;
+				//idPhrase++;
+				System.out.println("Ingrese el ID del lick que va a ingresar");
+				idPhrase = Integer.parseInt(s.nextLine());
 				
 				System.out.println("Ingrese la frase con id: " + idPhrase);
 				
@@ -264,7 +266,7 @@ public class FuncionesArchivos {
 					
 					System.out.println(compas);
 					
-					//grabarMeasureBD(idMeasure, compas);
+					grabarMeasureBD(idMeasure, compas);
 					//grabar compas, el cual tiene las notas del measure ya en numero
 					
 					frase += idMeasure; //guarda el id del measure(debo elegirlo)
@@ -272,7 +274,7 @@ public class FuncionesArchivos {
 					
 				}
 					
-				//grabarPhraseBD(idPhrase,frase,genre);
+				grabarPhraseBD(idPhrase,frase,genre);
 				//graba la frase que esta en "frase"
 				
 				System.out.println(frase);
