@@ -43,7 +43,7 @@ public class PhrasePopulation {
 				populationP.add(new_Phrase);
 			}
 			
-			System.out.println("> 'MapChordvsScale' inicializado correctamente");
+			System.out.println("> 'PhrasePopulation' inicializado correctamente");
 			
 			conexion.cerrarConexion();
 			

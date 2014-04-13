@@ -1,10 +1,6 @@
 package Elements;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.List;
-
-import DataBase.Conexion;
 
 //Bean para las Phrases
 public class Phrase {
