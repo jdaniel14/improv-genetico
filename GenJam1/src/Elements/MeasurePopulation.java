@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MeasurePopulation {
-	List <Measure> populationM;
+	List <Measures> populationM;
 	
 	public MeasurePopulation(){
-		populationM = new ArrayList<Measure>();
+		populationM = new ArrayList<Measures>();
 	}
 }

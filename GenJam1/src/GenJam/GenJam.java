@@ -5,10 +5,12 @@ import java.util.List;
 
 import Elements.MapChordvsScale;
 import Elements.MapNotevsSound;
+import Elements.PhrasePopulation;
 import jm.music.data.Note;
 import jm.util.Play;
 import jm.JMC;
 import jm.music.data.*;
+import jm.music.tools.ga.Recombiner;
 import jm.util.Write;
 
 public class GenJam {
@@ -21,7 +23,13 @@ public class GenJam {
 		
 		//MapChordvsScale map = new MapChordvsScale();
 		
-		FuncionesArchivos.initMeasureBD();
+		PhrasePopulation poblacionFrases = new PhrasePopulation();
+		
+		FuncionesMusicales.recorrerPoblacion(poblacionFrases);
+		
+		
+		
+		//FuncionesArchivos.initMeasureBD();
 		
 		//System.out.println("Nota: " + map.CvsS.get(0).notes.get(5));
 		

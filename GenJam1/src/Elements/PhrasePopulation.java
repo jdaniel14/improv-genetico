@@ -8,15 +8,15 @@ import java.util.List;
 import DataBase.Conexion;
 
 public class PhrasePopulation {
-	List <Phrase> populationP;
+	public List <Phrases> populationP;
 	
 	public PhrasePopulation(){
-		populationP = new ArrayList<Phrase>();
+		populationP = new ArrayList<Phrases>();
 		
 		Conexion conexion = new Conexion();
 		try{
 			conexion.abrirConexion();
-			String sql = "SELECT id, measureId, genre FROM Phrase ORDER BY RAND() LIMIT 16";
+			String sql = "SELECT id, measureId, genre FROM Phrases ORDER BY RAND() LIMIT 16";
 			
 			PreparedStatement pst = conexion.conn.prepareStatement(sql);
 			
@@ -32,14 +32,14 @@ public class PhrasePopulation {
 				/*
 				 for de 4 measures 
 				 */
-				List <Measure> list_measure = new ArrayList <Measure>();
+				List <Measures> list_measure = new ArrayList <Measures>();
 				List<Integer> lista_int_measure = separar_measures(list_measure_string);
 				for(int i = 0; i < lista_int_measure.size(); i++){
 					int id_measure = lista_int_measure.get(i);
-					Measure measure = Measure.GetMeasureId(id_measure);
+					Measures measure = Measures.GetMeasureId(id_measure);
 					list_measure.add(measure);
 				}
-				Phrase new_Phrase = new Phrase(id, list_measure, genre);
+				Phrases new_Phrase = new Phrases(id, list_measure, genre);
 				populationP.add(new_Phrase);
 			}
 			
@@ -53,7 +53,7 @@ public class PhrasePopulation {
 		}
 	}
 	
-	public List<Integer> separar_measures(String list_measure_string) {
+	private List<Integer> separar_measures(String list_measure_string) {
 		
 		String[] a = list_measure_string.split(" ");
 		
