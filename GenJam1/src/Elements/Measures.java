@@ -8,16 +8,16 @@ import java.util.List;
 import DataBase.Conexion;
 
 //Bean para los Measures
-public class Measure {
+public class Measures {
 	public int id;
 	public List<Integer> notas;
 	
-	public Measure(int _id, List<Integer> _notas){
+	public Measures(int _id, List<Integer> _notas){
 		id = _id;
 		notas = _notas;
 	}
 	
-	public static Measure GetMeasureId(int id_measure) {
+	public static Measures GetMeasureId(int id_measure) {
 		Conexion conexion = new Conexion();
 		int _id;
 		List<Integer> _notas = new ArrayList<Integer>();
@@ -41,7 +41,7 @@ public class Measure {
 			System.out.println(e.toString());
 			return null;
 		}
-		return new Measure(_id, _notas);
+		return new Measures(_id, _notas);
 	}
 	
 	public static List<Integer> separar_notas(String list_notas) {

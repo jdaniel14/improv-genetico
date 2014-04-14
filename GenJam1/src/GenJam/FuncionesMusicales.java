@@ -4,8 +4,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import jm.music.data.Part;
+import jm.music.data.Score;
+
 import Elements.ChordvsScale;
 import Elements.MapChordvsScale;
+import Elements.Measures;
+import Elements.Phrases;
+import Elements.PhrasePopulation;
 
 public class FuncionesMusicales {
 	
@@ -20,6 +26,48 @@ public class FuncionesMusicales {
 		}		
 		
 		return "?";
+	}
+	
+	public static void crearComposicion(PhrasePopulation pobFrases){
+		
+		Score s = new Score("GenJam");
+		
+		Part melodia = new Part("Melodia", 0);
+		
+		
+	}
+	
+	public static void recorrerPoblacion(PhrasePopulation pobFrases){
+		Iterator<Phrases> iterF = pobFrases.populationP.iterator();
+		
+		while(iterF.hasNext()){
+			Phrases frase = iterF.next();
+			
+			System.out.println("Frase: " + frase.id);
+			System.out.println(frase.genre);
+			
+			Iterator<Measures> iterM = frase.measureId.iterator();
+			
+			while(iterM.hasNext()){
+				Measures compas = iterM.next();
+				
+				System.out.println("Measure: " + compas.id);
+				
+				Iterator<Integer> iterN = compas.notas.iterator();
+				
+				while(iterN.hasNext()){
+					Integer notas = iterN.next();
+					
+					System.out.print(notas + " ");
+				}
+				
+				System.out.println();
+				
+			}
+			
+			
+		}
+		
 	}
 	
 	public static List<String> melodiaNumeradaANotas(List<Integer> notas, List<String> acordes){
