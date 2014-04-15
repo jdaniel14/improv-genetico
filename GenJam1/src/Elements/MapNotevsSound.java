@@ -90,6 +90,8 @@ public class MapNotevsSound {
 		NvsS.put("Bb7",JMC.BF7);
 		NvsS.put("B7",JMC.B7);
 		NvsS.put("B#7",JMC.BS7);
+		NvsS.put("H", JMC.REST);
+		NvsS.put("R", JMC.REST);
 		
 		System.out.println("> 'MapNotevsSound' inicializado correctamente");
 	}

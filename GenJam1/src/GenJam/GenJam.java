@@ -19,14 +19,21 @@ public class GenJam {
 	
 	public static void main(String[] args) {
 		
-		MapNotevsSound mapSonidos = new MapNotevsSound();
+		//MapNotevsSound mapSonidos = new MapNotevsSound();
 		
 		//MapChordvsScale map = new MapChordvsScale();
+		
+		List<String> acordes = new ArrayList<String>();
+		acordes.add("Cm7");
+		acordes.add("Cm7");
+		acordes.add("Cm7");
+		acordes.add("Cm7");
 		
 		PhrasePopulation poblacionFrases = new PhrasePopulation();
 		
 		FuncionesMusicales.recorrerPoblacion(poblacionFrases);
 		
+		FuncionesMusicales.crearComposicion(poblacionFrases, acordes);
 		
 		
 		//FuncionesArchivos.initMeasureBD();
