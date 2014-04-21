@@ -7,6 +7,7 @@ import java.util.List;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter.DEFAULT;
 
 import jm.audio.Instrument;
+import jm.music.data.CPhrase;
 import jm.music.data.Note;
 import jm.music.data.Part;
 import jm.music.data.Phrase;
@@ -153,13 +154,14 @@ public class FuncionesMusicales {
 		
 		//Preparacion de las notas para la reproduccion
 		
+		System.out.println("Frases sacadas");
 		
 		//Transformo los holds iniciales en silencios
 		
 		Integer recorrer = 0;
 		
 		while(recorrer < notasRep.size()){
-			
+			System.out.println("Elimina hasta: " + recorrer);
 			if(notasRep.get(recorrer) == -1){
 				notasRep.set(recorrer, JMC.REST);
 			}
@@ -173,59 +175,92 @@ public class FuncionesMusicales {
 		
 		//Reproduccion
 		
+		System.out.println("**Inicia reproduccion");
+		
 		recorrer = 0;
 		double duration = 0.75;
 		double auxDur = 0.75;
 		
+		
 		while(recorrer < notasRep.size()){
 			
-			Note n;
+			Note n = null;
 			
-			if (notasRep.get(recorrer) != -1){
-				Integer aux = recorrer + 1;
-				auxDur = duration;
+			Integer aux = recorrer + 1;
+			auxDur = duration;
 				
-				while(notasRep.get(aux) == -1){
+			while((aux < notasRep.size()) && (notasRep.get(aux) == -1)){
 					
-					duration = 1 - duration;
+				duration = 1 - duration;
 					
-					auxDur = auxDur + 1 - duration;
+				auxDur = auxDur + duration;
 										
-					aux++;
-				}
-				
-				if(auxDur == 0.25){
-					n = new Note(notasRep.get(recorrer),JMC.EIGHTH_NOTE_TRIPLET);
-				}
-				if(auxDur == 0.75){
-					n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE_TRIPLET);
-				}
-				if(auxDur == 1){
-					n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE);
-				}
-				if(auxDur == 1.25){
-					n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.EIGHTH_NOTE_TRIPLET);
-				}
-				if(auxDur == 1.75){
-					n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.QUARTER_NOTE_TRIPLET);
-				}
-				if(auxDur == 2){
-					n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.QUARTER_NOTE);
-				}
-				if(auxDur == 2.25){
-					n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.QUARTER_NOTE + JMC.EIGHTH_NOTE_TRIPLET);
-				}
-				
-				recorrer = aux;
-				
-			}
-			else{
-				recorrer++;
+				aux++;
 			}
 			
+			if(Note.getNote(notasRep.get(recorrer)) != "N/A"){
+				System.out.print(Note.getNote(notasRep.get(recorrer)) + " ");
+			}
+			else
+				System.out.print(notasRep.get(recorrer) + " ");
+			
+			
+			if(auxDur == 0.25){
+				n = new Note(notasRep.get(recorrer),JMC.EIGHTH_NOTE_TRIPLET);
+				//System.out.println("*1");
+			}
+			if(auxDur == 0.75){
+				n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE_TRIPLET);
+				//System.out.println("*2");
+			}
+			if(auxDur == 1){
+				n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE);
+				//System.out.println("3");
+			}
+			if(auxDur == 1.25){
+				n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.EIGHTH_NOTE_TRIPLET);
+				///System.out.println("4");
+			}
+			if(auxDur == 1.75){
+				n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.QUARTER_NOTE_TRIPLET);
+				//System.out.println("5");
+			}
+			if(auxDur == 2){
+				n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.QUARTER_NOTE);
+				//System.out.println("6");
+			}
+			if(auxDur == 2.25){
+				n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.QUARTER_NOTE + JMC.EIGHTH_NOTE_TRIPLET);
+				//System.out.println("7");
+			}
+			if(auxDur == 2.75){
+				n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.QUARTER_NOTE + JMC.QUARTER_NOTE_TRIPLET);
+//				System.out.println("8");
+			}
+			if(auxDur == 3){
+				n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.QUARTER_NOTE + JMC.QUARTER_NOTE);
+//				System.out.println("9");
+			}
+			if(auxDur == 3.25){
+				n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.QUARTER_NOTE + JMC.QUARTER_NOTE + JMC.EIGHTH_NOTE_TRIPLET);
+			}
+			if(auxDur == 3.75){
+				n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.QUARTER_NOTE + JMC.QUARTER_NOTE + JMC.QUARTER_NOTE_TRIPLET);
+			}
+			if(auxDur == 4){
+				n = new Note(notasRep.get(recorrer),JMC.QUARTER_NOTE + JMC.QUARTER_NOTE + JMC.QUARTER_NOTE + JMC.QUARTER_NOTE);
+			}
+			
+			phr.add(n);
+			
+			duration = 1 - duration;
+				
+			recorrer = aux;
 			
 			
 		}
+		
+		System.out.println();
 		
 		/*
 		Iterator<Integer> it = notasRep.iterator();
@@ -247,6 +282,9 @@ public class FuncionesMusicales {
 			phr.add(n);
 		}
 		*/
+		
+		int[] pitchArray = {JMC.c3,JMC.g3,JMC.c4,JMC.e4,JMC.a4,JMC.c5}; 
+		phr.addChord(pitchArray, JMC.WHOLE_NOTE);
 		
 		melodia.add(phr);
 		s.add(melodia);
@@ -279,7 +317,12 @@ public class FuncionesMusicales {
                  
         }
 		
+        
+        Note n = new Note(JMC.C3,JMC.WHOLE_NOTE);
+        phr2.add(n); 
+        
 		walkin.add(phr2);
+			
 		s.add(walkin);
 		
 		
@@ -290,7 +333,10 @@ public class FuncionesMusicales {
 	public static void recorrerPoblacion(PhrasePopulation pobFrases){
 		Iterator<Phrases> iterF = pobFrases.populationP.iterator();
 		
-		//while(iterF.hasNext()){
+		int i = 0;
+		
+		while(iterF.hasNext()){
+			i++;
 			Phrases frase = iterF.next();
 			
 			System.out.println("Frase: " + frase.id);
@@ -312,11 +358,11 @@ public class FuncionesMusicales {
 				}
 				
 				System.out.println();
-				
+				if ( i == 4) break;
 			}
 			
 			
-		//}
+		}
 		
 	}
 	
