@@ -15,6 +15,7 @@ public class Crossover {
 		//PhrasePopulation poblacion_frases = new PhrasePopulation();
 		
 		List <Phrases> lista_auxiliar = null;
+		List <Phrases> lista_res_auxiliar = new ArrayList<Phrases>();
 		for ( int k = 0; k < 3; k++ ) {
 			Pair par_res = new Pair(-1, Integer.MAX_VALUE);
 			for ( int i = 0; i < lista_frases.size(); i += 2 ) {
@@ -24,8 +25,9 @@ public class Crossover {
 						par_res = par_aux;
 				}
 				lista_auxiliar = casamiento(par_res, lista_frases.get(i), lista_frases.get(i + 1));
+				lista_res_auxiliar.addAll(lista_auxiliar);
 			}
-			lista_frases.addAll(lista_auxiliar);
+			lista_frases.addAll(lista_res_auxiliar);
 		}
 		resultado_final.populationP = lista_frases;
 	}
