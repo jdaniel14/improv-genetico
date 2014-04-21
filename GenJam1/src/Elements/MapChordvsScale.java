@@ -51,7 +51,7 @@ public class MapChordvsScale {
 				CvsS.add(temp);
 			}
 			
-			System.out.println("> 'MapChordvsScale' inicializado correctamente");
+			//System.out.println("> 'MapChordvsScale' inicializado correctamente");
 			
 			conexion.cerrarConexion();
 		}

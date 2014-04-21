@@ -24,14 +24,14 @@ public class GenJam {
 		//MapChordvsScale map = new MapChordvsScale();
 		
 		List<String> acordes = new ArrayList<String>();
-		acordes.add("Cm7");
-		acordes.add("Cm7");
-		acordes.add("Cm7");
-		acordes.add("Cm7");
+		acordes.add("Dm7");
+		acordes.add("G7");
+		acordes.add("A7b9");
+		acordes.add("Cmaj7");
 		
 		PhrasePopulation poblacionFrases = new PhrasePopulation();
 		
-		FuncionesMusicales.recorrerPoblacion(poblacionFrases);
+		//FuncionesMusicales.recorrerPoblacion(poblacionFrases);
 		
 		FuncionesMusicales.crearComposicion(poblacionFrases, acordes);
 		
