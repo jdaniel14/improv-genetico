@@ -1,6 +1,7 @@
 package GenJam;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import Elements.PhrasePopulation;
@@ -17,10 +18,15 @@ public class GenJam {
 		//MapChordvsScale map = new MapChordvsScale();
 		
 		List<String> acordes = new ArrayList<String>();
+
+		acordes.add("Dm7");
 		acordes.add("Dm7");
 		acordes.add("G7");
-		acordes.add("A7b9");
+		acordes.add("G7");
 		acordes.add("Cmaj7");
+		acordes.add("Cmaj7");
+		acordes.add("A7b9");
+		acordes.add("A7b9");
 		
 		PhrasePopulation poblacionFrases = new PhrasePopulation();
 		
@@ -29,11 +35,19 @@ public class GenJam {
 		
 
 		Crossover cross = new Crossover();
-		cross.genera_frases(new PhrasePopulation().populationP);
+		cross.genera_frases(poblacionFrases.populationP);
+		
+		Collections.reverse(cross.resultado_final.populationP);
+		
+		FuncionesMusicales.crearComposicion(cross.resultado_final, acordes);
+		
+//		FuncionesMusicales.crearComposicion(poblacionFrases, acordes);
 		
 		//FuncionesMusicales.recorrerPoblacion(poblacionFrases);
 		
-		//FuncionesMusicales.crearComposicion(poblacionFrases, acordes);
+		
+		
+		//int s = cross.resultado_final.populationP.size();
 		
 		
 		//FuncionesArchivos.initMeasureBD();

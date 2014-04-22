@@ -16,7 +16,7 @@ public class PhrasePopulation {
 		Conexion conexion = new Conexion();
 		try{
 			conexion.abrirConexion();
-			String sql = "SELECT id, measureId, genre FROM Phrases ORDER BY RAND() LIMIT 16";
+			String sql = "SELECT id, measureId, genre FROM Phrases LIMIT 16";
 			
 			PreparedStatement pst = conexion.conn.prepareStatement(sql);
 			

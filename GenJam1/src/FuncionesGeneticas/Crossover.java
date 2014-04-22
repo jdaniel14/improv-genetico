@@ -9,14 +9,15 @@ import Elements.PhrasePopulation;
 import Elements.Phrases;
 
 public class Crossover {
-	public PhrasePopulation resultado_final;
+	public PhrasePopulation resultado_final = new PhrasePopulation();
 	
 	public void genera_frases(List <Phrases> lista_frases){
 		//PhrasePopulation poblacion_frases = new PhrasePopulation();
 		
 		List <Phrases> lista_auxiliar = null;
 		List <Phrases> lista_res_auxiliar = new ArrayList<Phrases>();
-		for ( int k = 0; k < 3; k++ ) {
+		for ( int k = 0; k < 1; k++ ) {
+			System.out.println(k);
 			Pair par_res = new Pair(-1, Integer.MAX_VALUE);
 			for ( int i = 0; i < lista_frases.size(); i += 2 ) {
 				for ( int j = 0 ; j < 2; j++ ) {
@@ -28,8 +29,13 @@ public class Crossover {
 				lista_res_auxiliar.addAll(lista_auxiliar);
 			}
 			lista_frases.addAll(lista_res_auxiliar);
+			System.out.println(lista_frases.size());
 		}
-		resultado_final.populationP = lista_frases;
+		System.out.println("FINAL " + lista_frases.size());
+		
+		resultado_final.populationP = new ArrayList<Phrases>();
+		resultado_final.populationP.addAll( lista_frases );
+		System.out.println("FINAL " + resultado_final.populationP.size());
 	}
 	
 	public List <Phrases> casamiento(Pair par_res, Phrases frase1, Phrases frase2) {

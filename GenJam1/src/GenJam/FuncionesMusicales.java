@@ -134,14 +134,13 @@ public class FuncionesMusicales {
 			Phrases reproducir = itFrases.next();
 			
 			for(int j = 0; j< 4; j++){
-				
 				List<Integer> temp = notasDelCompas(reproducir.measureId.get(j),acordes.get(j));
 				
 				Iterator<Integer> iter = temp.iterator();
 				
 				while(iter.hasNext()){
 					Integer tempNota = iter.next();
-					 
+				
 					notasRep.add(tempNota);
 				}
 				
@@ -283,7 +282,7 @@ public class FuncionesMusicales {
 		}
 		*/
 		
-		int[] pitchArray = {JMC.c3,JMC.g3,JMC.c4,JMC.e4,JMC.a4,JMC.c5}; 
+		int[] pitchArray = {JMC.c3,JMC.g3,JMC.c4,JMC.e4,JMC.c5}; 
 		phr.addChord(pitchArray, JMC.WHOLE_NOTE);
 		
 		melodia.add(phr);
@@ -296,6 +295,7 @@ public class FuncionesMusicales {
 				
 		// create a phrase of 32 quavers following 
         // a random walk within C minor.
+		/*
         for(short i=0;i<8;i++) {
         	// next note within plus or minus a 5th.\
         	Note n = new Note(JMC.C3, JMC.QUARTER_NOTE);
@@ -314,6 +314,91 @@ public class FuncionesMusicales {
             phr2.addNote(n);
             n = new Note(JMC.EF3, JMC.QUARTER_NOTE);
             phr2.addNote(n);                 
+                 
+        }
+        */
+        //Para Dm7 - G7 - A7b9 - Cmaj7
+		
+        for(short i=0;i<2;i++) {
+        	
+        	// next note within plus or minus a 5th.\
+        	
+        	Note n = new Note(JMC.D3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.F3, JMC.QUARTER_NOTE);	
+            phr2.addNote(n);
+            n = new Note(JMC.G3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.A3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            
+            n = new Note(JMC.D3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.F3, JMC.QUARTER_NOTE);	
+            phr2.addNote(n);
+            n = new Note(JMC.G3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.A3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            
+            n = new Note(JMC.G2, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.B2, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.C3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.D3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            
+
+            n = new Note(JMC.G2, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.B2, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.C3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.D3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+
+
+            n = new Note(JMC.C3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.E3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.F3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.G3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            
+
+            n = new Note(JMC.C3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.E3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.F3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.G3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);  
+            
+
+            n = new Note(JMC.A2, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.CF3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.D3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.E3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);  
+            
+
+            n = new Note(JMC.A2, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.CF3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.D3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);
+            n = new Note(JMC.E3, JMC.QUARTER_NOTE);
+            phr2.addNote(n);  
                  
         }
 		
