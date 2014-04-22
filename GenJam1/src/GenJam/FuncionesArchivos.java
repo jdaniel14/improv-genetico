@@ -186,7 +186,7 @@ public class FuncionesArchivos {
 		return dev;
 	}
 	
-	public static void initMeasureBD(){
+	public static void leerDatosParaBD(){
 		Integer idMeasure = 0;//inicializarlos desde BD
 		Integer idPhrase = 0;//inicialidar desde BD
 		int exit = 0;
@@ -277,4 +277,92 @@ public class FuncionesArchivos {
 		}
 	}
 	
+	
+	
+	public static void initMeasureBD(){
+		
+		Integer idMeasure = 0;//inicializarlos desde BD
+		Integer idPhrase = 0;//inicialidar desde BD
+		int exit = 0;
+		
+		//Leer Ids
+		//...
+		//Fin leer Ids
+		
+		
+		try{
+			
+			Scanner s = new Scanner(System.in);
+			
+			System.out.println("Ingrese el género");
+			String genre = s.nextLine();
+			
+			while(exit != 1){
+				//Inicio de la lectura de una frase
+				
+				System.out.println("Ingrese el acorde en el que está la frase");
+				
+				String acorde = s.nextLine();
+				
+				if(acorde.contains("x") || acorde.contains("X")){
+					exit = 1;
+					break;
+				}
+				
+				//idPhrase++;
+				System.out.println("Ingrese el ID del lick que va a ingresar");
+				idPhrase = Integer.parseInt(s.nextLine());
+				
+				System.out.println("Ingrese la frase con id: " + idPhrase);
+				
+				String frase = "";
+				
+				//Lectura de los 4 compases
+				for(Integer z = 1; z <=4 ; z++){
+					
+					idMeasure++;
+					String lecturaCompas;
+					String compas = "";
+					
+					System.out.println("Measure: " + z);
+					
+					lecturaCompas = s.nextLine();
+					String[] notasLeidas = lecturaCompas.split(" ");
+										
+					for(Integer j = 0; j <= 7; j++){
+						
+						compas += numeroDeLaNota(acorde, notasLeidas[j]);
+						
+						if (j != 7) compas += " "; //para dejar espacio entre cada numero
+						
+						
+						
+					}
+					
+					System.out.println(compas);
+					
+					grabarMeasureBD(idMeasure, compas);
+					//grabar compas, el cual tiene las notas del measure ya en numero
+					
+					frase += idMeasure; //guarda el id del measure(debo elegirlo)
+					if (z != 4) frase += " ";
+					
+				}
+					
+				grabarPhraseBD(idPhrase,frase,genre);
+				//graba la frase que esta en "frase"
+				
+				System.out.println(frase);
+				
+				System.out.println();
+				
+			}//fin while(1)
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
+
+
+		
+	}	
 }
