@@ -28,84 +28,28 @@ public class GenJam {
 		acordes.add("A7b9");
 		acordes.add("A7b9");
 		
-		PhrasePopulation poblacionFrases = new PhrasePopulation();
+		//PhrasePopulation poblacionFrases = new PhrasePopulation();
 		
 		
-		//FuncionesMusicales.recorrerPoblacion(poblacionFrases);
-		
-
+/*
 		Crossover cross = new Crossover();
 		cross.genera_frases(poblacionFrases.populationP);
 		
 		Collections.reverse(cross.resultado_final.populationP);
 		
 		FuncionesMusicales.crearComposicion(cross.resultado_final, acordes);
+	*/
+		
+		
 		
 //		FuncionesMusicales.crearComposicion(poblacionFrases, acordes);
 		
-		//FuncionesMusicales.recorrerPoblacion(poblacionFrases);
-		
-		
-		
-		//int s = cross.resultado_final.populationP.size();
-		
+		FuncionesArchivos.initChordvsScaleBD();
 		
 		//FuncionesArchivos.initMeasureBD();
 		
-		//System.out.println("Nota: " + map.CvsS.get(0).notes.get(5));
 		
-		//FuncionesArchivos.crearMeasureBD();
 		
-		/*
-		
-		List<String> armonia = new ArrayList<String>();
-		armonia.add("Cmaj7");
-		
-		List<Integer> melodia = new ArrayList<Integer>();
-		melodia.add(1);
-		melodia.add(2);
-		melodia.add(3);
-		melodia.add(1);
-		melodia.add(2);
-		melodia.add(3);
-		melodia.add(3);
-		melodia.add(1);
-		
-		List<String> notas = FuncionesMusicales.melodiaNumeradaANotas(melodia, armonia);
-		
-		for(int i = 0; i < notas.size(); i++){
-			Note note = new Note();
-			//System.out.println(notas.get(i));
-			note.setPitch((Integer) mapSonidos.NvsS.get(notas.get(i)));
-			note.setDynamic(JMC.PP);
-			note.setDuration(JMC.EIGHTH_NOTE);
-			
-			Play.midi(note);
-		}
-		
-		//System.out.println(JMC.C3);
-		
-		Part mypart = new Part(JMC.PIANO, 0);
-		
-		Phrase ph1 = new Phrase(2.0);
-		Note n1 = new Note(JMC.G4, JMC.HALF_NOTE);
-		ph1.addNote(n1);
-		mypart.addPhrase(ph1);
-		
-		Phrase ph2 = new Phrase(1.0);
-		Note n2 = new Note(JMC.E4, JMC.DOTTED_HALF_NOTE);
-		ph1.addNote(n2);
-		mypart.addPhrase(ph2);
-		
-		Phrase ph3 = new Phrase(0.0);
-		Note n3 = new Note(JMC.C4, JMC.WHOLE_NOTE);
-		ph1.addNote(n3);
-		mypart.addPhrase(ph3);
-		
-		Write.midi(mypart, "out.midi");
-		Play.midi(mypart);
-		
-		*/
 
 	} 
 	
