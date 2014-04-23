@@ -1,5 +1,7 @@
 package GenJam;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -114,8 +116,8 @@ public class FuncionesArchivos {
 			conexion.abrirConexion();
 			
 			String sql = 	" INSERT INTO measures (id, notas) values ( " +
-							idMeasure + ",'" + measure + "') " ;
-						
+					idMeasure + ",'" + measure + "') " ;
+				
 			PreparedStatement pst = conexion.conn.prepareStatement(sql);
 			
 			pst.execute();
@@ -150,20 +152,15 @@ public class FuncionesArchivos {
 		}
 	}
 	
-	
-	
-	public static List<Integer> leerIds(){
-		List<Integer> dev = new ArrayList<Integer>();
+	public static Integer dev_id_measure(){
+		Integer dev = 0;
 		
 		Conexion conexion = new Conexion();
 		
 		try{
 			conexion.abrirConexion();
 			
-			String sql = 	" SELECT A.idM, B.idP " +
-							" FROM " + 
-							" (select max(M.id) as idM from measures M) A, " +
-							" (select max(P.id) as idP from phrases P) B " ;
+			String sql = 	" select max(M.id) as idM from measures M ";
 						
 			PreparedStatement pst = conexion.conn.prepareStatement(sql);
 			
@@ -173,8 +170,7 @@ public class FuncionesArchivos {
 			
 			rs.next();
 						
-			dev.add(rs.getInt(1));
-			dev.add(rs.getInt(2));
+			dev = rs.getInt(1);
 			
 			conexion.cerrarConexion();
 		}
@@ -186,183 +182,144 @@ public class FuncionesArchivos {
 		return dev;
 	}
 	
-	public static void leerDatosParaBD(){
-		Integer idMeasure = 0;//inicializarlos desde BD
-		Integer idPhrase = 0;//inicialidar desde BD
-		int exit = 0;
-		
-		List<Integer> aux = leerIds();
-		
-		idMeasure = aux.get(0);
-		idPhrase = aux.get(1);
-		
-		System.out.println("Last idMeasure: " + idMeasure);
-		System.out.println("Last idPhrase: " + idPhrase);
-		System.out.println();
-		
-		System.out.println("**Measure & Phrase DataBase**");
-		System.out.println("Ingrese la letra 'x' para salir y concluir la creación");
-		System.out.println();
-		
-		try{
-			
-			Scanner s = new Scanner(System.in);
-			
-			System.out.println("Ingrese el género");
-			String genre = s.nextLine();
-			
-			while(exit != 1){
-				//Inicio de la lectura de una frase
-				
-				System.out.println("Ingrese el acorde en el que está la frase");
-				
-				String acorde = s.nextLine();
-				
-				if(acorde.contains("x") || acorde.contains("X")){
-					exit = 1;
-					break;
-				}
-				
-				//idPhrase++;
-				System.out.println("Ingrese el ID del lick que va a ingresar");
-				idPhrase = Integer.parseInt(s.nextLine());
-				
-				System.out.println("Ingrese la frase con id: " + idPhrase);
-				
-				String frase = "";
-				
-				//Lectura de los 4 compases
-				for(Integer z = 1; z <=4 ; z++){
-					
-					idMeasure++;
-					String lecturaCompas;
-					String compas = "";
-					
-					System.out.println("Measure: " + z);
-					
-					lecturaCompas = s.nextLine();
-					String[] notasLeidas = lecturaCompas.split(" ");
-										
-					for(Integer j = 0; j <= 7; j++){
-						
-						compas += numeroDeLaNota(acorde, notasLeidas[j]);
-						
-						if (j != 7) compas += " "; //para dejar espacio entre cada numero
-						
-						
-						
-					}
-					
-					System.out.println(compas);
-					
-					grabarMeasureBD(idMeasure, compas);
-					//grabar compas, el cual tiene las notas del measure ya en numero
-					
-					frase += idMeasure; //guarda el id del measure(debo elegirlo)
-					if (z != 4) frase += " ";
-					
-				}
-					
-				grabarPhraseBD(idPhrase,frase,genre);
-				//graba la frase que esta en "frase"
-				
-				System.out.println(frase);
-				
-				System.out.println();
-				
-			}//fin while(1)
-		}
-		catch(Exception e){
-			System.out.println(e.toString());
-		}
-	}
-	
-	
 	
 	public static void initMeasureBD(){
 		
-		Integer idMeasure = 0;//inicializarlos desde BD
-		Integer idPhrase = 0;//inicialidar desde BD
-		int exit = 0;
+		Integer idMeasure = dev_id_measure();
 		
-		//Leer Ids
-		//...
-		//Fin leer Ids
-		
-		
+		BufferedReader br = null;
+				
 		try{
 			
-			Scanner s = new Scanner(System.in);
 			
-			System.out.println("Ingrese el género");
-			String genre = s.nextLine();
+			br = new BufferedReader(new FileReader("bin/Files/licks.txt"));
 			
-			while(exit != 1){
-				//Inicio de la lectura de una frase
+			while(br.readLine() != null){
+								
+				//1) Leo el ID del lick
 				
-				System.out.println("Ingrese el acorde en el que está la frase");
+				Integer idPhrase = Integer.parseInt(br.readLine());
 				
-				String acorde = s.nextLine();
+				//2) Leo el género
 				
-				if(acorde.contains("x") || acorde.contains("X")){
-					exit = 1;
-					break;
-				}
+				String genre = br.readLine();
 				
-				//idPhrase++;
-				System.out.println("Ingrese el ID del lick que va a ingresar");
-				idPhrase = Integer.parseInt(s.nextLine());
-				
-				System.out.println("Ingrese la frase con id: " + idPhrase);
-				
+				//Voy a ir almacenando los idMeasures en frase
 				String frase = "";
 				
-				//Lectura de los 4 compases
-				for(Integer z = 1; z <=4 ; z++){
+				//3) Leo los 4 acordes con sus 4 measures
+				for(int z = 0; z < 4; z++){
 					
+					//Incremento el idMeasure (lo necesito para la tabla phrases)
 					idMeasure++;
-					String lecturaCompas;
+					
+					String acorde = br.readLine();
+					String lecturaCompas = br.readLine();
+					
+					String[] notasLeidas = lecturaCompas.split(" ");
+					
 					String compas = "";
 					
-					System.out.println("Measure: " + z);
-					
-					lecturaCompas = s.nextLine();
-					String[] notasLeidas = lecturaCompas.split(" ");
-										
 					for(Integer j = 0; j <= 7; j++){
 						
 						compas += numeroDeLaNota(acorde, notasLeidas[j]);
 						
-						if (j != 7) compas += " "; //para dejar espacio entre cada numero
-						
-						
+						if (j != 7) compas += " "; //para dejar espacio entre cada numero				
 						
 					}
-					
 					System.out.println(compas);
-					
 					grabarMeasureBD(idMeasure, compas);
-					//grabar compas, el cual tiene las notas del measure ya en numero
 					
-					frase += idMeasure; //guarda el id del measure(debo elegirlo)
+					frase += idMeasure;
 					if (z != 4) frase += " ";
-					
 				}
-					
+				
 				grabarPhraseBD(idPhrase,frase,genre);
-				//graba la frase que esta en "frase"
-				
-				System.out.println(frase);
-				
-				System.out.println();
-				
-			}//fin while(1)
+			}
+			
 		}
 		catch(Exception e){
 			System.out.println(e.toString());
 		}
-
-
-		
+		finally {
+			try {
+				if (br != null) br.close();
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+		}
 	}	
+	
+	public static void insertarChordvsScale(String acorde, String scale, 
+			String notasTeoricas, String notes){
+		
+		Conexion conexion = new Conexion();
+		
+		try{
+			conexion.abrirConexion();
+			
+			String sql = " INSERT INTO chordvsscale (chord" +
+						",scale,notasTeoricas,notes) VALUES ('" +
+						acorde + "','" + scale + "','" + notasTeoricas  + "','" + 
+						notes + "') ";
+			
+			PreparedStatement pst = conexion.conn.prepareStatement(sql);
+			
+			pst.execute();
+			conexion.conn.commit();
+			
+			conexion.cerrarConexion();
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
+		
+	}
+	
+	
+	public static void initChordvsScaleBD(){
+		
+		BufferedReader br = null;
+		
+		try{
+			
+			
+			br = new BufferedReader(new FileReader("bin/Files/chordvsscale.txt"));
+			
+			while(br.readLine() != null){
+				
+				//1)Leo el acorde
+				String acorde = br.readLine();
+				
+				//2)Leo el nombre de la escala
+				String scale = br.readLine();
+				
+				//3)Leo las notas teoricas que deberian incluirse
+				String notasTeoricas = br.readLine();
+				
+				//4)Leo las notas de las escala
+				String notes = br.readLine();
+				
+				insertarChordvsScale(acorde, scale, notasTeoricas, notes);
+				
+			}
+			
+			
+			
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
+		finally {
+			try {
+				if (br != null) br.close();
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+		}
+			
+		
+	}
+	
+	
 }
