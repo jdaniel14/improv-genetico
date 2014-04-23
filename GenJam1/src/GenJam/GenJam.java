@@ -40,11 +40,9 @@ public class GenJam {
 		FuncionesMusicales.crearComposicion(cross.resultado_final, acordes);
 	*/
 		
-		
-		
 //		FuncionesMusicales.crearComposicion(poblacionFrases, acordes);
 		
-		FuncionesArchivos.initChordvsScaleBD();
+//		FuncionesArchivos.initChordvsScaleBD();
 		
 		//FuncionesArchivos.initMeasureBD();
 		
