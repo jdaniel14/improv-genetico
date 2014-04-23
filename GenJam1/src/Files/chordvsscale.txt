@@ -1,0 +1,90 @@
+***Chords vs Scales ****
+Cmaj7
+Major (avoid 4th)
+C D E G A B
+R C4 D4 E4 G4 A4 B4 C5 D5 E5 G5 A5 B5 C6 D6 H
+
+C7
+Mixolydian (avoid 4th)
+C D E G A Bb
+R C4 D4 E4 G4 A4 Bb4 C5 D5 E5 G5 A5 Bb5 C6 D6 H
+
+Cm7
+Minor (avoid 6th)
+C D Eb F G Bb
+R C4 D4 Eb4 F4 G4 Bb4 C5 D5 Eb5 F5 G5 Bb5 C6 D6 H
+
+Cm7b5
+Locrian (avoid 2nd)
+C Eb F Gb Ab Bb
+R C4 Eb4 F4 Gb4 Ab4 Bb4 C5 Eb5 F5 Gb5 Ab5 Bb5 C6 Eb6 H
+
+Cdim
+W/H Dimished
+C D Eb F Gb G# A B
+R C4 D4 Eb4 F4 Gb4 G#4 A4 B4 C5 D5 Eb5 F5 Gb5 G#5 H
+
+C+
+Lydian Augmented
+C D E F# G# A B
+R C4 D4 E4 F#4 G#4 A4 B4 C5 D5 E5 F#5 G#5 A5 B5 H
+
+C7+
+Whole Tone
+C D E F# G# Bb
+R C4 D4 E4 F#4 G#4 Bb4 C5 D5 E5 F#5 G#5 Bb5 C6 D6 H
+
+C7#11
+Lydian Dominant
+C D E F# G A Bb
+R C4 D4 E4 F#4 G4 A4 Bb4 C5 D5 E5 F#5 G5 A5 Bb5 H
+
+C7alt
+Altered Scale
+C Db D# E Gb G# Bb
+R C4 Db4 D#4 E4 Gb4 G#4 Bb4 C5 Db5 D#5 E5 Gb5 G#5 Bb5 H
+
+C7#9
+Mixolydian #2 (avoid 4th)
+C Eb E G A Bb
+R C4 Eb4 E4 G4 A4 Bb4 C5 Eb5 E5 G5 A5 Bb5 C6 Eb6 H
+
+C7b9
+Harm Minor V (avoid 6th)
+C Db E F G Bb
+R C4 Db4 E4 F4 G4 Bb4 C5 Db5 E5 F5 G5 Bb5 C6 Db6 H
+
+CmMaj7
+Melodic Minor
+C D Eb F G A B
+R C4 D4 Eb4 F4 G4 A4 B4 C5 D5 Eb5 F5 G5 A5 B5 H
+
+Cm6
+Dorian (avoid 7th)
+C D Eb F G A
+R C4 D4 Eb4 F4 G4 A4 C5 D5 Eb5 F5 G5 A5 C5 D5 H
+
+Cm7b9
+Melodic Minor II mode
+C Db Eb F G A Bb
+R C4 Db4 Eb4 F4 G4 A4 Bb4 C5 Db5 Eb5 F5 G5 A5 Bb5 H
+
+Cmaj7#11
+Lydian
+C D E F# G A B
+R C4 D4 E4 F#4 G4 A4 B4 C5 D5 E5 F#5 G5 A5 B5 H
+
+C7sus
+Mixolydian
+C D E F G A Bb
+R C4 D4 E4 F4 G4 A4 Bb4 C5 D5 E5 F5 G5 A5 Bb5 H
+
+Cmaj7sus
+Major
+C D E F G A B
+R C4 D4 E4 F4 G4 A4 B4 C5 D5 E5 F5 G5 A5 B5 H
+
+C7Bl
+Blues
+C Eb F Gb G Bb
+R C4 Eb4 F4 Gb4 G4 Bb4 C5 Eb5 F5 Gb5 G5 Bb5 C6 Eb6 e

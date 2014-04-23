@@ -1,0 +1,22 @@
+***Archivo de los licks****
+3
+Jazz
+Cmaj7
+c4 e4 c4 e4 c4 e4 c4 e4
+Cmaj7
+e4 g4 e4 g4 e4 g4 e4 g4
+Cmaj7
+c4 e4 c4 e4 c4 e4 c4 e4
+Cmaj7
+e4 g4 e4 r r g4 h g4
+-- Dejar un espacio al siguiente measure --
+4
+Jazz
+C7
+c4 e4 c4 e4 c4 e4 c4 e4
+G7
+e4 g4 e4 g4 e4 g4 e4 g4
+Cmaj7
+c4 e4 c4 e4 c4 e4 c4 e4
+Dm7
+e4 g4 e4 g4 e4 g4 e4 g4
