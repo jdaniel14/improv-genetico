@@ -1,22 +1,22 @@
-***Archivo de los licks****
+***Archivo de los licks**** (el primer numero es el id del lick)
 3
 Jazz
 Cmaj7
-c4 e4 c4 e4 c4 e4 c4 e4
+r r r e5 g5 e5 d5 c5
 Cmaj7
-e4 g4 e4 g4 e4 g4 e4 g4
+d5 h h d5 f5 d5 c5 b4
 Cmaj7
-c4 e4 c4 e4 c4 e4 c4 e4
+c5 h h c5 e5 c5 b4 a4
 Cmaj7
-e4 g4 e4 r r g4 h g4
+g4 a4 e4 f4 g4 e4 f4 g4
 -- Dejar un espacio al siguiente measure --
-4
+5
 Jazz
-C7
-c4 e4 c4 e4 c4 e4 c4 e4
-G7
-e4 g4 e4 g4 e4 g4 e4 g4
 Cmaj7
-c4 e4 c4 e4 c4 e4 c4 e4
-Dm7
-e4 g4 e4 g4 e4 g4 e4 g4
+g5 e5 f5 f5 e5 c5 a4 g4
+Cmaj7
+c5 h c5 e5 r r r c5
+Cmaj7
+a5 g5 b4 c5 f5 e5 g4 a4
+Cmaj7
+b4 g4 e4 d4 h h h h
