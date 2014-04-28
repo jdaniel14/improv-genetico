@@ -21,6 +21,7 @@ public class MapChordvsScale {
 			dev.add(a[i]);
 		}
 		
+		dev.add("T");
 		//dev.add("h");
 		
 		return dev;

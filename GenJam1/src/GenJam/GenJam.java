@@ -44,7 +44,7 @@ public class GenJam {
 		
 //		FuncionesArchivos.initChordvsScaleBD();
 		
-		//FuncionesArchivos.initMeasureBD();
+		FuncionesArchivos.initMeasureBD();
 		
 		
 		

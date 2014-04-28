@@ -200,6 +200,8 @@ public class FuncionesArchivos {
 				
 				Integer idPhrase = Integer.parseInt(br.readLine());
 				
+				
+				
 				//2) Leo el género
 				
 				String genre = br.readLine();
@@ -220,11 +222,11 @@ public class FuncionesArchivos {
 					
 					String compas = "";
 					
-					for(Integer j = 0; j <= 7; j++){
+					for(Integer j = 0; j <= 15; j++){
 						
 						compas += numeroDeLaNota(acorde, notasLeidas[j]);
 						
-						if (j != 7) compas += " "; //para dejar espacio entre cada numero				
+						if (j != 15) compas += " "; //para dejar espacio entre cada numero				
 						
 					}
 					System.out.println(compas);
