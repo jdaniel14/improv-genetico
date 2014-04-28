@@ -276,7 +276,7 @@ public class FuncionesArchivos {
 		
 	}
 	
-	
+	//Funci—n para cargar el archivo ChordvsScale.txt a la Base de Datos
 	public static void initChordvsScaleBD(){
 		
 		BufferedReader br = null;
@@ -304,7 +304,7 @@ public class FuncionesArchivos {
 				
 			}
 			
-			
+			System.out.println("Carga de ChordvsScale.txt exitosa");
 			
 		}
 		catch(Exception e){
