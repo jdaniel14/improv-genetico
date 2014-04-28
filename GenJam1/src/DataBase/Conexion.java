@@ -23,13 +23,13 @@ public class Conexion{
 		conn = null;
 		String username="root";
       
-		String password = "123";
+		String password = "CLIOPS20";
 
 		String database = "genjam";
 
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-		conn = DriverManager.getConnection("jdbc:mysql://localhost/"+database, username, password);
+		conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:10800/"+database, username, password);
 		conn.setAutoCommit(false);
      return conn;
 	}

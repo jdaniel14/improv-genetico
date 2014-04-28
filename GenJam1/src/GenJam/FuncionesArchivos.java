@@ -115,7 +115,7 @@ public class FuncionesArchivos {
 		try{
 			conexion.abrirConexion();
 			
-			String sql = 	" INSERT INTO measures (id, notas) values ( " +
+			String sql = 	" INSERT INTO Measures (id, notas) values ( " +
 					idMeasure + ",'" + measure + "') " ;
 				
 			PreparedStatement pst = conexion.conn.prepareStatement(sql);
@@ -136,7 +136,7 @@ public class FuncionesArchivos {
 		try{
 			conexion.abrirConexion();
 			
-			String sql = 	" INSERT INTO phrases (id, measureId, genre) values ( " +
+			String sql = 	" INSERT INTO Phrases (id, measureId, genre) values ( " +
 							idPhrase + ",'" + phrase + "','" + genre + "') " ;
 						
 			PreparedStatement pst = conexion.conn.prepareStatement(sql);
@@ -160,7 +160,7 @@ public class FuncionesArchivos {
 		try{
 			conexion.abrirConexion();
 			
-			String sql = 	" select max(M.id) as idM from measures M ";
+			String sql = 	" select max(M.id) as idM from Measures M ";
 						
 			PreparedStatement pst = conexion.conn.prepareStatement(sql);
 			
@@ -260,7 +260,7 @@ public class FuncionesArchivos {
 		try{
 			conexion.abrirConexion();
 			
-			String sql = " INSERT INTO chordvsscale (chord" +
+			String sql = " INSERT INTO ChordvsScale (chord" +
 						",scale,notasTeoricas,notes) VALUES ('" +
 						acorde + "','" + scale + "','" + notasTeoricas  + "','" + 
 						notes + "') ";
