@@ -201,7 +201,6 @@ public static void makeMelodyImproved(List<Phrases> pobFrases, List<String> acor
 			if(notasRep.get(recorrer) == -2){
 				iniciaTriplets = 1;
 				
-				aux++;
 				recorrer = aux;
 				
 				continue;
@@ -231,7 +230,6 @@ public static void makeMelodyImproved(List<Phrases> pobFrases, List<String> acor
 					iniciaTriplets = 0;
 				}
 				
-				aux++;
 				
 				//termina con todos los holds para una nota del triplet
 				while((aux < notasRep.size()) && (notasRep.get(aux) == -1) && (iniciaTriplets != 0)){
@@ -308,7 +306,7 @@ public static void makeMelodyImproved(List<Phrases> pobFrases, List<String> acor
 							iniciaSemi++;
 							if (iniciaSemi == 5) iniciaSemi = 0;
 							aux++;		
-							aux++;
+							
 						}
 						else if(iniciaCorchea > 0){
 							if(iniciaCorchea == 1){
@@ -325,6 +323,8 @@ public static void makeMelodyImproved(List<Phrases> pobFrases, List<String> acor
 					}
 				}	
 			}
+			
+			System.out.print(aux - 2 + ": ");
 			
 			if(Note.getNote(notasRep.get(recorrer)) != "N/A"){
 				System.out.print(Note.getNote(notasRep.get(recorrer)) + " ");
