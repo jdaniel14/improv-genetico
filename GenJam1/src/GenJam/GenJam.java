@@ -19,28 +19,28 @@ public class GenJam {
 		
 		List<String> acordes = new ArrayList<String>();
 
+		acordes.add("Dm7");
+		acordes.add("Dm7");
+		acordes.add("G7");
+		acordes.add("G7");
 		acordes.add("Cmaj7");
 		acordes.add("Cmaj7");
-		acordes.add("Cmaj7");
-		acordes.add("Cmaj7");
-		acordes.add("Cmaj7");
-		acordes.add("Cmaj7");
-		acordes.add("Cmaj7");
-		acordes.add("Cmaj7");
+		acordes.add("A7b9");
+		acordes.add("A7b9");
 		
 		PhrasePopulation poblacionFrases = new PhrasePopulation();
 		
 		
-/*
+
 		Crossover cross = new Crossover();
 		cross.genera_frases(poblacionFrases.populationP);
 		
 		Collections.reverse(cross.resultado_final.populationP);
 		
 		FuncionesMusicales.crearComposicion(cross.resultado_final, acordes);
-	*/
+	
 		
-		FuncionesMusicales.crearComposicion(poblacionFrases, acordes);
+		//FuncionesMusicales.crearComposicion(poblacionFrases, acordes);
 		
 //		FuncionesArchivos.initChordvsScaleBD();
 		

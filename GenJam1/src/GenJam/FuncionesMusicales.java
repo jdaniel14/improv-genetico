@@ -287,7 +287,7 @@ public static void makeMelodyImproved(List<Phrases> pobFrases, List<String> acor
 			}
 			
 			//Si es que no es un nuevo evento
-			if(notasRep.get(aux) == -1){
+			if((aux < notasRep.size() && (notasRep.get(aux) == -1))){
 				
 				while((aux < notasRep.size()) && (notasRep.get(aux) == -1) && iniciaTriplets == 0){
 					
