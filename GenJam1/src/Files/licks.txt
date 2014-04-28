@@ -2,21 +2,175 @@
 3
 Jazz
 Cmaj7
-r r r e5 g5 e5 d5 c5
+r r r r r r e5 h g5 h e5 h d5 h c5 h
 Cmaj7
-d5 h h d5 f5 d5 c5 b4
+d5 h h h h h d5 h f5 h f5 h c5 h b4 h
 Cmaj7
-c5 h h c5 e5 c5 b4 a4
+c5 h h h h h c5 h e5 h c5 h b4 h a4 h
 Cmaj7
-g4 a4 e4 f4 g4 e4 f4 g4
--- Dejar un espacio al siguiente measure --
+g4 h a4 h e4 h f4 h g4 h e4 h f4 h g4 h
+
 5
 Jazz
 Cmaj7
-g5 e5 f5 f5 e5 c5 a4 g4
+g5 h e5 h t f5 g5 f5 e5 h c5 h a4 h g4 h
 Cmaj7
-c5 h c5 e5 r r r c5
+c5 h h h c5 h e5 h r r r r r r c5 h
 Cmaj7
-a5 g5 b4 c5 f5 e5 g4 a4
+a5 h g5 h b4 h c5 h f5 h e5 h g4 h a4 h
 Cmaj7
-b4 g4 e4 d4 h h h h
+b4 h g4 h e4 h d4 h h h h h h h h h
+
+10
+Jazz
+Cmaj7
+e5 h b4 h r r d5 h c5 h h h h h h h
+Cmaj7
+d5 h a4 h r r c5 h b4 h h h h h h h
+Cmaj7
+c5 h h h t r4 e4 f4 g4 h a4 h g4 h f4 h
+Cmaj7
+e4 h g4 h a4 h b4 h h h h h h h h h
+
+11
+Jazz
+Cmaj7
+r r r r r r r r r r e5 h g5 h b5 h
+Cmaj7
+c6 h b5 h g5 h e5 h a5 h g5 h e5 h c5 h
+Cmaj7
+f5 h e5 h c5 h a4 h g4 h f5 h d5 h f5 h
+Cmaj7
+e5 h c5 h g4 h h h h h h h h h h h
+
+12
+Jazz
+Cmaj7
+g5 h h h t f5 g5 f5 e5 h c5 h a4 h g4 h
+Cmaj7
+c5 h g4 h f5 h e5 h r r r r r r c5 h
+Cmaj7
+a5 h g5 h c5 h f5 h e5 h g4 h b4 h d5 h
+Cmaj7
+h h h h h h h h h h h h h h h h
+
+20
+Jazz
+Cmaj7
+g5 h a5 h f5 h d5 h e5 h f5 h d5 h b4 h
+Cmaj7
+c5 h d5 h b4 h a4 h bb4 h ab4 h g4 h f4 h
+Cmaj7
+e4 h f4 h f#4 h a4 h g4 h h h h h h h
+Cmaj7
+r r r r r r r r r r r r r r r r
+
+286
+Jazz
+Dm7b5
+g5 h d5 h c5 h g5 h d5 h c5 h ab4 h f5 h
+G7
+e5 h b4 h ab4 h e5 h b4 h ab4 h f4 h e5 h
+Cm7
+eb5 h c5 h g4 h f5 h h h eb5 h t c5 bb4 c5
+Cm7
+h h h h a4 c5 eb5 f#5 g5 f5 eb5 c5 a4 h h h
+
+323
+Jazz
+Dm7
+t f5 g5 a5 t e5 f5 g5 d5 h e5 h f5 h c5 h
+G7
+t b4 c5 d5 t ab4 a#4 b4 g4 h a4 h b4 h f4 h
+Cmaj7
+e4 h c5 h r r b4 h d5 h c5 h b4 h a4 h
+A7
+g4 h a4 h bb4 c5 a4 h r r r r r r r r
+
+340
+Jazz
+Dm7
+r r r r r r r r d4 c#4 d4 e4 f4 e4 f4 g4
+G7
+g#4 a4 f4 d4 a#4 b4 g4 f4 b4 c5 a4 f4 c#5 d5 b4 a4
+Cmaj7
+g4 e4 f4 g4 e4 c4 r r r r r r r r a5 g5
+A7
+c6 bb5 a5 g5 f#5 e5 eb5 c#5 c5 bb4 a4 g4 f#4 h h h
+
+348
+Jazz
+Dm7b5
+r r r r r r r r t g5 ab5 g5 f5 h eb5 h
+G7
+d5 h c5 h ab4 h c5 h b4 h d5 h g5 h f5 h
+Cm7
+eb5 h h h r r r r eb5 h d5 h c5 h bb4 h
+A7
+a4 h bb4 h c#5 h e5 h f5 h g5 h a5 h h h
+
+363
+Jazz
+Dm7b5
+r r r r r r e5 h f5 h bb5 h ab5 h f#5 h
+G7
+g5 h h h eb5 h b4 h c#5 h a4 h f4 h h h
+Cm7
+eb4 h g4 h b4 h d4 h t d5 eb5 d5 c5 h h h
+A7
+bb4 h h h d5 h c#5 h h h d#5 h e5 h f#5 h
+
+390
+Jazz
+Cmaj7
+d5 h b5 h g4 h b4 h c5 h a4 h f4 h a4 h
+A7
+b4 h g4 h e4 h bb4 h h h h h c#5 h a4 h
+Dm7
+r r r r r r e5 h r r e5 h r r c5 h
+G7
+e5 h d5 h b4 h f4 h h h a4 h h h g4 h h h
+
+391
+Jazz
+Cmaj7
+r r r r r r d5 h b4 h c5 h e5 h b4 h
+A7
+a4 h bb4 h g4 h a4 h r r r r r r g5 e5
+Dm7
+f5 h h h r r a4 h r r c5 h r r a4 h
+G7
+g4 h a4 h b4 h e5 h t b4 c5 f4 r r r r
+
+419
+Jazz
+Cmaj7
+g4 h e4 h f4 h g4 h a4 h bb4 h c5 h d5 h
+A7
+e5 h f#5 h g5 h a5 h bb5 h d5 h c#5 h a4 h
+Dm7
+ab4 h c5 h e5 h c#5 h d5 h e5 h f5 h c5 h
+G7
+b4 h c5 h b4 h g4 h f4 h d#5 h r r e5 h
+
+422
+Jazz
+Cm7
+r r c5 h r r eb5 h g5 h r r eb4 h
+A7
+f5 h c#5 h bb4 h f#5 h eb5 h c#5 h c5 h bb4 h
+Dm7b5
+ab4 h f4 h ab4 h c5 h eb5 h g5 h f5 h eb5 h
+G7
+d5 h f4 h c5 h g4 h b4 h d5 h ab4 h f4 h
+
+426
+Jazz
+Cm7
+t g4 eb4 g4 t b4 g4 b4 t d5 b5 d5 t f5 d5 f5
+A7
+t a4 f4 a4 t c#5 a4 c#5 t f5 c5 f5 t a5 f5 a5
+Dm7b5
+t g5 eb5 g5 t eb5 c5 eb5 t c5 ab4 c5 t ab4 f4 ab4
+G7
+t f5 d5 f5 t d5 b4 d5 t b4 ab4 b4 t ab4 f4 ab4
