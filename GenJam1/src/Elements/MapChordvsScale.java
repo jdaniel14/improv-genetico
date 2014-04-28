@@ -34,7 +34,7 @@ public class MapChordvsScale {
 		try{
 			conexion.abrirConexion();
 			
-			String sql = "SELECT id, chord, scale, notasTeoricas, notes FROM chordvsscale ";
+			String sql = "SELECT id, chord, scale, notasTeoricas, notes FROM ChordvsScale ";
 						
 			PreparedStatement pst = conexion.conn.prepareStatement(sql);
 			
