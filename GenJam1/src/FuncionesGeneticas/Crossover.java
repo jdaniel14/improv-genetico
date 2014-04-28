@@ -27,11 +27,15 @@ public class Crossover {
 				Random r = new Random();
 				int val = r.nextInt(100);
 				if(val < 5){
-					
-					
+					Measures meas_hemiola = hemolia_condition(lista_frases.get(i), lista_frases.get(i+1));
+					if ( meas_hemiola != null ) {
+						//Phrases frase_hemiola = creacion_hemiola_frase(); 
+						//lista_frases.add(frase_hemiola);
+						continue;
+					}
 				}
 
-				for ( int j = 0 ; j < 2; j++ ) {
+				for ( int j = 0 ; j < 3; j++ ) {
 					Pair par_aux = calculaPunto( j, lista_frases.get(i), lista_frases.get(i + 1)) ;
 					puntos[j] = par_aux;
 					if ( par_res.second > par_aux.second )
@@ -120,7 +124,7 @@ public class Crossover {
 		Measures msr1_f2 = frase2.measure_list.get(pos+1);
 
 		int inc;
-		int inicio_der = msr0_f1.notas.size();
+		int inicio_der = msr0_f1.notas.size() - 1;
 		int inicio_izq = 0;
 		
 		inc = -1;
@@ -158,10 +162,17 @@ public class Crossover {
 	public static int get_nota_valida (Measures msr0_f1, int inicio, int inc) {
 		int ind  = inicio;
 		int nota = msr0_f1.notas.get(ind);
-		while(nota >= 15 || nota ==  0) {
+		while ( (nota >= 15 || nota ==  0) && (ind < 15 && ind >=0) ) {
 			ind += inc;
+			System.out.println("IND : " + ind);
 			nota = msr0_f1.notas.get(ind);
 		}
 		return nota;
 	}
+	
+	public static Measures hemolia_condition(Phrases frase1, Phrases frase2){
+		
+		
+		return null;
+	}	
 }
