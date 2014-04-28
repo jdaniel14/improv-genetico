@@ -134,7 +134,7 @@ public class FuncionesMusicales {
 			Phrases reproducir = itFrases.next();
 			
 			for(int j = 0; j< 4; j++){
-				List<Integer> temp = notasDelCompas(reproducir.measureId.get(j),acordes.get(j));
+				List<Integer> temp = notasDelCompas(reproducir.measure_list.get(j),acordes.get(j));
 				
 				Iterator<Integer> iter = temp.iterator();
 				
@@ -427,7 +427,7 @@ public class FuncionesMusicales {
 			System.out.println("Frase: " + frase.id);
 			System.out.println(frase.genre);
 			
-			Iterator<Measures> iterM = frase.measureId.iterator();
+			Iterator<Measures> iterM = frase.measure_list.iterator();
 			
 			while(iterM.hasNext()){
 				Measures compas = iterM.next();

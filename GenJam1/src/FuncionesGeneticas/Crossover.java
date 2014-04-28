@@ -2,6 +2,7 @@ package FuncionesGeneticas;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import Elements.Measures;
 import Elements.Pair;
@@ -23,6 +24,13 @@ public class Crossover {
 		for ( int k = 0; k < 3; k++ ) {
 			Pair par_res = new Pair(-1, Integer.MAX_VALUE);
 			for ( int i = 0; i < lista_frases.size(); i += 2 ) {
+				Random r = new Random();
+				int val = r.nextInt(100);
+				if(val < 5){
+					
+					
+				}
+
 				for ( int j = 0 ; j < 2; j++ ) {
 					Pair par_aux = calculaPunto( j, lista_frases.get(i), lista_frases.get(i + 1)) ;
 					puntos[j] = par_aux;
@@ -52,6 +60,7 @@ public class Crossover {
 				lista_auxiliar = casamiento(par_res, lista_frases.get(i), lista_frases.get(i + 1), tipo, cad);
 				lista_res_auxiliar.addAll(lista_auxiliar);
 			}
+			
 			lista_frases.addAll(lista_res_auxiliar);
 			System.out.println(lista_frases.size());
 		}
@@ -70,6 +79,17 @@ public class Crossover {
 		List <Measures> l_msr2 = new ArrayList <Measures>();
 	
 		if(tipo) {
+			l_msr1.add(frase1.measure_list.get(0));
+			l_msr2.add(frase1.measure_list.get(0));
+			for(int i = 0; i < 3; i++) {
+				if(cad.charAt(i) == '1'){
+					l_msr1.add(frase2.measure_list.get(i+1));
+					l_msr2.add(frase1.measure_list.get(i+1));
+				}else{
+					l_msr1.add(frase1.measure_list.get(i+1));
+					l_msr2.add(frase2.measure_list.get(i+1));
+				}
+			}
 			
 			
 		} else {
@@ -100,7 +120,7 @@ public class Crossover {
 		Measures msr1_f2 = frase2.measure_list.get(pos+1);
 
 		int inc;
-		int inicio_der = 7;
+		int inicio_der = msr0_f1.notas.size();
 		int inicio_izq = 0;
 		
 		inc = -1;
