@@ -1,6 +1,5 @@
 package Elements;
 import java.util.List;
-import java.util.ArrayList;
 
 import jm.JMC;
 import jm.music.data.Note;
