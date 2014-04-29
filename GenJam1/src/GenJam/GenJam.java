@@ -1,11 +1,9 @@
 package GenJam;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import Elements.PhrasePopulation;
-import FuncionesGeneticas.Crossover;
 
 public class GenJam {
 
@@ -17,30 +15,60 @@ public class GenJam {
 		
 		//MapChordvsScale map = new MapChordvsScale();
 		
-		List<String> acordes = new ArrayList<String>();
+		List<String> acordesOrnithology = new ArrayList<String>();
 
-		acordes.add("Dm7");
-		acordes.add("Dm7");
-		acordes.add("G7");
-		acordes.add("G7");
-		acordes.add("Cmaj7");
-		acordes.add("Cmaj7");
-		acordes.add("A7b9");
-		acordes.add("A7b9");
+		acordesOrnithology.add("Gmaj7");
+		acordesOrnithology.add("Gmaj7");
+		acordesOrnithology.add("Gm7");
+		acordesOrnithology.add("Gm7");
+		acordesOrnithology.add("Fmaj7");
+		acordesOrnithology.add("Fmaj7");
+		acordesOrnithology.add("Fm7");
+		acordesOrnithology.add("Bb7");
+		acordesOrnithology.add("Eb7");
+		acordesOrnithology.add("D7");
+		acordesOrnithology.add("Gm7");
+		acordesOrnithology.add("Cm7b5");
+		acordesOrnithology.add("Bm7");
+		acordesOrnithology.add("E7");
+		acordesOrnithology.add("Am7");
+		acordesOrnithology.add("D7");
+		
+		
+		
+		List<String> acordesAlice = new ArrayList<String>();
+
+		acordesAlice.add("Dm7");
+		acordesAlice.add("Gmaj7");
+		acordesAlice.add("Cmaj7");
+		acordesAlice.add("Fmaj7");
+		acordesAlice.add("Bm7b5");
+		acordesAlice.add("E7");
+		acordesAlice.add("Am7");
+		acordesAlice.add("Eb7");
+		acordesAlice.add("Dm7");
+		acordesAlice.add("G7");
+		acordesAlice.add("Em7");
+		acordesAlice.add("Am7");
+		acordesAlice.add("Dm7");
+		acordesAlice.add("G7");
+		acordesAlice.add("Em7");
+		acordesAlice.add("Dm7");
+		
 		
 		PhrasePopulation poblacionFrases = new PhrasePopulation();
 		
 		
-
+/*
 		Crossover cross = new Crossover();
 		cross.genera_frases(poblacionFrases.populationP);
 		
 		Collections.reverse(cross.resultado_final.populationP);
 		
-		FuncionesMusicales.crearComposicion(cross.resultado_final, acordes);
-	
+		FuncionesMusicales.crearComposicion(cross.resultado_final, acordesOrnithology);
+	*/
 		
-		//FuncionesMusicales.crearComposicion(poblacionFrases, acordes);
+		FuncionesMusicales.crearComposicion(poblacionFrases, acordesAlice);
 		
 //		FuncionesArchivos.initChordvsScaleBD();
 		
