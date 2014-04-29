@@ -4,10 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Scanner;
 
 import DataBase.Conexion;
 import Elements.ChordvsScale;
@@ -18,11 +16,25 @@ public class FuncionesArchivos {
 	public static MapChordvsScale escalas = new MapChordvsScale();
 	public static Teclado keyboard = new Teclado();
 	
+	public static boolean contieneNota(List<String> lista, String nota){
+		
+		Iterator<String> iterTeclado = lista.iterator();
+		
+		while(iterTeclado.hasNext()){
+			String item = iterTeclado.next();
+			
+			if(item.equalsIgnoreCase(nota)) return true;
+			
+		}
+		
+		return false;
+	}
+	
 	public static String notaArriba(String nota){
 		Integer posicion = 0;
 		
 		for(posicion = 0; posicion < keyboard.notas.size(); posicion++){
-			if(keyboard.notas.get(posicion).equalsIgnoreCase(nota)){
+			if(contieneNota(keyboard.notas.get(posicion),nota)){
 				break;
 			}
 		}
@@ -31,7 +43,7 @@ public class FuncionesArchivos {
 			return nota;
 		}
 		else{
-			return keyboard.notas.get(posicion + 1);
+			return keyboard.notas.get(posicion + 1).get(0);
 		}
 		
 	}
@@ -40,7 +52,7 @@ public class FuncionesArchivos {
 		Integer posicion = 0;
 		
 		for(posicion = 0; posicion < keyboard.notas.size(); posicion++){
-			if(keyboard.notas.get(posicion).equalsIgnoreCase(nota)){
+			if(contieneNota(keyboard.notas.get(posicion),nota)){
 				break;
 			}
 		}
@@ -49,7 +61,7 @@ public class FuncionesArchivos {
 			return nota;
 		}
 		else{
-			return keyboard.notas.get(posicion - 1);
+			return keyboard.notas.get(posicion - 1).get(0);
 		}
 		
 	}
