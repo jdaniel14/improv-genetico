@@ -77,7 +77,7 @@ public class FuncionesArchivos {
 			
 			veces++;
 			
-			if(veces == 50){
+			if(veces == 100){
 				return "?";
 			}
 			
@@ -330,9 +330,71 @@ public class FuncionesArchivos {
 			} catch (Exception e) {
 				System.out.println(e.toString());
 			}
-		}
-			
+		}	
+	}
+	
+	public static void insertarBass(String alteracion, Integer tercera, Integer cuarta, Integer quinta){
+		Conexion conexion = new Conexion();
 		
+		try{
+			conexion.abrirConexion();
+			
+			String sql = " INSERT INTO Bass (alteracion" +
+						",tercera,cuarta,quinta) VALUES ('" +
+						alteracion + "'," + tercera + "," + cuarta + "," + 
+						quinta + ") ";
+			
+			PreparedStatement pst = conexion.conn.prepareStatement(sql);
+			
+			pst.execute();
+			conexion.conn.commit();
+			
+			conexion.cerrarConexion();
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
+	}
+	
+	public static void initBassNotes(){
+		BufferedReader br = null;
+		
+		try{
+			
+			
+			br = new BufferedReader(new FileReader("bin/Files/bass_notes.txt"));
+			
+			while(br.readLine() != null){
+				
+				//1)Leo la alteracion
+				String alteracion = br.readLine();
+				
+				//2)Leo la tercera
+				Integer tercera = Integer.parseInt(br.readLine());
+				
+				//3)Leo la cuarta
+				Integer cuarta = Integer.parseInt(br.readLine());
+				
+				//4)Leo la quinta
+				Integer quinta = Integer.parseInt(br.readLine());
+				
+				insertarBass(alteracion, tercera, cuarta, quinta);
+				
+			}
+			
+			System.out.println("Carga de bass_notes.txt exitosa");
+			
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
+		finally {
+			try {
+				if (br != null) br.close();
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+		}	
 	}
 	
 	

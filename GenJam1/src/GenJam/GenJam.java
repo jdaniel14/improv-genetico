@@ -1,9 +1,15 @@
 package GenJam;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Iterator;
 
+import Elements.BassNote;
+import Elements.MapBassNotes;
 import Elements.PhrasePopulation;
+import Elements.Teclado;
+import FuncionesGeneticas.Crossover;
 
 public class GenJam {
 
@@ -58,23 +64,22 @@ public class GenJam {
 		
 		PhrasePopulation poblacionFrases = new PhrasePopulation();
 		
-		
-/*
+
 		Crossover cross = new Crossover();
 		cross.genera_frases(poblacionFrases.populationP);
 		
 		Collections.reverse(cross.resultado_final.populationP);
 		
 		FuncionesMusicales.crearComposicion(cross.resultado_final, acordesOrnithology);
-	*/
+	
 		
-		FuncionesMusicales.crearComposicion(poblacionFrases, acordesAlice);
+//		FuncionesMusicales.crearComposicion(poblacionFrases, acordesAlice);
 		
 //		FuncionesArchivos.initChordvsScaleBD();
 		
 //		FuncionesArchivos.initMeasureBD();
 		
-		
+//		FuncionesArchivos.initBassNotes();		
 		
 
 	} 
