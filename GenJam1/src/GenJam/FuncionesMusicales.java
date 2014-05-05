@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import jm.gui.show.ShowScore;
 import jm.music.data.Note;
 import jm.music.data.Part;
 import jm.music.data.Phrase;
 import jm.music.data.Score;
+import jm.util.View;
 import jm.util.Write;
 import jm.JMC;
 
@@ -23,7 +25,7 @@ import Elements.Teclado;
 
 public class FuncionesMusicales {
 	
-	private static Score s = new Score("GenJam",180);
+	private static Score s;
 	private static Part melodia = new Part("Melodia", JMC.PIANO ,0);
 	private static Part walkin = new Part("Walkin", JMC.BASS ,1);
 	private static Part ridePart = new Part("Drums",0,9);
@@ -90,13 +92,14 @@ public class FuncionesMusicales {
 	}
 	
 	
-	public static void crearComposicion(PhrasePopulation pobFrases, List<String> acordes){
+	public static void crearComposicion(PhrasePopulation pobFrases, List<String> acordes, Integer tempo){
 		
-
+		s = new Score("GenJam",tempo);
 		//debo mandarle una lista de Phrases
 		makeMelody(pobFrases.populationP,acordes);
 		makeBass(acordes);
 		makeDrums(acordes);
+		generaPartitura();
 		
 		Write.midi(s,"out.midi");
 	}
@@ -463,5 +466,19 @@ public class FuncionesMusicales {
 	 	}
 		return phr;
 	}
+	
+	public static void generaPartitura(){
+		
+        View.notate(s);
+//        View.show(s);
+//		View.sketch(s);
+		
+//		View.histogram(s);
+//		View.notation(s);
+//		new Show(s);
+        
+	}
+	
+	
 	
 }

@@ -21,6 +21,12 @@ public class GenJam {
 		
 		//MapChordvsScale map = new MapChordvsScale();
 		
+		List<String> acordes;
+		Integer tempo;
+		
+		acordes = FuncionesArchivos.leeAcordes(args[4]);
+		tempo = FuncionesArchivos.leeTempo(args[4]);
+		/*
 		List<String> acordesOrnithology = new ArrayList<String>();
 
 		acordesOrnithology.add("Gmaj7");
@@ -60,20 +66,20 @@ public class GenJam {
 		acordesAlice.add("G7");
 		acordesAlice.add("Em7");
 		acordesAlice.add("Dm7");
-		
+		*/
 		
 		PhrasePopulation poblacionFrases = new PhrasePopulation();
-		
+/*		
 
 		Crossover cross = new Crossover();
 		cross.genera_frases(poblacionFrases.populationP);
 		
 		Collections.reverse(cross.resultado_final.populationP);
 		
-		FuncionesMusicales.crearComposicion(cross.resultado_final, acordesOrnithology);
-	
+		FuncionesMusicales.crearComposicion(cross.resultado_final, acordes,tempo);
+	*/
 		
-//		FuncionesMusicales.crearComposicion(poblacionFrases, acordesAlice);
+		FuncionesMusicales.crearComposicion(poblacionFrases, acordes,tempo);
 		
 //		FuncionesArchivos.initChordvsScaleBD();
 		

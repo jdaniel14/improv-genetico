@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -387,6 +388,75 @@ public class FuncionesArchivos {
 		}
 		catch(Exception e){
 			System.out.println(e.toString());
+		}
+		finally {
+			try {
+				if (br != null) br.close();
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+		}	
+	}
+	
+	
+	public static List<String> leeAcordes(String nombreArchivo){
+		
+		BufferedReader br = null;
+		
+		List<String> devolver = new ArrayList<String>();
+		
+		try{
+			br = new BufferedReader(new FileReader(nombreArchivo));
+			String next = br.readLine();
+			
+			if(next != null){
+				next = br.readLine();
+			}
+			
+			while(next != null){
+				
+				//1)Leo el acorde
+				devolver.add(br.readLine());
+				next = br.readLine();
+				
+			}
+			
+			System.out.println("Carga de " + nombreArchivo + " exitosa");
+			return devolver;
+			
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+			return null;
+		}
+		finally {
+			try {
+				if (br != null) br.close();
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+		}	
+		
+	}
+	
+	public static Integer leeTempo(String nombreArchivo){
+		
+		BufferedReader br = null;
+		
+		Integer devolver;
+		
+		try{
+			br = new BufferedReader(new FileReader(nombreArchivo));
+			
+			devolver = Integer.parseInt(br.readLine());
+			
+			System.out.println("Carga de " + nombreArchivo + " exitosa");
+			return devolver;
+			
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+			return 0;
 		}
 		finally {
 			try {
