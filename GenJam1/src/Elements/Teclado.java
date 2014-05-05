@@ -9,6 +9,119 @@ public class Teclado {
 	public Teclado(){
 		
 		List<String> aux;
+		
+//		aux = new ArrayList<String>();
+//		aux.add("C2");
+//		notas.add(aux);
+//		
+//		aux = new ArrayList<String>();
+//		aux.add("C#2");
+//		aux.add("Db2");
+//		notas.add(aux);
+//		
+//		aux = new ArrayList<String>();
+//		aux.add("D2");
+//		notas.add(aux);
+//		
+//		aux = new ArrayList<String>();
+//		aux.add("D#2");
+//		aux.add("Eb2");
+//		notas.add(aux);
+//		
+//		aux = new ArrayList<String>();
+//		aux.add("E2");
+//		aux.add("Fb2");
+//		notas.add(aux);
+//		
+//		aux = new ArrayList<String>();
+//		aux.add("F2");
+//		aux.add("E#2");		
+//		notas.add(aux);
+//		
+//		aux = new ArrayList<String>();
+//		aux.add("F#2");
+//		aux.add("Gb2");
+//		notas.add(aux);
+//		
+//		aux = new ArrayList<String>();
+//		aux.add("G2");
+//		notas.add(aux);
+//		
+//		aux = new ArrayList<String>();
+//		aux.add("G#2");		
+//		aux.add("Ab2");
+//		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("A2");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("A#2");
+		aux.add("Bb2");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("B2");
+		aux.add("Cb3");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("C3");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("C#3");
+		aux.add("Db3");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("D3");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("D#3");
+		aux.add("Eb3");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("E3");
+		aux.add("Fb3");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("F3");
+		aux.add("E#3");		
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("F#3");
+		aux.add("Gb3");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("G3");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("G#3");		
+		aux.add("Ab3");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("A3");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("A#3");
+		aux.add("Bb3");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("B3");
+		aux.add("Cb4");
+		notas.add(aux);
+		
 		aux = new ArrayList<String>();
 		aux.add("C4");
 		notas.add(aux);

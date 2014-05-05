@@ -8,6 +8,35 @@ public class MapNotevsSound {
 	public HashMap<String, Integer> NvsS = new HashMap<String, Integer>();
 	
 	public MapNotevsSound(){
+		
+		NvsS.put("A2",JMC.A2);
+		NvsS.put("A#2",JMC.AS2);
+		NvsS.put("Bb2",JMC.BF2);
+		NvsS.put("B2",JMC.B2);
+		NvsS.put("B#2",JMC.BS2);
+		NvsS.put("Cb3",JMC.CF3);
+		NvsS.put("C3",JMC.C3);
+		NvsS.put("C#3",JMC.CS3);
+		NvsS.put("Db3",JMC.DF3);
+		NvsS.put("D3",JMC.D3);
+		NvsS.put("D#3",JMC.DS3);
+		NvsS.put("Eb3",JMC.EF3);
+		NvsS.put("E3",JMC.E3);
+		NvsS.put("E#3",JMC.ES3);
+		NvsS.put("Fb3",JMC.FF3);
+		NvsS.put("F3",JMC.F3);
+		NvsS.put("F#3",JMC.FS3);
+		NvsS.put("Gb3",JMC.GF3);
+		NvsS.put("G3",JMC.G3);
+		NvsS.put("G#3",JMC.GS3);
+		NvsS.put("Ab3",JMC.AF3);
+		NvsS.put("A3",JMC.A3);
+		NvsS.put("A#3",JMC.AS3);
+		NvsS.put("Bb3",JMC.BF3);
+		NvsS.put("B3",JMC.B3);
+		NvsS.put("B#3",JMC.BS3);
+		NvsS.put("Cb4",JMC.CF4);
+		
 		NvsS.put("C4",JMC.C4);
 		NvsS.put("C#4",JMC.CS4);
 		NvsS.put("Db4",JMC.DF4);	//Re bemol
