@@ -65,24 +65,28 @@
                     console.log(arr);
 
                     var enviar = {
-                        lista_acordes: arr
+                        lista_acordes: arr, 
+                        tempo : $("#tempo").val()
                     };
 
                     var jsonData = JSON.stringify(enviar);
                     
                     console.log(jsonData);
-                    /*
+                    
                     $.ajax({
                         type: "POST",
                         data: jsonData,
                         dataType: "json",
                         contentType: "application/json; charset=utf-8",
-                        url: "ruta",      
+                        url: "servicios.php",      
                         success: function(data){
                             console.log(data);
+                            var archivos = data.split(",");
                             
+                            $(location).attr("href", archivos[0]);
+                            $(location).attr("href", archivos[1]);
                         }
-                    });*/
+                    });
                 }
             
             });
