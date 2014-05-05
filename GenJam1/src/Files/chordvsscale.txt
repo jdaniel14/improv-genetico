@@ -2,1529 +2,1529 @@
 Cmaj7
 Major (avoid 4th)
 C D E G A B
-R C4 D4 E4 G4 A4 B4 C5 D5 E5 G5 A5 B5 C6 D6 H
+R C4 D4 E4 G4 A4 B4 C5 D5 E5 G5 A5 B5 C6 D6 H T
 
 C7
 Mixolydian (avoid 4th)
 C D E G A Bb
-R C4 D4 E4 G4 A4 Bb4 C5 D5 E5 G5 A5 Bb5 C6 D6 H
+R C4 D4 E4 G4 A4 Bb4 C5 D5 E5 G5 A5 Bb5 C6 D6 H T
 
 Cm7
 Minor (avoid 6th)
 C D Eb F G Bb
-R C4 D4 Eb4 F4 G4 Bb4 C5 D5 Eb5 F5 G5 Bb5 C6 D6 H
+R C4 D4 Eb4 F4 G4 Bb4 C5 D5 Eb5 F5 G5 Bb5 C6 D6 H T
 
 Cm7b5
 Locrian (avoid 2nd)
 C Eb F Gb Ab Bb
-R C4 Eb4 F4 Gb4 Ab4 Bb4 C5 Eb5 F5 Gb5 Ab5 Bb5 C6 Eb6 H
+R C4 Eb4 F4 Gb4 Ab4 Bb4 C5 Eb5 F5 Gb5 Ab5 Bb5 C6 Eb6 H T
 
 Cdim
-W/H Dimished
+W/H
 C D Eb F Gb G# A B
-R C4 D4 Eb4 F4 Gb4 G#4 A4 B4 C5 D5 Eb5 F5 Gb5 G#5 H
+R C4 D4 Eb4 F4 Gb4 G#4 A4 B4 C5 D5 Eb5 F5 Gb5 G#5 H T
 
 C+
 Lydian Augmented
 C D E F# G# A B
-R C4 D4 E4 F#4 G#4 A4 B4 C5 D5 E5 F#5 G#5 A5 B5 H
+R C4 D4 E4 F#4 G#4 A4 B4 C5 D5 E5 F#5 G#5 A5 B5 H T
 
 C7+
 Whole Tone
 C D E F# G# Bb
-R C4 D4 E4 F#4 G#4 Bb4 C5 D5 E5 F#5 G#5 Bb5 C6 D6 H
+R C4 D4 E4 F#4 G#4 Bb4 C5 D5 E5 F#5 G#5 Bb5 C6 D6 H T
 
 C7#11
 Lydian Dominant
 C D E F# G A Bb
-R C4 D4 E4 F#4 G4 A4 Bb4 C5 D5 E5 F#5 G5 A5 Bb5 H
+R C4 D4 E4 F#4 G4 A4 Bb4 C5 D5 E5 F#5 G5 A5 Bb5 H T
 
 C7alt
 Altered Scale
 C Db D# E Gb G# Bb
-R C4 Db4 D#4 E4 Gb4 G#4 Bb4 C5 Db5 D#5 E5 Gb5 G#5 Bb5 H
+R C4 Db4 D#4 E4 Gb4 G#4 Bb4 C5 Db5 D#5 E5 Gb5 G#5 Bb5 H T
 
 C7#9
 Mixolydian #2 (avoid 4th)
 C Eb E G A Bb
-R C4 Eb4 E4 G4 A4 Bb4 C5 Eb5 E5 G5 A5 Bb5 C6 Eb6 H
+R C4 Eb4 E4 G4 A4 Bb4 C5 Eb5 E5 G5 A5 Bb5 C6 Eb6 H T
 
 C7b9
 Harm Minor V (avoid 6th)
 C Db E F G Bb
-R C4 Db4 E4 F4 G4 Bb4 C5 Db5 E5 F5 G5 Bb5 C6 Db6 H
+R C4 Db4 E4 F4 G4 Bb4 C5 Db5 E5 F5 G5 Bb5 C6 Db6 H T
 
 CmMaj7
 Melodic Minor
 C D Eb F G A B
-R C4 D4 Eb4 F4 G4 A4 B4 C5 D5 Eb5 F5 G5 A5 B5 H
+R C4 D4 Eb4 F4 G4 A4 B4 C5 D5 Eb5 F5 G5 A5 B5 H T
 
 Cm6
 Dorian (avoid 7th)
 C D Eb F G A
-R C4 D4 Eb4 F4 G4 A4 C5 D5 Eb5 F5 G5 A5 C5 D5 H
+R C4 D4 Eb4 F4 G4 A4 C5 D5 Eb5 F5 G5 A5 C5 D5 H T
 
 Cm7b9
 Melodic Minor II mode
 C Db Eb F G A Bb
-R C4 Db4 Eb4 F4 G4 A4 Bb4 C5 Db5 Eb5 F5 G5 A5 Bb5 H
+R C4 Db4 Eb4 F4 G4 A4 Bb4 C5 Db5 Eb5 F5 G5 A5 Bb5 H T
 
 Cmaj7#11
 Lydian
 C D E F# G A B
-R C4 D4 E4 F#4 G4 A4 B4 C5 D5 E5 F#5 G5 A5 B5 H
+R C4 D4 E4 F#4 G4 A4 B4 C5 D5 E5 F#5 G5 A5 B5 H T
 
 C7sus
 Mixolydian
 C D E F G A Bb
-R C4 D4 E4 F4 G4 A4 Bb4 C5 D5 E5 F5 G5 A5 Bb5 H
+R C4 D4 E4 F4 G4 A4 Bb4 C5 D5 E5 F5 G5 A5 Bb5 H T
 
 Cmaj7sus
 Major
 C D E F G A B
-R C4 D4 E4 F4 G4 A4 B4 C5 D5 E5 F5 G5 A5 B5 H
+R C4 D4 E4 F4 G4 A4 B4 C5 D5 E5 F5 G5 A5 B5 H T
 
 C7Bl
 Blues
 C Eb F Gb G Bb
-R C4 Eb4 F4 Gb4 G4 Bb4 C5 Eb5 F5 Gb5 G5 Bb5 C6 Eb6 H
+R C4 Eb4 F4 Gb4 G4 Bb4 C5 Eb5 F5 Gb5 G5 Bb5 C6 Eb6 H T
 
 Dmaj7
 Major (avoid 4th)
 D E F# A B C#
-R C#4 D4 E4 F#4 A4 B4 C#5 D5 E5 F#5 A5 B5 C#6 D6 H
+R C#4 D4 E4 F#4 A4 B4 C#5 D5 E5 F#5 A5 B5 C#6 D6 H T
 
 D7
 Mixolydian (avoid 4th)
 D E F# A B C
-R C4 D4 E4 F#4 A4 B4 C5 D5 E5 F#5 A5 B5 C6 D6 H
+R C4 D4 E4 F#4 A4 B4 C5 D5 E5 F#5 A5 B5 C6 D6 H T
 
 Dm7
 Minor (avoid 6th)
 D E F G A C
-R C4 D4 E4 F4 G4 A4 C5 D5 E5 F5 G5 A5 C6 D6 H
+R C4 D4 E4 F4 G4 A4 C5 D5 E5 F5 G5 A5 C6 D6 H T
 
 Dm7b5
 Locrian (avoid 2nd)
 D F G Ab Bb C
-R C4 D4 F4 G4 Ab4 Bb4 C5 D5 F5 G5 Ab5 Bb5 C6 D6 H
+R C4 D4 F4 G4 Ab4 Bb4 C5 D5 F5 G5 Ab5 Bb5 C6 D6 H T
 
 Ddim
-W/H Dimished
+W/H
 D E F G Ab A# B C
-R C4 D4 E4 F4 G4 Ab4 A#4 B4 C5 D5 E5 F5 G5 Ab5 H
+R C4 D4 E4 F4 G4 Ab4 A#4 B4 C5 D5 E5 F5 G5 Ab5 H T
 
 D+
 Lydian Augmented
 D E F# G# A# B C#
-R C#4 D4 E4 F#4 G#4 A#4 B4 C#5 D5 E5 F#5 G#5 A#5 B5 H
+R C#4 D4 E4 F#4 G#4 A#4 B4 C#5 D5 E5 F#5 G#5 A#5 B5 H T
 
 D7+
 Whole Tone
 D E F# G# A# C
-R C4 D4 E4 F#4 G#4 A#4 C5 D5 E5 F#5 G#5 A#5 C6 D6 H
+R C4 D4 E4 F#4 G#4 A#4 C5 D5 E5 F#5 G#5 A#5 C6 D6 H T
 
 D7#11
 Lydian Dominant
 D E F# G# A B C
-R C4 D4 E4 F#4 G#4 A4 B4 C5 D5 E5 F#5 G#5 A5 B5 H
+R C4 D4 E4 F#4 G#4 A4 B4 C5 D5 E5 F#5 G#5 A5 B5 H T
 
 D7alt
 Altered Scale
 D Eb E# F# Ab A# C
-R C4 D4 Eb4 E#4 F#4 Ab4 A#4 C5 D5 Eb5 E#5 F#5 Ab5 A#5 H
+R C4 D4 Eb4 E#4 F#4 Ab4 A#4 C5 D5 Eb5 E#5 F#5 Ab5 A#5 H T
 
 D7#9
 Mixolydian #2 (avoid 4th)
 D E# F# A B C
-R C4 D4 E#4 F#4 A4 B4 C5 D5 E#5 F#5 A5 B5 C6 D6 H
+R C4 D4 E#4 F#4 A4 B4 C5 D5 E#5 F#5 A5 B5 C6 D6 H T
 
 D7b9
 Harm Minor V (avoid 6th)
 D Eb F# G A C
-R C4 D4 Eb4 F#4 G4 A4 C5 D5 Eb5 F#5 G5 A5 C6 D6 H
+R C4 D4 Eb4 F#4 G4 A4 C5 D5 Eb5 F#5 G5 A5 C6 D6 H T
 
 DmMaj7
 Melodic Minor
 D E F G A B C#
-R C#4 D4 E4 F4 G4 A4 B4 C#5 D5 E5 F5 G5 A5 B5 H
+R C#4 D4 E4 F4 G4 A4 B4 C#5 D5 E5 F5 G5 A5 B5 H T
 
 Dm6
 Dorian (avoid 7th)
 D E F G A B
-R D4 E4 F4 G4 A4 B4 D5 E5 F5 G5 A5 B5 D6 E6 H
+R D4 E4 F4 G4 A4 B4 D5 E5 F5 G5 A5 B5 D6 E6 H T
 
 Dm7b9
 Melodic Minor II mode
 D Eb F G A B C
-R C4 D4 Eb4 F4 G4 A4 B4 C5 D5 Eb5 F5 G5 A5 B5 H
+R C4 D4 Eb4 F4 G4 A4 B4 C5 D5 Eb5 F5 G5 A5 B5 H T
 
 Dmaj7#11
 Lydian
 D E F# G# A B C#
-R C#4 D4 E4 F#4 G#4 A4 B4 C#5 D5 E5 F#5 G#5 A5 B5 H
+R C#4 D4 E4 F#4 G#4 A4 B4 C#5 D5 E5 F#5 G#5 A5 B5 H T
 
 D7sus
 Mixolydian
 D E F# G A B C
-R C4 D4 E4 F#4 G4 A4 B4 C5 D5 E5 F#5 G5 A5 B5 H
+R C4 D4 E4 F#4 G4 A4 B4 C5 D5 E5 F#5 G5 A5 B5 H T
 
 Dmaj7sus
 Major
 D E F# G A B C#
-R C#4 D4 E4 F#4 G4 A4 B4 C#5 D5 E5 F#5 G5 A5 B5 H
+R C#4 D4 E4 F#4 G4 A4 B4 C#5 D5 E5 F#5 G5 A5 B5 H T
 
 D7Bl
 Blues
 D F G Ab A C
-R C4 D4 F4 G4 Ab4 A4 C5 D5 F5 G5 Ab5 A5 C6 D6 H
+R C4 D4 F4 G4 Ab4 A4 C5 D5 F5 G5 Ab5 A5 C6 D6 H T
 
 Emaj7
 Major (avoid 4th)
 E F# G# B C# D#
-R C#4 D#4 E4 F#4 G#4 B4 C#5 D#5 E5 F#5 G#5 B5 C#6 D#6 H
+R C#4 D#4 E4 F#4 G#4 B4 C#5 D#5 E5 F#5 G#5 B5 C#6 D#6 H T
 
 E7
 Mixolydian (avoid 4th)
 E F# G# B C# D
-R C#4 D4 E4 F#4 G#4 B4 C#5 D5 E5 F#5 G#5 B5 C#6 D6 H
+R C#4 D4 E4 F#4 G#4 B4 C#5 D5 E5 F#5 G#5 B5 C#6 D6 H T
 
 Em7
 Minor (avoid 6th)
 E F# G A B D
-R D4 E4 F#4 G4 A4 B4 D5 E5 F#5 G5 A5 B5 D6 E6 H
+R D4 E4 F#4 G4 A4 B4 D5 E5 F#5 G5 A5 B5 D6 E6 H T
 
 Em7b5
 Locrian (avoid 2nd)
 E G A Bb C D
-R C4 D4 E4 G4 A4 Bb4 C5 D5 E5 G5 A5 Bb5 C6 D6 H
+R C4 D4 E4 G4 A4 Bb4 C5 D5 E5 G5 A5 Bb5 C6 D6 H T
 
 Edim
-W/H Dimished
+W/H
 E F# G A Bb C C# D#
-R C4 C#4 D#4 E4 F#4 G4 A4 Bb4 C5 C#5 D#5 E5 F#5 G5 H
+R C4 C#4 D#4 E4 F#4 G4 A4 Bb4 C5 C#5 D#5 E5 F#5 G5 H T
 
 E+
 Lydian Augmented
 E F# G# A# C C# D#
-R C4 C#4 D#4 E4 F#4 G#4 A#4 C5 C#5 D#5 E5 F#5 G#5 A#5 H
+R C4 C#4 D#4 E4 F#4 G#4 A#4 C5 C#5 D#5 E5 F#5 G#5 A#5 H T
 
 E7+
 Whole Tone
 E F# G# A# C D
-R C4 D4 E4 F#4 G#4 A#4 C5 D5 E5 F#5 G#5 A#5 C6 D6 H
+R C4 D4 E4 F#4 G#4 A#4 C5 D5 E5 F#5 G#5 A#5 C6 D6 H T
 
 E7#11
 Lydian Dominant
 E F# G# A# B C# D
-R C#4 D4 E4 F#4 G#4 A#4 B4 C#5 D5 E5 F#5 G#5 A#5 B5 H
+R C#4 D4 E4 F#4 G#4 A#4 B4 C#5 D5 E5 F#5 G#5 A#5 B5 H T
 
 E7alt
 Altered Scale
 E F G G# Bb C D
-R C4 D4 E4 F4 G4 G#4 Bb4 C5 D5 E5 F5 G5 G#5 Bb5 H
+R C4 D4 E4 F4 G4 G#4 Bb4 C5 D5 E5 F5 G5 G#5 Bb5 H T
 
 E7#9
 Mixolydian #2 (avoid 4th)
 E G G# B C# D
-R C#4 D4 E4 G4 G#4 B4 C#5 D5 E5 G5 G#5 B5 C#6 D6 H
+R C#4 D4 E4 G4 G#4 B4 C#5 D5 E5 G5 G#5 B5 C#6 D6 H T
 
 E7b9
 Harm Minor V (avoid 6th)
 E F G# A B D
-R D4 E4 F4 G#4 A4 B4 D5 E5 F5 G#5 A5 B5 D6 E6 H
+R D4 E4 F4 G#4 A4 B4 D5 E5 F5 G#5 A5 B5 D6 E6 H T
 
 EmMaj7
 Melodic Minor
 E F# G A B C# D#
-R C#4 D#4 E4 F#4 G4 A4 B4 C#5 D#5 E5 F#5 G5 A5 B5 H
+R C#4 D#4 E4 F#4 G4 A4 B4 C#5 D#5 E5 F#5 G5 A5 B5 H T
 
 Em6
 Dorian (avoid 7th)
 E F# G A B C#
-R C#4 E4 F#4 G4 A4 B4 C#5 E5 F#5 G5 A5 B5 C#6 E6 H
+R C#4 E4 F#4 G4 A4 B4 C#5 E5 F#5 G5 A5 B5 C#6 E6 H T
 
 Em7b9
 Melodic Minor II mode
 E F G A B C# D
-R C#4 D4 E4 F4 G4 A4 B4 C#5 D5 E5 F5 G5 A5 B5 H
+R C#4 D4 E4 F4 G4 A4 B4 C#5 D5 E5 F5 G5 A5 B5 H T
 
 Emaj7#11
 Lydian
 E F# G# A# B C# D#
-R C#4 D#4 E4 F#4 G#4 A#4 B4 C#5 D#5 E5 F#5 G#5 A#5 B5 H
+R C#4 D#4 E4 F#4 G#4 A#4 B4 C#5 D#5 E5 F#5 G#5 A#5 B5 H T
 
 E7sus
 Mixolydian
 E F# G# A B C# D
-R C#4 D4 E4 F#4 G#4 A4 B4 C#5 D5 E5 F#5 G#5 A5 B5 H
+R C#4 D4 E4 F#4 G#4 A4 B4 C#5 D5 E5 F#5 G#5 A5 B5 H T
 
 Emaj7sus
 Major
 E F# G# A B C# D#
-R C#4 D#4 E4 F#4 G#4 A4 B4 C#5 D#5 E5 F#5 G#5 A5 B5 H
+R C#4 D#4 E4 F#4 G#4 A4 B4 C#5 D#5 E5 F#5 G#5 A5 B5 H T
 
 E7Bl
 Blues
 E G A Bb B D
-R D4 E4 G4 A4 Bb4 B4 D5 E5 G5 A5 Bb5 B5 D6 E6 H
+R D4 E4 G4 A4 Bb4 B4 D5 E5 G5 A5 Bb5 B5 D6 E6 H T
 
 Fmaj7
 Major (avoid 4th)
 F G A C D E
-R C4 D4 E4 F4 G4 A4 C5 D5 E5 F5 G5 A5 C6 D6 H
+R C4 D4 E4 F4 G4 A4 C5 D5 E5 F5 G5 A5 C6 D6 H T
 
 F7
 Mixolydian (avoid 4th)
 F G A C D Eb
-R C4 D4 Eb4 F4 G4 A4 C5 D5 Eb5 F5 G5 A5 C6 D6 H
+R C4 D4 Eb4 F4 G4 A4 C5 D5 Eb5 F5 G5 A5 C6 D6 H T
 
 Fm7
 Minor (avoid 6th)
 F G Ab Bb C Eb
-R C4 Eb4 F4 G4 Ab4 Bb4 C5 Eb5 F5 G5 Ab5 Bb5 C6 Eb6 H
+R C4 Eb4 F4 G4 Ab4 Bb4 C5 Eb5 F5 G5 Ab5 Bb5 C6 Eb6 H T
 
 Fm7b5
 Locrian (avoid 2nd)
 F Ab Bb Cb Db Eb
-R Db4 Eb4 F4 Ab4 Bb4 Cb4 Db5 Eb5 F5 Ab5 Bb5 Cb5 Db6 Eb6 H
+R Db4 Eb4 F4 Ab4 Bb4 Cb4 Db5 Eb5 F5 Ab5 Bb5 Cb5 Db6 Eb6 H T
 
 Fdim
-W/H Dimished
+W/H
 F G Ab Bb Cb C# D E
-R C#4 D4 E4 F4 G4 Ab4 Bb4 Cb4 C#5 D5 E5 F5 G5 Ab5 H
+R C#4 D4 E4 F4 G4 Ab4 Bb4 Cb4 C#5 D5 E5 F5 G5 Ab5 H T
 
 F+
 Lydian Augmented
 F A G B C# D E
-R C#4 D4 E4 F4 A4 G4 B4 C#5 D5 E5 F5 A5 G5 B5 H
+R C#4 D4 E4 F4 A4 G4 B4 C#5 D5 E5 F5 A5 G5 B5 H T
 
 F7+
 Whole Tone
 F G A B C# Eb
-R C#4 Eb4 F4 G4 A4 B4 C#5 Eb5 F5 G5 A5 B5 C#6 Eb6 H
+R C#4 Eb4 F4 G4 A4 B4 C#5 Eb5 F5 G5 A5 B5 C#6 Eb6 H T
 
 F7#11
 Lydian Dominant
 F G A B C D Eb
-R C4 D4 Eb4 F4 G4 A4 B4 C5 D5 Eb5 F5 G5 A5 B5 H
+R C4 D4 Eb4 F4 G4 A4 B4 C5 D5 Eb5 F5 G5 A5 B5 H T
 
 F7alt
 Altered Scale
 F Gb G# A Cb C# Eb
-R C#4 Eb4 F4 Gb4 G#4 A4 Cb4 C#5 Eb5 F5 Gb5 G#5 A5 Cb5 H
+R C#4 Eb4 F4 Gb4 G#4 A4 Cb4 C#5 Eb5 F5 Gb5 G#5 A5 Cb5 H T
 
 F7#9
 Mixolydian #2 (avoid 4th)
 F Ab A C D Eb
-R C4 D4 Eb4 F4 Ab4 A4 C5 D5 Eb5 F5 Ab5 A5 C6 D6 H
+R C4 D4 Eb4 F4 Ab4 A4 C5 D5 Eb5 F5 Ab5 A5 C6 D6 H T
 
 F7b9
 Harm Minor V (avoid 6th)
 F Gb A Bb C Eb
-R C4 Eb4 F4 Gb4 A4 Bb4 C5 Eb5 F5 Gb5 A5 Bb5 C6 Eb6 H
+R C4 Eb4 F4 Gb4 A4 Bb4 C5 Eb5 F5 Gb5 A5 Bb5 C6 Eb6 H T
 
 FmMaj7
 Melodic Minor
 F G Ab Bb C D E
-R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H
+R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H T
 
 Fm6
 Dorian (avoid 7th)
 F G Ab Bb C D
-R C4 D4 F4 G4 Ab4 Bb4 C5 D5 F5 G5 Ab5 Bb5 C6 D6 H
+R C4 D4 F4 G4 Ab4 Bb4 C5 D5 F5 G5 Ab5 Bb5 C6 D6 H T
 
 Fm7b9
 Melodic Minor II mode
 F Gb Ab Bb C D Eb
-R C4 D4 Eb4 F4 Gb4 Ab4 Bb4 C5 D5 Eb5 F5 Gb5 Ab5 Bb5 H
+R C4 D4 Eb4 F4 Gb4 Ab4 Bb4 C5 D5 Eb5 F5 Gb5 Ab5 Bb5 H T
 
 Fmaj7#11
 Lydian
 F G A B C D E
-R C4 D4 E4 F4 G4 A4 B4 C5 D5 E5 F5 G5 A5 B5 H
+R C4 D4 E4 F4 G4 A4 B4 C5 D5 E5 F5 G5 A5 B5 H T
 
 F7sus
 Mixolydian
 F G A Bb C D Eb
-R C4 D4 Eb4 F4 G4 A4 Bb4 C5 D5 Eb5 F5 G5 A5 Bb5 H
+R C4 D4 Eb4 F4 G4 A4 Bb4 C5 D5 Eb5 F5 G5 A5 Bb5 H T
 
 Fmaj7sus
 Major
 F G A Bb C D E
-R C4 D4 E4 F4 G4 A4 Bb4 C5 D5 E5 F5 G5 A5 Bb5 H
+R C4 D4 E4 F4 G4 A4 Bb4 C5 D5 E5 F5 G5 A5 Bb5 H T
 
 F7Bl
 Blues
 F Ab Bb Cb C Eb
-R C4 Eb4 F4 Ab4 Bb4 Cb4 C5 Eb5 F5 Ab5 Bb5 Cb5 C6 Eb6 H
+R C4 Eb4 F4 Ab4 Bb4 Cb4 C5 Eb5 F5 Ab5 Bb5 Cb5 C6 Eb6 H T
 
 Gmaj7
 Major (avoid 4th)
 G A B D E F#
-R D4 E4 F#4 G4 A4 B4 D5 E5 F#5 G5 A5 B5 D6 E6 H
+R D4 E4 F#4 G4 A4 B4 D5 E5 F#5 G5 A5 B5 D6 E6 H T
 
 G7
 Mixolydian (avoid 4th)
 G A B D E F
-R D4 E4 F4 G4 A4 B4 D5 E5 F5 G5 A5 B5 D6 E6 H
+R D4 E4 F4 G4 A4 B4 D5 E5 F5 G5 A5 B5 D6 E6 H T
 
 Gm7
 Minor (avoid 6th)
 G A Bb C D F
-R C4 D4 F4 G4 A4 Bb4 C5 D5 F5 G5 A5 Bb5 C6 D6 H
+R C4 D4 F4 G4 A4 Bb4 C5 D5 F5 G5 A5 Bb5 C6 D6 H T
 
 Gm7b5
 Locrian (avoid 2nd)
 G Bb C Db Eb F
-R C4 Db4 Eb4 F4 G4 Bb4 C5 Db5 Eb5 F5 G5 Bb5 C6 Db6 H
+R C4 Db4 Eb4 F4 G4 Bb4 C5 Db5 Eb5 F5 G5 Bb5 C6 Db6 H T
 
 Gdim
-W/H Dimished
+W/H
 G A Bb C Db D# E F#
-R C4 Db4 D#4 E4 F#4 G4 A4 Bb4 C5 Db5 D#5 E5 F#5 G5 H
+R C4 Db4 D#4 E4 F#4 G4 A4 Bb4 C5 Db5 D#5 E5 F#5 G5 H T
 
 G+
 Lydian Augmented
 G A B C# D# E F#
-R C#4 D#4 E4 F#4 G4 A4 B4 C#5 D#5 E5 F#5 G5 A5 B5 H
+R C#4 D#4 E4 F#4 G4 A4 B4 C#5 D#5 E5 F#5 G5 A5 B5 H T
 
 G7+
 Whole Tone
 G A B C# D# F
-R C#4 D#4 F4 G4 A4 B4 C#5 D#5 F5 G5 A5 B5 C#6 D#6 H
+R C#4 D#4 F4 G4 A4 B4 C#5 D#5 F5 G5 A5 B5 C#6 D#6 H T
 
 G7#11
 Lydian Dominant
 G A B C# D E F
-R C#4 D4 E4 F4 G4 A4 B4 C#5 D5 E5 F5 G5 A5 B5 H
+R C#4 D4 E4 F4 G4 A4 B4 C#5 D5 E5 F5 G5 A5 B5 H T
 
 G7alt
 Altered Scale
 G Ab A# B Db D# F
-R Db4 D#4 F4 G4 Ab4 A#4 B4 Db5 D#5 F5 G5 Ab5 A#5 B5 H
+R Db4 D#4 F4 G4 Ab4 A#4 B4 Db5 D#5 F5 G5 Ab5 A#5 B5 H T
 
 G7#9
 Mixolydian #2 (avoid 4th)
 G Bb B D E F
-R D4 E4 F4 G4 Bb4 B4 D5 E5 F5 G5 Bb5 B5 D6 E6 H
+R D4 E4 F4 G4 Bb4 B4 D5 E5 F5 G5 Bb5 B5 D6 E6 H T
 
 G7b9
 Harm Minor V (avoid 6th)
 G Ab B C D F
-R C4 D4 F4 G4 Ab4 B4 C5 D5 F5 G5 Ab5 B5 C6 D6 H
+R C4 D4 F4 G4 Ab4 B4 C5 D5 F5 G5 Ab5 B5 C6 D6 H T
 
 GmMaj7
 Melodic Minor
 G A Bb C D E F#
-R C4 D4 E4 F#4 G4 A4 Bb4 C5 D5 E5 F#5 G5 A5 Bb5 H
+R C4 D4 E4 F#4 G4 A4 Bb4 C5 D5 E5 F#5 G5 A5 Bb5 H T
 
 Gm6
 Dorian (avoid 7th)
 G A Bb C D E
-R C4 D4 E4 G4 A4 Bb4 C5 D5 E5 G5 A5 Bb5 C6 D6 H
+R C4 D4 E4 G4 A4 Bb4 C5 D5 E5 G5 A5 Bb5 C6 D6 H T
 
 Gm7b9
 Melodic Minor II mode
 G Ab Bb C D E F
-R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H
+R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H T
 
 Gmaj7#11
 Lydian
 G A B C# D E F#
-R C#4 D4 E4 F#4 G4 A4 B4 C#5 D5 E5 F#5 G5 A5 B5 H
+R C#4 D4 E4 F#4 G4 A4 B4 C#5 D5 E5 F#5 G5 A5 B5 H T
 
 G7sus
 Mixolydian
 G A B C D E F
-R C4 D4 E4 F4 G4 A4 B4 C5 D5 E5 F5 G5 A5 B5 H
+R C4 D4 E4 F4 G4 A4 B4 C5 D5 E5 F5 G5 A5 B5 H T
 
 Gmaj7sus
 Major
 G A B C D E F#
-R C4 D4 E4 F#4 G4 A4 B4 C5 D5 E5 F#5 G5 A5 B5 H
+R C4 D4 E4 F#4 G4 A4 B4 C5 D5 E5 F#5 G5 A5 B5 H T
 
 G7Bl
 Blues
 G Bb C Db D F 
-R C4 Db4 D4 F4 G4 Bb4 C5 Db5 D5 F5 G5 Bb5 C6 Db6 H
+R C4 Db4 D4 F4 G4 Bb4 C5 Db5 D5 F5 G5 Bb5 C6 Db6 H T
 
 Amaj7
 Major (avoid 4th)
 A B C# E F# G#
-R C#4 E4 F#4 G#4 A4 B4 C#5 E5 F#5 G#5 A5 B5 C#6 E6 H
+R C#4 E4 F#4 G#4 A4 B4 C#5 E5 F#5 G#5 A5 B5 C#6 E6 H T
 
 A7
 Mixolydian (avoid 4th)
 A B C# E F# G
-R C#4 E4 F#4 G4 A4 B4 C#5 E5 F#5 G5 A5 B5 C#6 E6 H
+R C#4 E4 F#4 G4 A4 B4 C#5 E5 F#5 G5 A5 B5 C#6 E6 H T
 
 Am7
 Minor (avoid 6th)
 A B C D E G
-R C4 D4 E4 G4 A4 B4 C5 D5 E5 G5 A5 B5 C6 D6 H
+R C4 D4 E4 G4 A4 B4 C5 D5 E5 G5 A5 B5 C6 D6 H T
 
 Am7b5
 Locrian (avoid 2nd)
 A C D Eb F G
-R C4 D4 Eb4 F4 G4 A4 C5 D5 Eb5 F5 G5 A5 C6 D6 H
+R C4 D4 Eb4 F4 G4 A4 C5 D5 Eb5 F5 G5 A5 C6 D6 H T
 
 Adim
-W/H Dimished
+W/H
 A B C D Eb E# F# G#
-R C4 D4 Eb4 E#4 F#4 G#4 A4 B4 C5 D5 Eb5 E#5 F#5 G#5 H
+R C4 D4 Eb4 E#4 F#4 G#4 A4 B4 C5 D5 Eb5 E#5 F#5 G#5 H T
 
 A+
 Lydian Augmented
 A B C# D# E# F# G#
-R C#4 D#4 E#4 F#4 G#4 A4 B4 C#5 D#5 E#5 F#5 G#5 A5 B5 H
+R C#4 D#4 E#4 F#4 G#4 A4 B4 C#5 D#5 E#5 F#5 G#5 A5 B5 H T
 
 A7+
 Whole Tone
 A B C# D# E# G
-R C#4 D#4 E#4 G4 A4 B4 C#5 D#5 E#5 G5 A5 B5 C#6 D#6 H
+R C#4 D#4 E#4 G4 A4 B4 C#5 D#5 E#5 G5 A5 B5 C#6 D#6 H T
 
 A7#11
 Lydian Dominant
 A B C# D# E F# G
-R C#4 D#4 E4 F#4 G4 A4 B4 C#5 D#5 E5 F#5 G5 A5 B5 H
+R C#4 D#4 E4 F#4 G4 A4 B4 C#5 D#5 E5 F#5 G5 A5 B5 H T
 
 A7alt
 Altered Scale
 A Bb C C# Eb E# G
-R C4 C#4 Eb4 E#4 G4 A4 Bb4 C5 C#5 Eb5 E#5 G5 A5 Bb5 H
+R C4 C#4 Eb4 E#4 G4 A4 Bb4 C5 C#5 Eb5 E#5 G5 A5 Bb5 H T
 
 A7#9
 Mixolydian #2 (avoid 4th)
 A C C# E F# G
-R C4 C#4 E4 F#4 G4 A4 C5 C#5 E5 F#5 G5 A5 C6 C#6 H
+R C4 C#4 E4 F#4 G4 A4 C5 C#5 E5 F#5 G5 A5 C6 C#6 H T
 
 A7b9
 Harm Minor V (avoid 6th)
 A Bb C# D E G
-R C#4 D4 E4 G4 A4 Bb4 C#5 D5 E5 G5 A5 Bb5 C#6 D6 H
+R C#4 D4 E4 G4 A4 Bb4 C#5 D5 E5 G5 A5 Bb5 C#6 D6 H T
 
 AmMaj7
 Melodic Minor
 A B C D E F# G#
-R C4 D4 E4 F#4 G#4 A4 B4 C5 D5 E5 F#5 G#5 A5 B5 H
+R C4 D4 E4 F#4 G#4 A4 B4 C5 D5 E5 F#5 G#5 A5 B5 H T
 
 Am6
 Dorian (avoid 7th)
 A B C D E F#
-R C4 D4 E4 F#4 A4 B4 C5 D5 E5 F#5 A5 B5 C6 D6 H
+R C4 D4 E4 F#4 A4 B4 C5 D5 E5 F#5 A5 B5 C6 D6 H T
 
 Am7b9
 Melodic Minor II mode
 A Bb C D E F# G
-R C4 D4 E4 F#4 G4 A4 Bb4 C5 D5 E5 F#5 G5 A5 Bb5 H
+R C4 D4 E4 F#4 G4 A4 Bb4 C5 D5 E5 F#5 G5 A5 Bb5 H T
 
 Amaj7#11
 Lydian
 A B C# D# E F# G#
-R C#4 D#4 E4 F#4 G#4 A4 B4 C#5 D#5 E5 F#5 G#5 A5 B5 H
+R C#4 D#4 E4 F#4 G#4 A4 B4 C#5 D#5 E5 F#5 G#5 A5 B5 H T
 
 A7sus
 Mixolydian
 A B C# D E F# G
-R C#4 D4 E4 F#4 G4 A4 B4 C#5 D5 E5 F#5 G5 A5 B5 H
+R C#4 D4 E4 F#4 G4 A4 B4 C#5 D5 E5 F#5 G5 A5 B5 H T
 
 Amaj7sus
 Major
 A B C# D E F# G#
-R C#4 D4 E4 F#4 G#4 A4 B4 C#5 D5 E5 F#5 G#5 A5 B5 H
+R C#4 D4 E4 F#4 G#4 A4 B4 C#5 D5 E5 F#5 G#5 A5 B5 H T
 
 A7Bl
 Blues
 A C D Eb E G
-R C4 D4 Eb4 E4 G4 A4 C5 D5 Eb5 E5 G5 A5 C6 D6 H
+R C4 D4 Eb4 E4 G4 A4 C5 D5 Eb5 E5 G5 A5 C6 D6 H T
 
 Bmaj7
 Major (avoid 4th)
 B C# D# F# G# A#
-R C#4 D#4 F#4 G#4 A#4 B4 C#5 D#5 F#5 G#5 A#5 B5 C#6 D#6 H
+R C#4 D#4 F#4 G#4 A#4 B4 C#5 D#5 F#5 G#5 A#5 B5 C#6 D#6 H T
 
 B7
 Mixolydian (avoid 4th)
 B C# D# F# G# A
-R C#4 D#4 F#4 G#4 A4 B4 C#5 D#5 F#5 G#5 A5 B5 C#6 D#6 H
+R C#4 D#4 F#4 G#4 A4 B4 C#5 D#5 F#5 G#5 A5 B5 C#6 D#6 H T
 
 Bm7
 Minor (avoid 6th)
 B C# D E F# A
-R C#4 D4 E4 F#4 A4 B4 C#5 D5 E5 F#5 A5 B5 C#6 D6 H
+R C#4 D4 E4 F#4 A4 B4 C#5 D5 E5 F#5 A5 B5 C#6 D6 H T
 
 Bm7b5
 Locrian (avoid 2nd)
 B D E F G A
-R D4 E4 F4 G4 A4 B4 D5 E5 F5 G5 A5 B5 D6 E6 H
+R D4 E4 F4 G4 A4 B4 D5 E5 F5 G5 A5 B5 D6 E6 H T
 
 Bdim
-W/H Dimished
+W/H
 B C# D E F G G# A#
-R C#4 D4 E4 F4 G4 G#4 A#4 B4 C#5 D5 E5 F5 G5 G#5 H
+R C#4 D4 E4 F4 G4 G#4 A#4 B4 C#5 D5 E5 F5 G5 G#5 H T
 
 B+
 Lydian Augmented
 B C# D# E# G G# A#
-R C#4 D#4 E#4 G4 G#4 A#4 B4 C#5 D#5 E#5 G5 G#5 A#5 B5 H
+R C#4 D#4 E#4 G4 G#4 A#4 B4 C#5 D#5 E#5 G5 G#5 A#5 B5 H T
 
 B7+
 Whole Tone
 B C# D# E# G A
-R C#4 D#4 E#4 G4 A4 B4 C#5 D#5 E#5 G5 A5 B5 C#6 D#6 H
+R C#4 D#4 E#4 G4 A4 B4 C#5 D#5 E#5 G5 A5 B5 C#6 D#6 H T
 
 B7#11
 Lydian Dominant
 B C# D# E# F# G# A
-R C#4 D#4 E#4 F#4 G#4 A4 B4 C#5 D#5 E#5 F#5 G#5 A5 B5 H
+R C#4 D#4 E#4 F#4 G#4 A4 B4 C#5 D#5 E#5 F#5 G#5 A5 B5 H T
 
 B7alt
 Altered Scale
 B C D D# F G A
-R C4 D4 D#4 F4 G4 A4 B4 C5 D5 D#5 F5 G5 A5 B5 H
+R C4 D4 D#4 F4 G4 A4 B4 C5 D5 D#5 F5 G5 A5 B5 H T
 
 B7#9
 Mixolydian #2 (avoid 4th)
 B D D# F# G# A
-R D4 D#4 F#4 G#4 A4 B4 D5 D#5 F#5 G#5 A5 B5 D6 D#6 H
+R D4 D#4 F#4 G#4 A4 B4 D5 D#5 F#5 G#5 A5 B5 D6 D#6 H T
 
 B7b9
 Harm Minor V (avoid 6th)
 B C D# E F# A
-R C4 D#4 E4 F#4 A4 B4 C5 D#5 E5 F#5 A5 B5 C6 D#6 H
+R C4 D#4 E4 F#4 A4 B4 C5 D#5 E5 F#5 A5 B5 C6 D#6 H T
 
 BmMaj7
 Melodic Minor
 B C# D E F# G# A#
-R C#4 D4 E4 F#4 G#4 A#4 B4 C#5 D5 E5 F#5 G#5 A#5 B5 H
+R C#4 D4 E4 F#4 G#4 A#4 B4 C#5 D5 E5 F#5 G#5 A#5 B5 H T
 
 Bm6
 Dorian (avoid 7th)
 B C# D E F# G#
-R C#4 D4 E4 F#4 G#4 B4 C#5 D5 E5 F#5 G#5 B5 C#6 D6 H
+R C#4 D4 E4 F#4 G#4 B4 C#5 D5 E5 F#5 G#5 B5 C#6 D6 H T
 
 Bm7b9
 Melodic Minor II mode
 B C D E F# G# A
-R C4 D4 E4 F#4 G#4 A4 B4 C5 D5 E5 F#5 G#5 A5 B5 H
+R C4 D4 E4 F#4 G#4 A4 B4 C5 D5 E5 F#5 G#5 A5 B5 H T
 
 Bmaj7#11
 Lydian
 B C# D# E# F# G# A#
-R C#4 D#4 E#4 F#4 G#4 A#4 B4 C#5 D#5 E#5 F#5 G#5 A#5 B5 H
+R C#4 D#4 E#4 F#4 G#4 A#4 B4 C#5 D#5 E#5 F#5 G#5 A#5 B5 H T
 
 B7sus
 Mixolydian
 B C# D# E F# G# A
-R C#4 D#4 E4 F#4 G#4 A4 B4 C#5 D#5 E5 F#5 G#5 A5 B5 H
+R C#4 D#4 E4 F#4 G#4 A4 B4 C#5 D#5 E5 F#5 G#5 A5 B5 H T
 
 Bmaj7sus
 Major
 B C# D# E F# G# A#
-R C#4 D#4 E4 F#4 G#4 A#4 B4 C#5 D#5 E5 F#5 G#5 A#5 B5 H
+R C#4 D#4 E4 F#4 G#4 A#4 B4 C#5 D#5 E5 F#5 G#5 A#5 B5 H T
 
 B7Bl
 Blues
 B D E F F# A
-R D4 E4 F4 F#4 A4 B4 D5 E5 F5 F#5 A5 B5 D6 E6 H
+R D4 E4 F4 F#4 A4 B4 D5 E5 F5 F#5 A5 B5 D6 E6 H T
 
 Dbmaj7
 Major (avoid 4th)
 Db Eb F Ab Bb C
-R C4 Db4 Eb4 F4 Ab4 Bb4 C5 Db5 Eb5 F5 Ab5 Bb5 C5 Db6 H
+R C4 Db4 Eb4 F4 Ab4 Bb4 C5 Db5 Eb5 F5 Ab5 Bb5 C5 Db6 H T
 
 Db7
 Mixolydian (avoid 4th)
 Db Eb F Ab Bb B
-R Db4 Eb4 F4 Ab4 Bb4 B4 Db5 Eb5 F5 Ab5 Bb5 B5 Db6 Eb6 H
+R Db4 Eb4 F4 Ab4 Bb4 B4 Db5 Eb5 F5 Ab5 Bb5 B5 Db6 Eb6 H T
 
 Dbm7
 Minor (avoid 6th)
 Db Eb E Gb Ab B
-R Db4 Eb4 E4 Gb4 Ab4 B4 Db5 Eb5 E5 Gb5 Ab5 B5 Db6 Eb6 H
+R Db4 Eb4 E4 Gb4 Ab4 B4 Db5 Eb5 E5 Gb5 Ab5 B5 Db6 Eb6 H T
 
 Dbm7b5
 Locrian (avoid 2nd)
 Db Fb Gb G Bb B
-R Db4 Fb4 Gb4 G4 Bb4 B4 Db5 Fb5 Gb5 G5 Bb5 B5 Db6 Fb6 H
+R Db4 Fb4 Gb4 G4 Bb4 B4 Db5 Fb5 Gb5 G5 Bb5 B5 Db6 Fb6 H T
 
 Dbdim
-W/H Dimished
+W/H
 Db Eb Fb Gb G A Bb C
-R C4 Db4 Eb4 Fb4 Gb4 G4 A4 Bb4 C5 Db5 Eb5 Fb5 Gb5 G5 H
+R C4 Db4 Eb4 Fb4 Gb4 G4 A4 Bb4 C5 Db5 Eb5 Fb5 Gb5 G5 H T
 
 Db+
 Lydian Augmented
 Db Eb Eb G A Bb C
-R C4 Db4 Eb4 Eb4 G4 A4 Bb4 C5 Db5 Eb5 Eb5 G5 A5 Bb5 H
+R C4 Db4 Eb4 Eb4 G4 A4 Bb4 C5 Db5 Eb5 Eb5 G5 A5 Bb5 H T
 
 Db7+
 Whole Tone
 Db Eb F G A B
-R Db4 Eb4 F4 G4 A4 B4 Db5 Eb5 F5 G5 A5 B5 Db6 Eb6 H
+R Db4 Eb4 F4 G4 A4 B4 Db5 Eb5 F5 G5 A5 B5 Db6 Eb6 H T
 
 Db7#11
 Lydian Dominant
 Db Eb F G Ab Bb B
-R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H
+R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H T
 
 Db7alt
 Altered Scale
 Db D E F G A B
-R Db4 D4 E4 F4 G4 A4 B4 Db5 D5 E5 F5 G5 A5 B5 H
+R Db4 D4 E4 F4 G4 A4 B4 Db5 D5 E5 F5 G5 A5 B5 H T
 
 Db7#9
 Mixolydian #2 (avoid 4th)
 Db Fb F Ab Bb B
-R Db4 Fb4 F4 Ab4 Bb4 B4 Db5 Fb5 F5 Ab5 Bb5 B5 Db6 Fb6 H
+R Db4 Fb4 F4 Ab4 Bb4 B4 Db5 Fb5 F5 Ab5 Bb5 B5 Db6 Fb6 H T
 
 Db7b9
 Harm Minor V (avoid 6th)
 Db D F Gb Ab B
-R Db4 D4 F4 Gb4 Ab4 B4 Db5 D5 F5 Gb5 Ab5 B5 Db6 D6 H
+R Db4 D4 F4 Gb4 Ab4 B4 Db5 D5 F5 Gb5 Ab5 B5 Db6 D6 H T
 
 DbmMaj7
 Melodic Minor
 Db Eb Fb Gb Ab Bb C
-R C4 Db4 Eb4 Fb4 Gb4 Ab4 Bb4 C5 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 H
+R C4 Db4 Eb4 Fb4 Gb4 Ab4 Bb4 C5 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 H T
 
 Dbm6
 Dorian (avoid 7th)
 Db Eb Fb Gb Ab Bb
-R Db4 Eb4 Fb4 Gb4 Ab4 Bb4 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 Db6 Eb6 H
+R Db4 Eb4 Fb4 Gb4 Ab4 Bb4 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 Db6 Eb6 H T
 
 Dbm7b9
 Melodic Minor II mode
 Db D Fb Gb Ab Bb B
-R Db4 D4 Fb4 Gb4 Ab4 Bb4 B4 Db5 D5 Fb5 Gb5 Ab5 Bb5 B5 H
+R Db4 D4 Fb4 Gb4 Ab4 Bb4 B4 Db5 D5 Fb5 Gb5 Ab5 Bb5 B5 H T
 
 Dbmaj7#11
 Lydian
 Db Eb F G Ab Bb C
-R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H T
 
 Db7sus
 Mixolydian
 Db Eb F Gb Ab Bb B
-R Db4 Eb4 F4 Gb4 Ab4 Bb4 B4 Db5 Eb5 F5 Gb5 Ab5 Bb5 B5 H
+R Db4 Eb4 F4 Gb4 Ab4 Bb4 B4 Db5 Eb5 F5 Gb5 Ab5 Bb5 B5 H T
 
 Dbmaj7sus
 Major
 Db Eb F Gb Ab Bb C
-R C4 Db4 Eb4 F4 Gb4 Ab4 Bb4 C5 Db5 Eb5 F5 Gb5 Ab5 Bb5 H
+R C4 Db4 Eb4 F4 Gb4 Ab4 Bb4 C5 Db5 Eb5 F5 Gb5 Ab5 Bb5 H T
 
 Db7Bl
 Blues
 Db Fb Gb G Ab B
-R Db4 Fb4 Gb4 G4 Ab4 B4 Db5 Fb5 Gb5 G5 Ab5 B5 Db6 Fb6 H
+R Db4 Fb4 Gb4 G4 Ab4 B4 Db5 Fb5 Gb5 G5 Ab5 B5 Db6 Fb6 H T
 
 Ebmaj7
 Major (avoid 4th)
 Eb F G Bb C D
-R C4 D4 Eb4 F4 G4 Bb4 C5 D5 Eb5 F5 G5 Bb5 C6 D6 H
+R C4 D4 Eb4 F4 G4 Bb4 C5 D5 Eb5 F5 G5 Bb5 C6 D6 H T
 
 Eb7
 Mixolydian (avoid 4th)
 Eb A G Bb C Db
-R C4 Db4 Eb4 A4 G4 Bb4 C5 Db5 Eb5 A5 G5 Bb5 C6 Db6 H
+R C4 Db4 Eb4 A4 G4 Bb4 C5 Db5 Eb5 A5 G5 Bb5 C6 Db6 H T
 
 Ebm7
 Minor (avoid 6th)
 Eb F Gb Ab Bb Db
-R Db4 Eb4 F4 Gb4 Ab4 Bb4 Db5 Eb5 F5 Gb5 Ab5 Bb5 Db6 Eb6 H
+R Db4 Eb4 F4 Gb4 Ab4 Bb4 Db5 Eb5 F5 Gb5 Ab5 Bb5 Db6 Eb6 H T
 
 Ebm7b5
 Locrian (avoid 2nd)
 Eb Gb Ab A B Db
-R Db4 Eb4 Gb4 Ab4 A4 B4 Db5 Eb5 Gb5 Ab5 A5 B5 Db6 Eb6 H
+R Db4 Eb4 Gb4 Ab4 A4 B4 Db5 Eb5 Gb5 Ab5 A5 B5 Db6 Eb6 H T
 
 Ebdim
-W/H Dimished
+W/H
 Eb F Gb Ab A B C D
-R C4 D4 Eb4 F4 Gb4 Ab4 A4 B4 C5 D5 Eb5 F5 Gb5 Ab5 H
+R C4 D4 Eb4 F4 Gb4 Ab4 A4 B4 C5 D5 Eb5 F5 Gb5 Ab5 H T
 
 Eb+
 Lydian Augmented
 Eb F G A B C D
-R C4 D4 Eb4 F4 G4 A4 B4 C5 D5 Eb5 F5 G5 A5 B5 H
+R C4 D4 Eb4 F4 G4 A4 B4 C5 D5 Eb5 F5 G5 A5 B5 H T
 
 Eb7+
 Whole Tone
 Eb F G A B Db
-R Db4 Eb4 F4 G4 A4 B4 Db5 Eb5 F5 G5 A5 B5 Db6 Eb6 H
+R Db4 Eb4 F4 G4 A4 B4 Db5 Eb5 F5 G5 A5 B5 Db6 Eb6 H T
 
 Eb7#11
 Lydian Dominant
 Eb F G A Bb C Db
-R C4 Db4 Eb4 F4 G4 A4 Bb4 C5 Db5 Eb5 F5 G5 A5 Bb5 H
+R C4 Db4 Eb4 F4 G4 A4 Bb4 C5 Db5 Eb5 F5 G5 A5 Bb5 H T
 
 Eb7alt
 Altered Scale
 Eb Fb F# G A B Db
-R Db4 Eb4 Fb4 F4#4 G4 A4 B4 Db5 Eb5 Fb5 F5#5 G5 H
+R Db4 Eb4 Fb4 F4#4 G4 A4 B4 Db5 Eb5 Fb5 F5#5 G5 H T
 
 Eb7#9
 Mixolydian #2 (avoid 4th)
 Eb Gb G Bb C Db
-R C4 Db4 Eb4 Gb4 G4 Bb4 C5 Db5 Eb5 Gb5 G5 Bb5 C6 Db6 H
+R C4 Db4 Eb4 Gb4 G4 Bb4 C5 Db5 Eb5 Gb5 G5 Bb5 C6 Db6 H T
 
 Eb7b9
 Harm Minor V (avoid 6th)
 Eb Fb G Ab Bb Db
-R Db4 Eb4 Fb4 G4 Ab4 Bb4 Db5 Eb5 Fb5 G5 Ab5 Bb5 Db6 Eb6 H
+R Db4 Eb4 Fb4 G4 Ab4 Bb4 Db5 Eb5 Fb5 G5 Ab5 Bb5 Db6 Eb6 H T
 
 EbmMaj7
 Melodic Minor
 Eb F Gb Ab Bb C D
-R C4 D4 Eb4 F4 Gb4 Ab4 Bb4 C5 D5 Eb5 F5 Gb5 Ab5 Bb5 H
+R C4 D4 Eb4 F4 Gb4 Ab4 Bb4 C5 D5 Eb5 F5 Gb5 Ab5 Bb5 H T
 
 Ebm6
 Dorian (avoid 7th)
 Eb F Gb Ab Bb C
-R C4 Eb4 F4 Gb4 Ab4 Bb4 C5 Eb5 F5 Gb5 Ab5 Bb5 C6 Eb6 H
+R C4 Eb4 F4 Gb4 Ab4 Bb4 C5 Eb5 F5 Gb5 Ab5 Bb5 C6 Eb6 H T
 
 Ebm7b9
 Melodic Minor II mode
 Eb Fb Gb Ab Bb C Db
-R C4 Db4 Eb4 Fb4 Gb4 Ab4 Bb4 C5 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 H
+R C4 Db4 Eb4 Fb4 Gb4 Ab4 Bb4 C5 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 H T
 
 Ebmaj7#11
 Lydian
 Eb F G A Bb C D
-R C4 D4 Eb4 F4 G4 A4 Bb4 C5 D5 Eb5 F5 G5 A5 Bb5 H
+R C4 D4 Eb4 F4 G4 A4 Bb4 C5 D5 Eb5 F5 G5 A5 Bb5 H T
 
 Eb7sus
 Mixolydian
 Eb F G Ab Bb C Db
-R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H T
 
 Ebmaj7sus
 Major
 Eb F G Ab Bb C D
-R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H T
 
 Eb7Bl
 Blues
 Eb Gb Ab A Bb Db
-R Db4 Eb4 Gb4 Ab4 A4 Bb4 Db5 Eb5 Gb5 Ab5 A5 Bb5 Db6 Eb6 H
+R Db4 Eb4 Gb4 Ab4 A4 Bb4 Db5 Eb5 Gb5 Ab5 A5 Bb5 Db6 Eb6 H T
 
 F#maj7
 Major (avoid 4th)
 F# G# A# C# D# E#
-R C#4 D#4 E#4 F#4 G#4 A#4 C#5 D#5 E#5 F#5 G#5 A#5 C#6 D#6 H
+R C#4 D#4 E#4 F#4 G#4 A#4 C#5 D#5 E#5 F#5 G#5 A#5 C#6 D#6 H T
 
 F#7
 Mixolydian (avoid 4th)
 F# G# A# C# D# E
-R C#4 D#4 E4 F#4 G#4 A#4 C#5 D#5 E5 F#5 G#5 A#5 C#6 D#6 H
+R C#4 D#4 E4 F#4 G#4 A#4 C#5 D#5 E5 F#5 G#5 A#5 C#6 D#6 H T
 
 F#m7
 Minor (avoid 6th)
 F# G# A B C# E
-R C#4 E4 F#4 G#4 A4 B4 C#5 E5 F#5 G#5 A5 B5 C#6 E6 H
+R C#4 E4 F#4 G#4 A4 B4 C#5 E5 F#5 G#5 A5 B5 C#6 E6 H T
 
 F#m7b5
 Locrian (avoid 2nd)
 F# A B C D E
-R C4 D4 E4 F#4 A4 B4 C5 D5 E5 F#5 A5 B5 C6 D6 H
+R C4 D4 E4 F#4 A4 B4 C5 D5 E5 F#5 A5 B5 C6 D6 H T
 
 F#dim
-W/H Dimished
+W/H
 F# G# A B C D D# E#
-R C4 D4 D#4 E#4 F#4 G#4 A4 B4 C5 D5 D#5 E#5 F#5 G#5 H
+R C4 D4 D#4 E#4 F#4 G#4 A4 B4 C5 D5 D#5 E#5 F#5 G#5 H T
 
 F#+
 Lydian Augmented
 F# G# A# C D D# E#
-R C4 D4 D#4 E#4 F#4 G#4 A#4 C5 D5 D#5 E#5 F#5 G#5 A#5 H
+R C4 D4 D#4 E#4 F#4 G#4 A#4 C5 D5 D#5 E#5 F#5 G#5 A#5 H T
 
 F#7+
 Whole Tone
 F# G# A# C D E
-R C4 D4 E4 F#4 G#4 A#4 C5 D5 E5 F#5 G#5 A#5 C6 D6 H
+R C4 D4 E4 F#4 G#4 A#4 C5 D5 E5 F#5 G#5 A#5 C6 D6 H T
 
 F#7#11
 Lydian Dominant
 F# G# A# C C# D# E
-R C4 C#4 D#4 E4 F#4 G#4 A#4 C5 C#5 D#5 E5 F#5 G#5 A#5 H
+R C4 C#4 D#4 E4 F#4 G#4 A#4 C5 C#5 D#5 E5 F#5 G#5 A#5 H T
 
 F#7alt
 Altered Scale
 F# G A A# C D E
-R C4 D4 E4 F#4 G4 A4 A#4 C5 D5 E5 F#5 G5 A5 A#5 H
+R C4 D4 E4 F#4 G4 A4 A#4 C5 D5 E5 F#5 G5 A5 A#5 H T
 
 F#7#9
 Mixolydian #2 (avoid 4th)
 F# A A# C# D# E
-R C#4 D#4 E4 F#4 A4 A#4 C#5 D#5 E5 F#5 A5 A#5 C#6 D#6 H
+R C#4 D#4 E4 F#4 A4 A#4 C#5 D#5 E5 F#5 A5 A#5 C#6 D#6 H T
 
 F#7b9
 Harm Minor V (avoid 6th)
 F# G A# B C# E
-R C#4 E4 F#4 G4 A#4 B4 C#5 E5 F#5 G5 A#5 B5 C#6 E6 H
+R C#4 E4 F#4 G4 A#4 B4 C#5 E5 F#5 G5 A#5 B5 C#6 E6 H T
 
 F#mMaj7
 Melodic Minor
 F# G# A B C# D# E#
-R C#4 D#4 E#4 F#4 G#4 A4 B4 C#5 D#5 E#5 F#5 G#5 A5 B5 H
+R C#4 D#4 E#4 F#4 G#4 A4 B4 C#5 D#5 E#5 F#5 G#5 A5 B5 H T
 
 F#m6
 Dorian (avoid 7th)
 F# G# A B C# D#
-R C#4 D#4 F#4 G#4 A4 B4 C#5 D#5 F#5 G#5 A5 B5 C#6 D#6 H
+R C#4 D#4 F#4 G#4 A4 B4 C#5 D#5 F#5 G#5 A5 B5 C#6 D#6 H T
 
 F#m7b9
 Melodic Minor II mode
 F# G A B C# D# E
-R C#4 D#4 E4 F#4 G4 A4 B4 C#5 D#5 E5 F#5 G5 A5 B5 H
+R C#4 D#4 E4 F#4 G4 A4 B4 C#5 D#5 E5 F#5 G5 A5 B5 H T
 
 F#maj7#11
 Lydian
 F# G# A# C C# D# E#
-R C4 C#4 D#4 E#4 F#4 G#4 A#4 C5 C#5 D#5 E#5 F#5 G#5 A#5 H
+R C4 C#4 D#4 E#4 F#4 G#4 A#4 C5 C#5 D#5 E#5 F#5 G#5 A#5 H T
 
 F#7sus
 Mixolydian
 F# G# A# B C# D# E
-R C#4 D#4 E4 F#4 G#4 A#4 B4 C#5 D#5 E5 F#5 G#5 A#5 B5 H
+R C#4 D#4 E4 F#4 G#4 A#4 B4 C#5 D#5 E5 F#5 G#5 A#5 B5 H T
 
 F#maj7sus
 Major
 F# G# A# B C# D# E#
-R C#4 D#4 E#4 F#4 G#4 A#4 B4 C#5 D#5 E#5 F#5 G#5 A#5 B5 H
+R C#4 D#4 E#4 F#4 G#4 A#4 B4 C#5 D#5 E#5 F#5 G#5 A#5 B5 H T
 
 F#7Bl
 Blues
 F# A B C C# E
-R C4 C#4 E4 F#4 A4 B4 C5 C#5 E5 F#5 A5 B5 C6 C#6 H
+R C4 C#4 E4 F#4 A4 B4 C5 C#5 E5 F#5 A5 B5 C6 C#6 H T
 
 Abmaj7
 Major (avoid 4th)
 Ab Bb C Eb F G
-R C4 Eb4 F4 G4 Ab4 Bb4 C5 Eb5 F5 G5 Ab5 Bb5 C6 Eb6 H
+R C4 Eb4 F4 G4 Ab4 Bb4 C5 Eb5 F5 G5 Ab5 Bb5 C6 Eb6 H T
 
 Ab7
 Mixolydian (avoid 4th)
 Ab Bb C Eb F Gb
-R C4 Eb4 F4 Gb4 Ab4 Bb4 C5 Eb5 F5 Gb5 Ab5 Bb5 C6 Eb6 H
+R C4 Eb4 F4 Gb4 Ab4 Bb4 C5 Eb5 F5 Gb5 Ab5 Bb5 C6 Eb6 H T
 
 Abm7
 Minor (avoid 6th)
 Ab Bb B Db Eb Gb
-R Db4 Eb4 Gb4 Ab4 Bb4 B4 Db5 Eb5 Gb5 Ab5 Bb5 B5 Db6 Eb6 H
+R Db4 Eb4 Gb4 Ab4 Bb4 B4 Db5 Eb5 Gb5 Ab5 Bb5 B5 Db6 Eb6 H T
 
 Abm7b5
 Locrian (avoid 2nd)
 Ab B Db D Fb Gb
-R Db4 D4 Fb4 Gb4 Ab4 B4 Db5 D5 Fb5 Gb5 Ab5 B5 Db6 D6 H
+R Db4 D4 Fb4 Gb4 Ab4 B4 Db5 D5 Fb5 Gb5 Ab5 B5 Db6 D6 H T
 
 Abdim
-W/H Dimished
+W/H
 Ab Bb B Db D E F G
-R Db4 D4 E4 F4 G4 Ab4 Bb4 B4 Db5 D5 E5 F5 G5 Ab5 H
+R Db4 D4 E4 F4 G4 Ab4 Bb4 B4 Db5 D5 E5 F5 G5 Ab5 H T
 
 Ab+
 Lydian Augmented
 Ab Bb C D E F G
-R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H
+R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H T
 
 Ab7+
 Whole Tone
 Ab Bb C D E Gb
-R C4 D4 E4 Gb4 Ab4 Bb4 C5 D5 E5 Gb5 Ab5 Bb5 C6 D6 H
+R C4 D4 E4 Gb4 Ab4 Bb4 C5 D5 E5 Gb5 Ab5 Bb5 C6 D6 H T
 
 Ab7#11
 Lydian Dominant
 Ab Bb C D Eb F Gb
-R C4 D4 Eb4 F4 Gb4 Ab4 Bb4 C5 D5 Eb5 F5 Gb5 Ab5 Bb5 H
+R C4 D4 Eb4 F4 Gb4 Ab4 Bb4 C5 D5 Eb5 F5 Gb5 Ab5 Bb5 H T
 
 Ab7alt
 Altered Scale
 Ab A B C D E Gb
-R C4 D4 E4 Gb4 Ab4 A4 B4 C5 D5 E5 Gb5 Ab5 A5 B5 H
+R C4 D4 E4 Gb4 Ab4 A4 B4 C5 D5 E5 Gb5 Ab5 A5 B5 H T
 
 Ab7#9
 Mixolydian #2 (avoid 4th)
 Ab B C Eb F Gb
-R C4 Eb4 F4 Gb4 Ab4 B4 C5 Eb5 F5 Gb5 Ab5 B5 C6 Eb6 H
+R C4 Eb4 F4 Gb4 Ab4 B4 C5 Eb5 F5 Gb5 Ab5 B5 C6 Eb6 H T
 
 Ab7b9
 Harm Minor V (avoid 6th)
 Ab A C Db Eb Gb
-R C4 Db4 Eb4 Gb4 Ab4 A4 C5 Db5 Eb5 Gb5 Ab5 A5 C6 Db6 H
+R C4 Db4 Eb4 Gb4 Ab4 A4 C5 Db5 Eb5 Gb5 Ab5 A5 C6 Db6 H T
 
 AbmMaj7
 Melodic Minor
 Ab Bb B Db Eb F G
-R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H
+R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H T
 
 Abm6
 Dorian (avoid 7th)
 Ab Bb B Db Eb F
-R Db4 Eb4 F4 Ab4 Bb4 B4 Db5 Eb5 F5 Ab5 Bb5 B5 Db6 Eb6 H
+R Db4 Eb4 F4 Ab4 Bb4 B4 Db5 Eb5 F5 Ab5 Bb5 B5 Db6 Eb6 H T
 
 Abm7b9
 Melodic Minor II mode
 Ab A B Db Eb F Gb
-R Db4 Eb4 F4 Gb4 Ab4 A4 B4 Db5 Eb5 F5 Gb5 Ab5 A5 B5 H
+R Db4 Eb4 F4 Gb4 Ab4 A4 B4 Db5 Eb5 F5 Gb5 Ab5 A5 B5 H T
 
 Abmaj7#11
 Lydian
 Ab Bb C D Eb F G
-R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H T
 
 Ab7sus
 Mixolydian
 Ab Bb C Db Eb F Gb
-R C4 Db4 Eb4 F4 Gb4 Ab4 Bb4 C5 Db5 Eb5 F5 Gb5 Ab5 Bb5 H
+R C4 Db4 Eb4 F4 Gb4 Ab4 Bb4 C5 Db5 Eb5 F5 Gb5 Ab5 Bb5 H T
 
 Abmaj7sus
 Major
 Ab Bb C Db Eb F G
-R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H T
 
 Ab7Bl
 Blues
 Ab B Db E Eb Gb
-R Db4 E4 Eb4 Gb4 Ab4 B4 Db5 E5 Eb5 Gb5 Ab5 B5 Db6 E6 H
+R Db4 E4 Eb4 Gb4 Ab4 B4 Db5 E5 Eb5 Gb5 Ab5 B5 Db6 E6 H T
 
 Bbmaj7
 Major (avoid 4th)
 Bb C D F G A
-R C4 D4 F4 G4 A4 Bb4 C5 D5 F5 G5 A5 Bb5 C6 D6 H
+R C4 D4 F4 G4 A4 Bb4 C5 D5 F5 G5 A5 Bb5 C6 D6 H T
 
 Bb7
 Mixolydian (avoid 4th)
 Bb C D F G Ab
-R C4 D4 F4 G4 Ab4 Bb4 C5 D5 F5 G5 Ab5 Bb5 C6 D6 H
+R C4 D4 F4 G4 Ab4 Bb4 C5 D5 F5 G5 Ab5 Bb5 C6 D6 H T
 
 Bbm7
 Minor (avoid 6th)
 Bb C Db Eb F Ab
-R C4 Db4 Eb4 F4 Ab4 Bb4 C5 Db5 Eb5 F5 Ab5 Bb5 C6 Db6 H
+R C4 Db4 Eb4 F4 Ab4 Bb4 C5 Db5 Eb5 F5 Ab5 Bb5 C6 Db6 H T
 
 Bbm7b5
 Locrian (avoid 2nd)
 Bb Db Eb Fb Gb Ab
-R Db4 Eb4 Fb4 Gb4 Ab4 Bb4 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 Db6 Eb6 H
+R Db4 Eb4 Fb4 Gb4 Ab4 Bb4 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 Db6 Eb6 H T
 
 Bbdim
-W/H Dimished
+W/H
 Bb C Db Eb Fb F# G A
-R C4 Db4 Eb4 Fb4 F4#4 G4 A4 Bb4 C5 Db5 Eb5 Fb5 F5#5 H
+R C4 Db4 Eb4 Fb4 F4#4 G4 A4 Bb4 C5 Db5 Eb5 Fb5 F5#5 H T
 
 Bb+
 Lydian Augmented
 Bb C D E F# G A
-R C4 D4 E4 F#4 G4 A4 Bb4 C5 D5 E5 F#5 G5 A5 Bb5 H
+R C4 D4 E4 F#4 G4 A4 Bb4 C5 D5 E5 F#5 G5 A5 Bb5 H T
 
 Bb7+
 Whole Tone
 Bb C D E F# Ab
-R C4 D4 E4 F#4 Ab4 Bb4 C5 D5 E5 F#5 Ab5 Bb5 C6 D6 H
+R C4 D4 E4 F#4 Ab4 Bb4 C5 D5 E5 F#5 Ab5 Bb5 C6 D6 H T
 
 Bb7#11
 Lydian Dominant
 Bb C D E F G Ab
-R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H
+R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H T
 
 Bb7alt
 Altered Scale
 Bb B C# D Fb F# Ab
-R C#4 D4 Fb4 F#4 Ab4 Bb4 B4 C#5 D5 Fb5 F#5 Ab5 Bb5 B5 H
+R C#4 D4 Fb4 F#4 Ab4 Bb4 B4 C#5 D5 Fb5 F#5 Ab5 Bb5 B5 H T
 
 Bb7#9
 Mixolydian #2 (avoid 4th)
 Bb Db D F G Ab
-R Db4 D4 F4 G4 Ab4 Bb4 Db5 D5 F5 G5 Ab5 Bb5 Db6 D6 H
+R Db4 D4 F4 G4 Ab4 Bb4 Db5 D5 F5 G5 Ab5 Bb5 Db6 D6 H T
 
 Bb7b9
 Harm Minor V (avoid 6th)
 Bb B D Eb F Ab
-R D4 Eb4 F4 Ab4 Bb4 B4 D5 Eb5 F5 Ab5 Bb5 B5 D6 Eb6 H
+R D4 Eb4 F4 Ab4 Bb4 B4 D5 Eb5 F5 Ab5 Bb5 B5 D6 Eb6 H T
 
 BbmMaj7
 Melodic Minor
 Bb C Db Eb F G A
-R C4 Db4 Eb4 F4 G4 A4 Bb4 C5 Db5 Eb5 F5 G5 A5 Bb5 H
+R C4 Db4 Eb4 F4 G4 A4 Bb4 C5 Db5 Eb5 F5 G5 A5 Bb5 H T
 
 Bbm6
 Dorian (avoid 7th)
 Bb C Db Eb F G
-R C4 Db4 Eb4 F4 G4 Bb4 C5 Db5 Eb5 F5 G5 Bb5 C6 Db6 H
+R C4 Db4 Eb4 F4 G4 Bb4 C5 Db5 Eb5 F5 G5 Bb5 C6 Db6 H T
 
 Bbm7b9
 Melodic Minor II mode
 Bb B Db Eb F G Ab
-R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H
+R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H T
 
 Bbmaj7#11
 Lydian
 Bb C D E F G A
-R C4 D4 E4 F4 G4 A4 Bb4 C5 D5 E5 F5 G5 A5 Bb5 H
+R C4 D4 E4 F4 G4 A4 Bb4 C5 D5 E5 F5 G5 A5 Bb5 H T
 
 Bb7sus
 Mixolydian
 Bb C D Eb F G Ab
-R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H T
 
 Bbmaj7sus
 Major
 Bb C D Eb F G A
-R C4 D4 Eb4 F4 G4 A4 Bb4 C5 D5 Eb5 F5 G5 A5 Bb5 H
+R C4 D4 Eb4 F4 G4 A4 Bb4 C5 D5 Eb5 F5 G5 A5 Bb5 H T
 
 Bb7Bl
 Blues
 Bb Db Eb Fb F Ab
-R Db4 Eb4 Fb4 F4 Ab4 Bb4 Db5 Eb5 Fb5 F5 Ab5 Bb5 Db6 Eb6 H
+R Db4 Eb4 Fb4 F4 Ab4 Bb4 Db5 Eb5 Fb5 F5 Ab5 Bb5 Db6 Eb6 H T
 
 C#maj7
 Major (avoid 4th)
 Db Eb F Ab Bb C
-R C4 Db4 Eb4 F4 Ab4 Bb4 C5 Db5 Eb5 F5 Ab5 Bb5 C5 Db6 H
+R C4 Db4 Eb4 F4 Ab4 Bb4 C5 Db5 Eb5 F5 Ab5 Bb5 C5 Db6 H T
 
 C#7
 Mixolydian (avoid 4th)
 Db Eb F Ab Bb B
-R Db4 Eb4 F4 Ab4 Bb4 B4 Db5 Eb5 F5 Ab5 Bb5 B5 Db6 Eb6 H
+R Db4 Eb4 F4 Ab4 Bb4 B4 Db5 Eb5 F5 Ab5 Bb5 B5 Db6 Eb6 H T
 
 C#m7
 Minor (avoid 6th)
 Db Eb E Gb Ab B
-R Db4 Eb4 E4 Gb4 Ab4 B4 Db5 Eb5 E5 Gb5 Ab5 B5 Db6 Eb6 H
+R Db4 Eb4 E4 Gb4 Ab4 B4 Db5 Eb5 E5 Gb5 Ab5 B5 Db6 Eb6 H T
 
 C#m7b5
 Locrian (avoid 2nd)
 Db Fb Gb G Bb B
-R Db4 Fb4 Gb4 G4 Bb4 B4 Db5 Fb5 Gb5 G5 Bb5 B5 Db6 Fb6 H
+R Db4 Fb4 Gb4 G4 Bb4 B4 Db5 Fb5 Gb5 G5 Bb5 B5 Db6 Fb6 H T
 
 C#dim
-W/H Dimished
+W/H
 Db Eb Fb Gb G A Bb C
-R C4 Db4 Eb4 Fb4 Gb4 G4 A4 Bb4 C5 Db5 Eb5 Fb5 Gb5 G5 H
+R C4 Db4 Eb4 Fb4 Gb4 G4 A4 Bb4 C5 Db5 Eb5 Fb5 Gb5 G5 H T
 
 C#+
 Lydian Augmented
 Db Eb Eb G A Bb C
-R C4 Db4 Eb4 Eb4 G4 A4 Bb4 C5 Db5 Eb5 Eb5 G5 A5 Bb5 H
+R C4 Db4 Eb4 Eb4 G4 A4 Bb4 C5 Db5 Eb5 Eb5 G5 A5 Bb5 H T
 
 C#7+
 Whole Tone
 Db Eb F G A B
-R Db4 Eb4 F4 G4 A4 B4 Db5 Eb5 F5 G5 A5 B5 Db6 Eb6 H
+R Db4 Eb4 F4 G4 A4 B4 Db5 Eb5 F5 G5 A5 B5 Db6 Eb6 H T
 
 C#7#11
 Lydian Dominant
 Db Eb F G Ab Bb B
-R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H
+R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H T
 
 C#7alt
 Altered Scale
 Db D E F G A B
-R Db4 D4 E4 F4 G4 A4 B4 Db5 D5 E5 F5 G5 A5 B5 H
+R Db4 D4 E4 F4 G4 A4 B4 Db5 D5 E5 F5 G5 A5 B5 H T
 
 C#7#9
 Mixolydian #2 (avoid 4th)
 Db Fb F Ab Bb B
-R Db4 Fb4 F4 Ab4 Bb4 B4 Db5 Fb5 F5 Ab5 Bb5 B5 Db6 Fb6 H
+R Db4 Fb4 F4 Ab4 Bb4 B4 Db5 Fb5 F5 Ab5 Bb5 B5 Db6 Fb6 H T
 
 C#7b9
 Harm Minor V (avoid 6th)
 Db D F Gb Ab B
-R Db4 D4 F4 Gb4 Ab4 B4 Db5 D5 F5 Gb5 Ab5 B5 Db6 D6 H
+R Db4 D4 F4 Gb4 Ab4 B4 Db5 D5 F5 Gb5 Ab5 B5 Db6 D6 H T
 
 C#mMaj7
 Melodic Minor
 Db Eb Fb Gb Ab Bb C
-R C4 Db4 Eb4 Fb4 Gb4 Ab4 Bb4 C5 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 H
+R C4 Db4 Eb4 Fb4 Gb4 Ab4 Bb4 C5 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 H T
 
 C#m6
 Dorian (avoid 7th)
 Db Eb Fb Gb Ab Bb
-R Db4 Eb4 Fb4 Gb4 Ab4 Bb4 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 Db6 Eb6 H
+R Db4 Eb4 Fb4 Gb4 Ab4 Bb4 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 Db6 Eb6 H T
 
 C#m7b9
 Melodic Minor II mode
 Db D Fb Gb Ab Bb B
-R Db4 D4 Fb4 Gb4 Ab4 Bb4 B4 Db5 D5 Fb5 Gb5 Ab5 Bb5 B5 H
+R Db4 D4 Fb4 Gb4 Ab4 Bb4 B4 Db5 D5 Fb5 Gb5 Ab5 Bb5 B5 H T
 
 C#maj7#11
 Lydian
 Db Eb F G Ab Bb C
-R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H T
 
 C#7sus
 Mixolydian
 Db Eb F Gb Ab Bb B
-R Db4 Eb4 F4 Gb4 Ab4 Bb4 B4 Db5 Eb5 F5 Gb5 Ab5 Bb5 B5 H
+R Db4 Eb4 F4 Gb4 Ab4 Bb4 B4 Db5 Eb5 F5 Gb5 Ab5 Bb5 B5 H T
 
 C#maj7sus
 Major
 Db Eb F Gb Ab Bb C
-R C4 Db4 Eb4 F4 Gb4 Ab4 Bb4 C5 Db5 Eb5 F5 Gb5 Ab5 Bb5 H
+R C4 Db4 Eb4 F4 Gb4 Ab4 Bb4 C5 Db5 Eb5 F5 Gb5 Ab5 Bb5 H T
 
 C#7Bl
 Blues
 Db Fb Gb G Ab B
-R Db4 Fb4 Gb4 G4 Ab4 B4 Db5 Fb5 Gb5 G5 Ab5 B5 Db6 Fb6 H
+R Db4 Fb4 Gb4 G4 Ab4 B4 Db5 Fb5 Gb5 G5 Ab5 B5 Db6 Fb6 H T
 
 D#maj7
 Major (avoid 4th)
 Eb F G Bb C D
-R C4 D4 Eb4 F4 G4 Bb4 C5 D5 Eb5 F5 G5 Bb5 C6 D6 H
+R C4 D4 Eb4 F4 G4 Bb4 C5 D5 Eb5 F5 G5 Bb5 C6 D6 H T
 
 D#7
 Mixolydian (avoid 4th)
 Eb A G Bb C Db
-R C4 Db4 Eb4 A4 G4 Bb4 C5 Db5 Eb5 A5 G5 Bb5 C6 Db6 H
+R C4 Db4 Eb4 A4 G4 Bb4 C5 Db5 Eb5 A5 G5 Bb5 C6 Db6 H T
 
 D#m7
 Minor (avoid 6th)
 Eb F Gb Ab Bb Db
-R Db4 Eb4 F4 Gb4 Ab4 Bb4 Db5 Eb5 F5 Gb5 Ab5 Bb5 Db6 Eb6 H
+R Db4 Eb4 F4 Gb4 Ab4 Bb4 Db5 Eb5 F5 Gb5 Ab5 Bb5 Db6 Eb6 H T
 
 D#m7b5
 Locrian (avoid 2nd)
 Eb Gb Ab A B Db
-R Db4 Eb4 Gb4 Ab4 A4 B4 Db5 Eb5 Gb5 Ab5 A5 B5 Db6 Eb6 H
+R Db4 Eb4 Gb4 Ab4 A4 B4 Db5 Eb5 Gb5 Ab5 A5 B5 Db6 Eb6 H T
 
 D#dim
-W/H Dimished
+W/H
 Eb F Gb Ab A B C D
-R C4 D4 Eb4 F4 Gb4 Ab4 A4 B4 C5 D5 Eb5 F5 Gb5 Ab5 H
+R C4 D4 Eb4 F4 Gb4 Ab4 A4 B4 C5 D5 Eb5 F5 Gb5 Ab5 H T
 
 D#+
 Lydian Augmented
 Eb F G A B C D
-R C4 D4 Eb4 F4 G4 A4 B4 C5 D5 Eb5 F5 G5 A5 B5 H
+R C4 D4 Eb4 F4 G4 A4 B4 C5 D5 Eb5 F5 G5 A5 B5 H T
 
 D#7+
 Whole Tone
 Eb F G A B Db
-R Db4 Eb4 F4 G4 A4 B4 Db5 Eb5 F5 G5 A5 B5 Db6 Eb6 H
+R Db4 Eb4 F4 G4 A4 B4 Db5 Eb5 F5 G5 A5 B5 Db6 Eb6 H T
 
 D#7#11
 Lydian Dominant
 Eb F G A Bb C Db
-R C4 Db4 Eb4 F4 G4 A4 Bb4 C5 Db5 Eb5 F5 G5 A5 Bb5 H
+R C4 Db4 Eb4 F4 G4 A4 Bb4 C5 Db5 Eb5 F5 G5 A5 Bb5 H T
 
 D#7alt
 Altered Scale
 Eb Fb F# G A B Db
-R Db4 Eb4 Fb4 F4#4 G4 A4 B4 Db5 Eb5 Fb5 F5#5 G5 H
+R Db4 Eb4 Fb4 F4#4 G4 A4 B4 Db5 Eb5 Fb5 F5#5 G5 H T
 
 D#7#9
 Mixolydian #2 (avoid 4th)
 Eb Gb G Bb C Db
-R C4 Db4 Eb4 Gb4 G4 Bb4 C5 Db5 Eb5 Gb5 G5 Bb5 C6 Db6 H
+R C4 Db4 Eb4 Gb4 G4 Bb4 C5 Db5 Eb5 Gb5 G5 Bb5 C6 Db6 H T
 
 D#7b9
 Harm Minor V (avoid 6th)
 Eb Fb G Ab Bb Db
-R Db4 Eb4 Fb4 G4 Ab4 Bb4 Db5 Eb5 Fb5 G5 Ab5 Bb5 Db6 Eb6 H
+R Db4 Eb4 Fb4 G4 Ab4 Bb4 Db5 Eb5 Fb5 G5 Ab5 Bb5 Db6 Eb6 H T
 
 D#mMaj7
 Melodic Minor
 Eb F Gb Ab Bb C D
-R C4 D4 Eb4 F4 Gb4 Ab4 Bb4 C5 D5 Eb5 F5 Gb5 Ab5 Bb5 H
+R C4 D4 Eb4 F4 Gb4 Ab4 Bb4 C5 D5 Eb5 F5 Gb5 Ab5 Bb5 H T
 
 D#m6
 Dorian (avoid 7th)
 Eb F Gb Ab Bb C
-R C4 Eb4 F4 Gb4 Ab4 Bb4 C5 Eb5 F5 Gb5 Ab5 Bb5 C6 Eb6 H
+R C4 Eb4 F4 Gb4 Ab4 Bb4 C5 Eb5 F5 Gb5 Ab5 Bb5 C6 Eb6 H T
 
 D#m7b9
 Melodic Minor II mode
 Eb Fb Gb Ab Bb C Db
-R C4 Db4 Eb4 Fb4 Gb4 Ab4 Bb4 C5 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 H
+R C4 Db4 Eb4 Fb4 Gb4 Ab4 Bb4 C5 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 H T
 
 D#maj7#11
 Lydian
 Eb F G A Bb C D
-R C4 D4 Eb4 F4 G4 A4 Bb4 C5 D5 Eb5 F5 G5 A5 Bb5 H
+R C4 D4 Eb4 F4 G4 A4 Bb4 C5 D5 Eb5 F5 G5 A5 Bb5 H T
 
 D#7sus
 Mixolydian
 Eb F G Ab Bb C Db
-R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H T
 
 D#maj7sus
 Major
 Eb F G Ab Bb C D
-R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H T
 
 D#7Bl
 Blues
 Eb Gb Ab A Bb Db
-R Db4 Eb4 Gb4 Ab4 A4 Bb4 Db5 Eb5 Gb5 Ab5 A5 Bb5 Db6 Eb6 H
+R Db4 Eb4 Gb4 Ab4 A4 Bb4 Db5 Eb5 Gb5 Ab5 A5 Bb5 Db6 Eb6 H T
 
 Gbmaj7
 Major (avoid 4th)
 F# G# A# C# D# E#
-R C#4 D#4 E#4 F#4 G#4 A#4 C#5 D#5 E#5 F#5 G#5 A#5 C#6 D#6 H
+R C#4 D#4 E#4 F#4 G#4 A#4 C#5 D#5 E#5 F#5 G#5 A#5 C#6 D#6 H T
 
 Gb7
 Mixolydian (avoid 4th)
 F# G# A# C# D# E
-R C#4 D#4 E4 F#4 G#4 A#4 C#5 D#5 E5 F#5 G#5 A#5 C#6 D#6 H
+R C#4 D#4 E4 F#4 G#4 A#4 C#5 D#5 E5 F#5 G#5 A#5 C#6 D#6 H T
 
 Gbm7
 Minor (avoid 6th)
 F# G# A B C# E
-R C#4 E4 F#4 G#4 A4 B4 C#5 E5 F#5 G#5 A5 B5 C#6 E6 H
+R C#4 E4 F#4 G#4 A4 B4 C#5 E5 F#5 G#5 A5 B5 C#6 E6 H T
 
 Gbm7b5
 Locrian (avoid 2nd)
 F# A B C D E
-R C4 D4 E4 F#4 A4 B4 C5 D5 E5 F#5 A5 B5 C6 D6 H
+R C4 D4 E4 F#4 A4 B4 C5 D5 E5 F#5 A5 B5 C6 D6 H T
 
 Gbdim
-W/H Dimished
+W/H
 F# G# A B C D D# E#
-R C4 D4 D#4 E#4 F#4 G#4 A4 B4 C5 D5 D#5 E#5 F#5 G#5 H
+R C4 D4 D#4 E#4 F#4 G#4 A4 B4 C5 D5 D#5 E#5 F#5 G#5 H T
 
 Gb+
 Lydian Augmented
 F# G# A# C D D# E#
-R C4 D4 D#4 E#4 F#4 G#4 A#4 C5 D5 D#5 E#5 F#5 G#5 A#5 H
+R C4 D4 D#4 E#4 F#4 G#4 A#4 C5 D5 D#5 E#5 F#5 G#5 A#5 H T
 
 Gb7+
 Whole Tone
 F# G# A# C D E
-R C4 D4 E4 F#4 G#4 A#4 C5 D5 E5 F#5 G#5 A#5 C6 D6 H
+R C4 D4 E4 F#4 G#4 A#4 C5 D5 E5 F#5 G#5 A#5 C6 D6 H T
 
 Gb7#11
 Lydian Dominant
 F# G# A# C C# D# E
-R C4 C#4 D#4 E4 F#4 G#4 A#4 C5 C#5 D#5 E5 F#5 G#5 A#5 H
+R C4 C#4 D#4 E4 F#4 G#4 A#4 C5 C#5 D#5 E5 F#5 G#5 A#5 H T
 
 Gb7alt
 Altered Scale
 F# G A A# C D E
-R C4 D4 E4 F#4 G4 A4 A#4 C5 D5 E5 F#5 G5 A5 A#5 H
+R C4 D4 E4 F#4 G4 A4 A#4 C5 D5 E5 F#5 G5 A5 A#5 H T
 
 Gb7#9
 Mixolydian #2 (avoid 4th)
 F# A A# C# D# E
-R C#4 D#4 E4 F#4 A4 A#4 C#5 D#5 E5 F#5 A5 A#5 C#6 D#6 H
+R C#4 D#4 E4 F#4 A4 A#4 C#5 D#5 E5 F#5 A5 A#5 C#6 D#6 H T
 
 Gb7b9
 Harm Minor V (avoid 6th)
 F# G A# B C# E
-R C#4 E4 F#4 G4 A#4 B4 C#5 E5 F#5 G5 A#5 B5 C#6 E6 H
+R C#4 E4 F#4 G4 A#4 B4 C#5 E5 F#5 G5 A#5 B5 C#6 E6 H T
 
 GbmMaj7
 Melodic Minor
 F# G# A B C# D# E#
-R C#4 D#4 E#4 F#4 G#4 A4 B4 C#5 D#5 E#5 F#5 G#5 A5 B5 H
+R C#4 D#4 E#4 F#4 G#4 A4 B4 C#5 D#5 E#5 F#5 G#5 A5 B5 H T
 
 Gbm6
 Dorian (avoid 7th)
 F# G# A B C# D#
-R C#4 D#4 F#4 G#4 A4 B4 C#5 D#5 F#5 G#5 A5 B5 C#6 D#6 H
+R C#4 D#4 F#4 G#4 A4 B4 C#5 D#5 F#5 G#5 A5 B5 C#6 D#6 H T
 
 Gbm7b9
 Melodic Minor II mode
 F# G A B C# D# E
-R C#4 D#4 E4 F#4 G4 A4 B4 C#5 D#5 E5 F#5 G5 A5 B5 H
+R C#4 D#4 E4 F#4 G4 A4 B4 C#5 D#5 E5 F#5 G5 A5 B5 H T
 
 Gbmaj7#11
 Lydian
 F# G# A# C C# D# E#
-R C4 C#4 D#4 E#4 F#4 G#4 A#4 C5 C#5 D#5 E#5 F#5 G#5 A#5 H
+R C4 C#4 D#4 E#4 F#4 G#4 A#4 C5 C#5 D#5 E#5 F#5 G#5 A#5 H T
 
 Gb7sus
 Mixolydian
 F# G# A# B C# D# E
-R C#4 D#4 E4 F#4 G#4 A#4 B4 C#5 D#5 E5 F#5 G#5 A#5 B5 H
+R C#4 D#4 E4 F#4 G#4 A#4 B4 C#5 D#5 E5 F#5 G#5 A#5 B5 H T
 
 Gbmaj7sus
 Major
 F# G# A# B C# D# E#
-R C#4 D#4 E#4 F#4 G#4 A#4 B4 C#5 D#5 E#5 F#5 G#5 A#5 B5 H
+R C#4 D#4 E#4 F#4 G#4 A#4 B4 C#5 D#5 E#5 F#5 G#5 A#5 B5 H T
 
 Gb7Bl
 Blues
 F# A B C C# E
-R C4 C#4 E4 F#4 A4 B4 C5 C#5 E5 F#5 A5 B5 C6 C#6 H
+R C4 C#4 E4 F#4 A4 B4 C5 C#5 E5 F#5 A5 B5 C6 C#6 H T
 
 G#maj7
 Major (avoid 4th)
 Ab Bb C Eb F G
-R C4 Eb4 F4 G4 Ab4 Bb4 C5 Eb5 F5 G5 Ab5 Bb5 C6 Eb6 H
+R C4 Eb4 F4 G4 Ab4 Bb4 C5 Eb5 F5 G5 Ab5 Bb5 C6 Eb6 H T
 
 G#7
 Mixolydian (avoid 4th)
 Ab Bb C Eb F Gb
-R C4 Eb4 F4 Gb4 Ab4 Bb4 C5 Eb5 F5 Gb5 Ab5 Bb5 C6 Eb6 H
+R C4 Eb4 F4 Gb4 Ab4 Bb4 C5 Eb5 F5 Gb5 Ab5 Bb5 C6 Eb6 H T
 
 G#m7
 Minor (avoid 6th)
 Ab Bb B Db Eb Gb
-R Db4 Eb4 Gb4 Ab4 Bb4 B4 Db5 Eb5 Gb5 Ab5 Bb5 B5 Db6 Eb6 H
+R Db4 Eb4 Gb4 Ab4 Bb4 B4 Db5 Eb5 Gb5 Ab5 Bb5 B5 Db6 Eb6 H T
 
 G#m7b5
 Locrian (avoid 2nd)
 Ab B Db D Fb Gb
-R Db4 D4 Fb4 Gb4 Ab4 B4 Db5 D5 Fb5 Gb5 Ab5 B5 Db6 D6 H
+R Db4 D4 Fb4 Gb4 Ab4 B4 Db5 D5 Fb5 Gb5 Ab5 B5 Db6 D6 H T
 
 G#dim
-W/H Dimished
+W/H
 Ab Bb B Db D E F G
-R Db4 D4 E4 F4 G4 Ab4 Bb4 B4 Db5 D5 E5 F5 G5 Ab5 H
+R Db4 D4 E4 F4 G4 Ab4 Bb4 B4 Db5 D5 E5 F5 G5 Ab5 H T
 
 G#+
 Lydian Augmented
 Ab Bb C D E F G
-R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H
+R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H T
 
 G#7+
 Whole Tone
 Ab Bb C D E Gb
-R C4 D4 E4 Gb4 Ab4 Bb4 C5 D5 E5 Gb5 Ab5 Bb5 C6 D6 H
+R C4 D4 E4 Gb4 Ab4 Bb4 C5 D5 E5 Gb5 Ab5 Bb5 C6 D6 H T
 
 G#7#11
 Lydian Dominant
 Ab Bb C D Eb F Gb
-R C4 D4 Eb4 F4 Gb4 Ab4 Bb4 C5 D5 Eb5 F5 Gb5 Ab5 Bb5 H
+R C4 D4 Eb4 F4 Gb4 Ab4 Bb4 C5 D5 Eb5 F5 Gb5 Ab5 Bb5 H T
 
 G#7alt
 Altered Scale
 Ab A B C D E Gb
-R C4 D4 E4 Gb4 Ab4 A4 B4 C5 D5 E5 Gb5 Ab5 A5 B5 H
+R C4 D4 E4 Gb4 Ab4 A4 B4 C5 D5 E5 Gb5 Ab5 A5 B5 H T
 
 G#7#9
 Mixolydian #2 (avoid 4th)
 Ab B C Eb F Gb
-R C4 Eb4 F4 Gb4 Ab4 B4 C5 Eb5 F5 Gb5 Ab5 B5 C6 Eb6 H
+R C4 Eb4 F4 Gb4 Ab4 B4 C5 Eb5 F5 Gb5 Ab5 B5 C6 Eb6 H T
 
 G#7b9
 Harm Minor V (avoid 6th)
 Ab A C Db Eb Gb
-R C4 Db4 Eb4 Gb4 Ab4 A4 C5 Db5 Eb5 Gb5 Ab5 A5 C6 Db6 H
+R C4 Db4 Eb4 Gb4 Ab4 A4 C5 Db5 Eb5 Gb5 Ab5 A5 C6 Db6 H T
 
 G#mMaj7
 Melodic Minor
 Ab Bb B Db Eb F G
-R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H
+R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H T
 
 G#m6
 Dorian (avoid 7th)
 Ab Bb B Db Eb F
-R Db4 Eb4 F4 Ab4 Bb4 B4 Db5 Eb5 F5 Ab5 Bb5 B5 Db6 Eb6 H
+R Db4 Eb4 F4 Ab4 Bb4 B4 Db5 Eb5 F5 Ab5 Bb5 B5 Db6 Eb6 H T
 
 G#m7b9
 Melodic Minor II mode
 Ab A B Db Eb F Gb
-R Db4 Eb4 F4 Gb4 Ab4 A4 B4 Db5 Eb5 F5 Gb5 Ab5 A5 B5 H
+R Db4 Eb4 F4 Gb4 Ab4 A4 B4 Db5 Eb5 F5 Gb5 Ab5 A5 B5 H T
 
 G#maj7#11
 Lydian
 Ab Bb C D Eb F G
-R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H T
 
 G#7sus
 Mixolydian
 Ab Bb C Db Eb F Gb
-R C4 Db4 Eb4 F4 Gb4 Ab4 Bb4 C5 Db5 Eb5 F5 Gb5 Ab5 Bb5 H
+R C4 Db4 Eb4 F4 Gb4 Ab4 Bb4 C5 Db5 Eb5 F5 Gb5 Ab5 Bb5 H T
 
 G#maj7sus
 Major
 Ab Bb C Db Eb F G
-R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 Db4 Eb4 F4 G4 Ab4 Bb4 C5 Db5 Eb5 F5 G5 Ab5 Bb5 H T
 
 G#7Bl
 Blues
 Ab B Db E Eb Gb
-R Db4 E4 Eb4 Gb4 Ab4 B4 Db5 E5 Eb5 Gb5 Ab5 B5 Db6 E6 H
+R Db4 E4 Eb4 Gb4 Ab4 B4 Db5 E5 Eb5 Gb5 Ab5 B5 Db6 E6 H T
 
 A#maj7
 Major (avoid 4th)
 Bb C D F G A
-R C4 D4 F4 G4 A4 Bb4 C5 D5 F5 G5 A5 Bb5 C6 D6 H
+R C4 D4 F4 G4 A4 Bb4 C5 D5 F5 G5 A5 Bb5 C6 D6 H T
 
 A#7
 Mixolydian (avoid 4th)
 Bb C D F G Ab
-R C4 D4 F4 G4 Ab4 Bb4 C5 D5 F5 G5 Ab5 Bb5 C6 D6 H
+R C4 D4 F4 G4 Ab4 Bb4 C5 D5 F5 G5 Ab5 Bb5 C6 D6 H T
 
 A#m7
 Minor (avoid 6th)
 Bb C Db Eb F Ab
-R C4 Db4 Eb4 F4 Ab4 Bb4 C5 Db5 Eb5 F5 Ab5 Bb5 C6 Db6 H
+R C4 Db4 Eb4 F4 Ab4 Bb4 C5 Db5 Eb5 F5 Ab5 Bb5 C6 Db6 H T
 
 A#m7b5
 Locrian (avoid 2nd)
 Bb Db Eb Fb Gb Ab
-R Db4 Eb4 Fb4 Gb4 Ab4 Bb4 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 Db6 Eb6 H
+R Db4 Eb4 Fb4 Gb4 Ab4 Bb4 Db5 Eb5 Fb5 Gb5 Ab5 Bb5 Db6 Eb6 H T
 
 A#dim
-W/H Dimished
+W/H
 Bb C Db Eb Fb F# G A
-R C4 Db4 Eb4 Fb4 F4#4 G4 A4 Bb4 C5 Db5 Eb5 Fb5 F5#5 H
+R C4 Db4 Eb4 Fb4 F4#4 G4 A4 Bb4 C5 Db5 Eb5 Fb5 F5#5 H T
 
 A#+
 Lydian Augmented
 Bb C D E F# G A
-R C4 D4 E4 F#4 G4 A4 Bb4 C5 D5 E5 F#5 G5 A5 Bb5 H
+R C4 D4 E4 F#4 G4 A4 Bb4 C5 D5 E5 F#5 G5 A5 Bb5 H T
 
 A#7+
 Whole Tone
 Bb C D E F# Ab
-R C4 D4 E4 F#4 Ab4 Bb4 C5 D5 E5 F#5 Ab5 Bb5 C6 D6 H
+R C4 D4 E4 F#4 Ab4 Bb4 C5 D5 E5 F#5 Ab5 Bb5 C6 D6 H T
 
 A#7#11
 Lydian Dominant
 Bb C D E F G Ab
-R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H
+R C4 D4 E4 F4 G4 Ab4 Bb4 C5 D5 E5 F5 G5 Ab5 Bb5 H T
 
 A#7alt
 Altered Scale
 Bb B C# D Fb F# Ab
-R C#4 D4 Fb4 F#4 Ab4 Bb4 B4 C#5 D5 Fb5 F#5 Ab5 Bb5 B5 H
+R C#4 D4 Fb4 F#4 Ab4 Bb4 B4 C#5 D5 Fb5 F#5 Ab5 Bb5 B5 H T
 
 A#7#9
 Mixolydian #2 (avoid 4th)
 Bb Db D F G Ab
-R Db4 D4 F4 G4 Ab4 Bb4 Db5 D5 F5 G5 Ab5 Bb5 Db6 D6 H
+R Db4 D4 F4 G4 Ab4 Bb4 Db5 D5 F5 G5 Ab5 Bb5 Db6 D6 H T
 
 A#7b9
 Harm Minor V (avoid 6th)
 Bb B D Eb F Ab
-R D4 Eb4 F4 Ab4 Bb4 B4 D5 Eb5 F5 Ab5 Bb5 B5 D6 Eb6 H
+R D4 Eb4 F4 Ab4 Bb4 B4 D5 Eb5 F5 Ab5 Bb5 B5 D6 Eb6 H T
 
 A#mMaj7
 Melodic Minor
 Bb C Db Eb F G A
-R C4 Db4 Eb4 F4 G4 A4 Bb4 C5 Db5 Eb5 F5 G5 A5 Bb5 H
+R C4 Db4 Eb4 F4 G4 A4 Bb4 C5 Db5 Eb5 F5 G5 A5 Bb5 H T
 
 A#m6
 Dorian (avoid 7th)
 Bb C Db Eb F G
-R C4 Db4 Eb4 F4 G4 Bb4 C5 Db5 Eb5 F5 G5 Bb5 C6 Db6 H
+R C4 Db4 Eb4 F4 G4 Bb4 C5 Db5 Eb5 F5 G5 Bb5 C6 Db6 H T
 
 A#m7b9
 Melodic Minor II mode
 Bb B Db Eb F G Ab
-R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H
+R Db4 Eb4 F4 G4 Ab4 Bb4 B4 Db5 Eb5 F5 G5 Ab5 Bb5 B5 H T
 
 A#maj7#11
 Lydian
 Bb C D E F G A
-R C4 D4 E4 F4 G4 A4 Bb4 C5 D5 E5 F5 G5 A5 Bb5 H
+R C4 D4 E4 F4 G4 A4 Bb4 C5 D5 E5 F5 G5 A5 Bb5 H T
 
 A#7sus
 Mixolydian
 Bb C D Eb F G Ab
-R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H
+R C4 D4 Eb4 F4 G4 Ab4 Bb4 C5 D5 Eb5 F5 G5 Ab5 Bb5 H T
 
 A#maj7sus
 Major
 Bb C D Eb F G A
-R C4 D4 Eb4 F4 G4 A4 Bb4 C5 D5 Eb5 F5 G5 A5 Bb5 H
+R C4 D4 Eb4 F4 G4 A4 Bb4 C5 D5 Eb5 F5 G5 A5 Bb5 H T
 
 A#7Bl
 Blues
 Bb Db Eb Fb F Ab
-R Db4 Eb4 Fb4 F4 Ab4 Bb4 Db5 Eb5 Fb5 F5 Ab5 Bb5 Db6 Eb6 H
+R Db4 Eb4 Fb4 F4 Ab4 Bb4 Db5 Eb5 Fb5 F5 Ab5 Bb5 Db6 Eb6 H T
