@@ -11,12 +11,15 @@ import jm.music.data.Score;
 import jm.util.Write;
 import jm.JMC;
 
+import Elements.BassNote;
 import Elements.ChordvsScale;
+import Elements.MapBassNotes;
 import Elements.MapChordvsScale;
 import Elements.MapNotevsSound;
 import Elements.Measures;
 import Elements.Phrases;
 import Elements.PhrasePopulation;
+import Elements.Teclado;
 
 public class FuncionesMusicales {
 	
@@ -111,420 +114,99 @@ public class FuncionesMusicales {
 		
 	}
 	
+	public static void makeVoicings(List<String> acordes){
+		
+	}
+	
+	public static boolean inicioBass(List<String> lista, String nota){
+		
+		Iterator<String> iterTeclado = lista.iterator();
+		
+		while(iterTeclado.hasNext()){
+			String item = iterTeclado.next();
+			
+			if(item.substring(0, 2).contains("#") || item.substring(0, 2).contains("b")){
+				item = item.substring(0, 2);
+				
+			}
+			else{
+				item = item.substring(0,1);
+			}
+			
+			if(item.equalsIgnoreCase(nota)) return true;
+			
+		}
+		
+		return false;
+	}
+	
 	public static void makeBass(List<String> acordes){
 
 		//WALKIN
 		Phrase phr2 = new Phrase();
-				
-		// create a phrase of 32 quavers following 
-        // a random walk within C minor.
-		/*
-        for(short i=0;i<8;i++) {
-        	// next note within plus or minus a 5th.\
-        	Note n = new Note(JMC.C3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.EF3, JMC.QUARTER_NOTE);	
-            phr2.addNote(n);
-            n = new Note(JMC.F3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.BF3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.F3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.EF3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);                 
-                 
-        }
-        */
-        //Para Dm7 - G7 - A7b9 - Cmaj7
+		Teclado keyboard = new Teclado();
+		MapNotevsSound sonidos = new MapNotevsSound();
+		MapBassNotes notasBass = new MapBassNotes();
 		
-		/*
-        for(short i=0;i<2;i++) {
-        	
-        	// next note within plus or minus a 5th.\
-        	
-        	Note n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.F3, JMC.QUARTER_NOTE);	
-            phr2.addNote(n);
-            n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            
-            n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.F3, JMC.QUARTER_NOTE);	
-            phr2.addNote(n);
-            n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            
-            n = new Note(JMC.G2, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.B2, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.C3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            
-
-            n = new Note(JMC.G2, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.B2, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.C3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-
-
-            n = new Note(JMC.C3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.F3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            
-
-            n = new Note(JMC.C3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.F3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);  
-            
-
-            n = new Note(JMC.A2, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.CF3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);  
-            
-
-            n = new Note(JMC.A2, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.CF3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);
-            n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-            phr2.addNote(n);  
-                 
-        }
-		*/
+		System.out.println("bass");
 		
-		/*
-		//ORNITHOLOGY
+		Iterator<String> iter = acordes.iterator();
+		
 		Note n = null;
-		n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.B3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.D4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.B3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.D4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.BF3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.D4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.BF3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.D4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.F3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.BF3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.F3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.BF3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.F3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.AF3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.BF3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.BF3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.D4, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.EF4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.F4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.EF3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.BF3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.F3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.BF3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.D4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.C3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.E3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.FS3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.B2, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.D3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.FS3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.B3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.A2, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.C3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.FS3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        */
-        
-        //Borrar
-        Note n = null;
+		boolean inicio = true;
+		String root = "";
 		
-        n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.F3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
+		while(iter.hasNext()){
+			String item = iter.next();
+			String nota = "";
+			String acorde = "";
+			
+			if(item.substring(0, 2).contains("#") || item.substring(0, 2).contains("b")){
+				nota = item.substring(0, 2);
+				acorde = item.substring(2,item.length());
+				
+			}
+			else{
+				nota = item.substring(0,1);
+				acorde = item.substring(1,item.length());
+			}
+						
+			for (int i = 0; i < keyboard.notas.size(); i++){
+				
+				if(inicioBass(keyboard.notas.get(i), nota)){
+//					System.out.println(keyboard.notas.get(i).get(0));
+					
+					Iterator<BassNote> itNotasB = notasBass.lista_bajo.iterator();
+					BassNote itemNotaB = null;
+					
+					while(itNotasB.hasNext()){
+						itemNotaB = itNotasB.next();
+						
+						if(itemNotaB.alteracion.equalsIgnoreCase(acorde)) break;
+						
+					}
+					
+					if(inicio){
+						inicio = false;
+						root = keyboard.notas.get(i).get(0);
+					}
+					
+					
+					n = new Note(sonidos.NvsS.get(keyboard.notas.get(i).get(0)), JMC.QUARTER_NOTE);
+		            phr2.addNote(n);
+		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.tercera).get(0)), JMC.QUARTER_NOTE);
+		            phr2.addNote(n);
+		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.cuarta).get(0)), JMC.QUARTER_NOTE);
+		            phr2.addNote(n);
+		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.quinta).get(0)), JMC.QUARTER_NOTE);
+		            phr2.addNote(n);
+					
+					break;
+				}
+			}
+		}
         
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.B3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.D4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.C3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.ES3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.F3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.F3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.B3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.B2, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.D3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.F3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.GS3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.B3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.A2, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.C3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.EF3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.BF3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.F3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.B3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.D4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.B3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.D4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.E4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.F3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.B3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.C4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.D4, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.E3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.B3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        n = new Note(JMC.D3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.F3, JMC.QUARTER_NOTE);	
-        phr2.addNote(n);
-        n = new Note(JMC.G3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        n = new Note(JMC.A3, JMC.QUARTER_NOTE);
-        phr2.addNote(n);
-        
-        //Fin borrar
-        
-        n = new Note(JMC.C3,JMC.WHOLE_NOTE);
+        n = new Note(sonidos.NvsS.get(root),JMC.WHOLE_NOTE);
         phr2.add(n); 
         
 		walkin.add(phr2);
@@ -573,7 +255,7 @@ public class FuncionesMusicales {
 		System.out.println("Frases sacadas");
 		
 		//Transformo los holds iniciales en silencios
-		
+				
 		Integer recorrer = 0;
 		
 		while(recorrer < notasRep.size()){
