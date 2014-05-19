@@ -24,8 +24,10 @@ public class GenJam {
 		List<String> acordes;
 		Integer tempo;
 		
-		acordes = FuncionesArchivos.leeAcordes(args[4]);
-		tempo = FuncionesArchivos.leeTempo(args[4]);
+		acordes = FuncionesArchivos.leeAcordes(args[0]);
+		for(int i = 0 ; i < acordes.size(); i++)
+			System.out.println(acordes.get(i));
+		tempo = FuncionesArchivos.leeTempo(args[0]);
 		/*
 		List<String> acordesOrnithology = new ArrayList<String>();
 
