@@ -50,6 +50,8 @@
         $(document).ready(function(){
             $(".nano").hide();
             $("#validacion").hide();
+            $(".player-prev").hide();
+            $(".player-next").hide();
 
             $("#improvisa").click(function(){
                 if( ($("#acordes").val() == "") || ($("#tempo").val() == "") ){
@@ -82,9 +84,9 @@
                         success: function(data){
                             console.log(data);
                             var archivos = data.split(",");
+                            console.log(archivos[0]);
+                            //$(location).attr("href", archivos[0]);
                             
-                            $(location).attr("href", archivos[0]);
-                            $(location).attr("href", archivos[1]);
                         }
                     });
                 }
