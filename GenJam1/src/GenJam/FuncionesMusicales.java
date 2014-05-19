@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import jm.gui.show.ShowScore;
+import jm.constants.Durations;
+import jm.constants.Pitches;
 import jm.music.data.Note;
 import jm.music.data.Part;
 import jm.music.data.Phrase;
@@ -96,6 +97,7 @@ public class FuncionesMusicales {
 		
 		s = new Score("GenJam",tempo);
 		//debo mandarle una lista de Phrases
+		System.out.println("SIZE: " + acordes.size());
 		makeMelody(pobFrases.populationP,acordes);
 		makeBass(acordes);
 		makeDrums(acordes);
@@ -106,7 +108,7 @@ public class FuncionesMusicales {
 		
 	public static void makeDrums(List<String> acordes){
 		
-		for(int fff = 0; fff < 16; fff++){
+		for(int fff = 0; fff < acordes.size(); fff++){
 			ridePart.addPhrase(swingTime());
 			snarePart.addPhrase(swingAccents());
 		}
@@ -195,13 +197,13 @@ public class FuncionesMusicales {
 					}
 					
 					
-					n = new Note(sonidos.NvsS.get(keyboard.notas.get(i).get(0)), JMC.QUARTER_NOTE);
+					n = new Note(sonidos.NvsS.get(keyboard.notas.get(i).get(0)), Durations.QUARTER_NOTE);
 		            phr2.addNote(n);
-		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.tercera).get(0)), JMC.QUARTER_NOTE);
+		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.tercera).get(0)), Durations.QUARTER_NOTE);
 		            phr2.addNote(n);
-		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.cuarta).get(0)), JMC.QUARTER_NOTE);
+		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.cuarta).get(0)), Durations.QUARTER_NOTE);
 		            phr2.addNote(n);
-		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.quinta).get(0)), JMC.QUARTER_NOTE);
+		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.quinta).get(0)), Durations.QUARTER_NOTE);
 		            phr2.addNote(n);
 					
 					break;
@@ -209,7 +211,7 @@ public class FuncionesMusicales {
 			}
 		}
         
-        n = new Note(sonidos.NvsS.get(root),JMC.WHOLE_NOTE);
+        n = new Note(sonidos.NvsS.get(root),Durations.WHOLE_NOTE);
         phr2.add(n); 
         
 		walkin.add(phr2);
@@ -264,7 +266,7 @@ public class FuncionesMusicales {
 		while(recorrer < notasRep.size()){
 			System.out.println("Elimina hasta: " + recorrer);
 			if(notasRep.get(recorrer) == -1){
-				notasRep.set(recorrer, JMC.REST);
+				notasRep.set(recorrer, Pitches.REST);
 			}
 			else{
 				break;
@@ -305,7 +307,7 @@ public class FuncionesMusicales {
 			}
 			else if (iniciaTriplets == 0){
 				if((iniciaCorchea == 0) && (iniciaSemi == 0)){
-					if(((notasRep.get(recorrer + 1) == -1) || (notasRep.get(recorrer + 1) == JMC.REST)) && ((notasRep.get(recorrer + 3) == -1) || (notasRep.get(recorrer + 3) == JMC.REST)) && (notasRep.get(recorrer + 2) != -1)){
+					if(((notasRep.get(recorrer + 1) == -1) || (notasRep.get(recorrer + 1) == Pitches.REST)) && ((notasRep.get(recorrer + 3) == -1) || (notasRep.get(recorrer + 3) == Pitches.REST)) && (notasRep.get(recorrer + 2) != -1)){
 						//es corchea
 						iniciaCorchea = 1;
 					}
@@ -318,7 +320,7 @@ public class FuncionesMusicales {
 			//Verifico cada caso
 			if(iniciaTriplets > 0){
 				
-				auxDur = JMC.EIGHTH_NOTE_TRIPLET;
+				auxDur = Durations.EIGHTH_NOTE_TRIPLET;
 				iniciaTriplets++;
 				
 				if(iniciaTriplets == 4){
@@ -329,7 +331,7 @@ public class FuncionesMusicales {
 				//termina con todos los holds para una nota del triplet
 				while((aux < notasRep.size()) && (notasRep.get(aux) == -1) && (iniciaTriplets != 0)){
 					
-					auxDur += JMC.EIGHTH_NOTE_TRIPLET;
+					auxDur += Durations.EIGHTH_NOTE_TRIPLET;
 					
 					iniciaTriplets++;
 					
@@ -341,13 +343,13 @@ public class FuncionesMusicales {
 				}								
 			}
 			else if(iniciaSemi > 0){
-				auxDur = JMC.SIXTEENTH_NOTE;
+				auxDur = Durations.SIXTEENTH_NOTE;
 				iniciaSemi++;
 				if (iniciaSemi == 5) iniciaSemi = 0;
 				
 				
 				while((aux < notasRep.size()) && (notasRep.get(aux) == -1) && (iniciaSemi != 0)){
-					auxDur += JMC.SIXTEENTH_NOTE;
+					auxDur += Durations.SIXTEENTH_NOTE;
 					iniciaSemi++;
 					if (iniciaSemi == 5) iniciaSemi = 0;
 					aux++;					
@@ -355,10 +357,10 @@ public class FuncionesMusicales {
 			}
 			else if(iniciaCorchea > 0){
 				if(iniciaCorchea == 1){
-					auxDur = JMC.QUARTER_NOTE_TRIPLET;
+					auxDur = Durations.QUARTER_NOTE_TRIPLET;
 				}
 				else{
-					auxDur = JMC.EIGHTH_NOTE_TRIPLET;
+					auxDur = Durations.EIGHTH_NOTE_TRIPLET;
 				}
 				iniciaCorchea++;
 				if(iniciaCorchea == 3) iniciaCorchea = 0;
@@ -366,10 +368,10 @@ public class FuncionesMusicales {
 				
 				while((aux < notasRep.size()) && (notasRep.get(aux) == -1) && (iniciaCorchea != 0)){
 					if(iniciaCorchea == 1){
-						auxDur += JMC.QUARTER_NOTE_TRIPLET;
+						auxDur += Durations.QUARTER_NOTE_TRIPLET;
 					}
 					else{
-						auxDur += JMC.EIGHTH_NOTE_TRIPLET;
+						auxDur += Durations.EIGHTH_NOTE_TRIPLET;
 					}
 					iniciaCorchea++;
 					if(iniciaCorchea == 3) iniciaCorchea = 0;
@@ -384,7 +386,7 @@ public class FuncionesMusicales {
 				while((aux < notasRep.size()) && (notasRep.get(aux) == -1) && iniciaTriplets == 0){
 					
 					if((iniciaSemi == 0) && (iniciaCorchea == 0) && notasRep.get(aux) != -2){
-						if(((notasRep.get(aux + 1) == -1) || (notasRep.get(aux + 1) == JMC.REST)) && ((notasRep.get(aux + 3) == -1) || (notasRep.get(aux + 3) == JMC.REST)) && (notasRep.get(aux + 2) != -1)){
+						if(((notasRep.get(aux + 1) == -1) || (notasRep.get(aux + 1) == Pitches.REST)) && ((notasRep.get(aux + 3) == -1) || (notasRep.get(aux + 3) == Pitches.REST)) && (notasRep.get(aux + 2) != -1)){
 							//es corchea
 							iniciaCorchea = 1;
 						}
@@ -394,7 +396,7 @@ public class FuncionesMusicales {
 					}
 					else{
 						if(iniciaSemi > 0){
-							auxDur += JMC.SIXTEENTH_NOTE;
+							auxDur += Durations.SIXTEENTH_NOTE;
 							iniciaSemi++;
 							if (iniciaSemi == 5) iniciaSemi = 0;
 							aux++;		
@@ -402,10 +404,10 @@ public class FuncionesMusicales {
 						}
 						else if(iniciaCorchea > 0){
 							if(iniciaCorchea == 1){
-								auxDur += JMC.QUARTER_NOTE_TRIPLET;
+								auxDur += Durations.QUARTER_NOTE_TRIPLET;
 							}
 							else{
-								auxDur += JMC.EIGHTH_NOTE_TRIPLET;
+								auxDur += Durations.EIGHTH_NOTE_TRIPLET;
 							}
 							iniciaCorchea++;
 							if(iniciaCorchea == 3) iniciaCorchea = 0;
@@ -436,8 +438,8 @@ public class FuncionesMusicales {
 		
 		System.out.println();
 		
-		int[] pitchArray = {JMC.c3,JMC.g3,JMC.b3,JMC.e4}; 
-		phr.addChord(pitchArray, JMC.WHOLE_NOTE);
+		int[] pitchArray = {Pitches.c3,Pitches.g3,Pitches.b3,Pitches.e4}; 
+		phr.addChord(pitchArray, Durations.WHOLE_NOTE);
 		
 		melodia.add(phr);
 		s.add(melodia);
@@ -448,11 +450,11 @@ public class FuncionesMusicales {
 		// build the ride line
 	 	Phrase phr = new Phrase();
 	 	int ride = 51;
-	 	phr.addNote(new Note(ride, JMC.C));
+	 	phr.addNote(new Note(ride, Durations.C));
 	 	phr.addNote(new Note(ride, 0.67));
 	 	phr.addNote(new Note(ride, 0.33));
-	 	phr.addNote(new Note(ride, JMC.C));
-	 	phr.addNote(new Note(ride, JMC.C));
+	 	phr.addNote(new Note(ride, Durations.C));
+	 	phr.addNote(new Note(ride, Durations.C));
 		return phr;
 	}
 		
@@ -461,7 +463,7 @@ public class FuncionesMusicales {
 	 	Phrase phr = new Phrase();
 	 	int snare = 38;
 		for (int i=0;i<4;i++) {
-	 		phr.addNote(new Note(JMC.REST, 0.67));
+	 		phr.addNote(new Note(Pitches.REST, 0.67));
 	 		phr.addNote(new Note(snare, 0.33, (int)(Math.random()*60)));
 	 	}
 		return phr;
@@ -469,7 +471,7 @@ public class FuncionesMusicales {
 	
 	public static void generaPartitura(){
 		
-        View.notate(s);
+//        View.notate(s);
 //        View.show(s);
 //		View.sketch(s);
 		
