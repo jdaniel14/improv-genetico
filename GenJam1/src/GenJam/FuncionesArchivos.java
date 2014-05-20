@@ -416,7 +416,7 @@ public class FuncionesArchivos {
 			while(next != null){
 				
 				//1)Leo el acorde
-				devolver.add(br.readLine());
+				devolver.add(next);
 				next = br.readLine();
 				
 			}
