@@ -30,7 +30,7 @@
 	$res = exec('export DYLD_LIBRARY_PATH="";java -cp .:./../lib/mysql-connector-java-5.1.30-bin.jar:./../lib/jMusic1.6.4.jar GenJam.GenJam ./../src/View/euphony-master/datos.txt');
 	chdir($old_path);
 	
-	$path_midi = "http://localhost/GenJam1/bin/arrastrar.midi,http://localhost/GenJam1/bin/tutti.midi";
+	$path_midi = "http://localhost/workspace eclipse/GenJam1/bin/out.midi,http://localhost/GenJam1/bin/out.midi";
 
 	header("Content-Type: text/html;charset=utf-8"); //esto es para las ñ y acentos
 	print json_encode($path_midi); //json_encode, serializa un arreglo a un formato JSON. (lo que devolvemos) 

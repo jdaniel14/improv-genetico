@@ -5,11 +5,15 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Iterator;
 
+import jm.music.data.Phrase;
+
 import Elements.BassNote;
 import Elements.MapBassNotes;
 import Elements.PhrasePopulation;
+import Elements.Phrases;
 import Elements.Teclado;
 import FuncionesGeneticas.Crossover;
+import FuncionesGeneticas.Genetico;
 
 public class GenJam {
 
@@ -17,18 +21,18 @@ public class GenJam {
 	
 	public static void main(String[] args) {
 		
-		//MapNotevsSound mapSonidos = new MapNotevsSound();
-		
-		//MapChordvsScale map = new MapChordvsScale();
-		
 		List<String> acordes;
-		Integer tempo;
+		Integer tempo = 180;
 		
+		// ** Lectura de datos desde el PHP **
+		/* 
 		acordes = FuncionesArchivos.leeAcordes(args[0]);
 		for(int i = 0 ; i < acordes.size(); i++)
 			System.out.println(acordes.get(i));
 		tempo = FuncionesArchivos.leeTempo(args[0]);
-		/*
+		*/
+		
+		/** Inicializacion de Datos de prueba***/
 		List<String> acordesOrnithology = new ArrayList<String>();
 
 		acordesOrnithology.add("Gmaj7");
@@ -53,7 +57,7 @@ public class GenJam {
 		List<String> acordesAlice = new ArrayList<String>();
 
 		acordesAlice.add("Dm7");
-		acordesAlice.add("Gmaj7");
+		acordesAlice.add("G7");
 		acordesAlice.add("Cmaj7");
 		acordesAlice.add("Fmaj7");
 		acordesAlice.add("Bm7b5");
@@ -68,26 +72,37 @@ public class GenJam {
 		acordesAlice.add("G7");
 		acordesAlice.add("Em7");
 		acordesAlice.add("Dm7");
-		*/
 		
-		PhrasePopulation poblacionFrases = new PhrasePopulation();
-/*		
-
+		
+		acordes = acordesAlice;
+		
+		
+		
+		// ** Inicializacion de la pobblaci—n de frases
+		//PhrasePopulation poblacionFrases = new PhrasePopulation();
+		
+		List<Phrases> frasesGeneradas = Genetico.AG();
+		
+		
+		/** Crossover **
 		Crossover cross = new Crossover();
 		cross.genera_frases(poblacionFrases.populationP);
 		
 		Collections.reverse(cross.resultado_final.populationP);
 		
-		FuncionesMusicales.crearComposicion(cross.resultado_final, acordes,tempo);
-	*/
+		FuncionesMusicales.crearComposicion(cross.resultado_final, acordes, tempo);
+		 */
 		
-		FuncionesMusicales.crearComposicion(poblacionFrases, acordes,tempo);
+		FuncionesMusicales.crearComposicion(frasesGeneradas, acordes,tempo);
 		
-//		FuncionesArchivos.initChordvsScaleBD();
+
 		
-//		FuncionesArchivos.initMeasureBD();
 		
-//		FuncionesArchivos.initBassNotes();		
+		
+		//	** Inicializaci—n de estructuras de la BD **
+		//		FuncionesArchivos.initChordvsScaleBD();
+		//		FuncionesArchivos.initMeasureBD();
+		//		FuncionesArchivos.initBassNotes();		
 		
 
 	} 
