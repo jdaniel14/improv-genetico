@@ -12,6 +12,11 @@ public class Measures {
 	public int id;
 	public List<Integer> notas;
 	
+	public Measures(){
+		id = 0;
+		notas = new ArrayList<Integer>();
+	}
+	
 	public Measures(int _id, List<Integer> _notas){
 		id = _id;
 		notas = _notas;

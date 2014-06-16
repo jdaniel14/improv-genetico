@@ -93,12 +93,12 @@ public class FuncionesMusicales {
 	}
 	
 	
-	public static void crearComposicion(PhrasePopulation pobFrases, List<String> acordes, Integer tempo){
+	public static void crearComposicion(List<Phrases> pobFrases, List<String> acordes, Integer tempo){
 		
-		s = new Score("GenJam",tempo);
+		s = new Score("Euricide",tempo);
 		//debo mandarle una lista de Phrases
-		System.out.println("SIZE: " + acordes.size());
-		makeMelody(pobFrases.populationP,acordes);
+		//System.out.println("SIZE: " + acordes.size());
+		makeMelody(pobFrases,acordes);
 		makeBass(acordes);
 		makeDrums(acordes);
 		generaPartitura();
@@ -153,7 +153,7 @@ public class FuncionesMusicales {
 		MapNotevsSound sonidos = new MapNotevsSound();
 		MapBassNotes notasBass = new MapBassNotes();
 		
-		System.out.println("bass");
+		//System.out.println("bass");
 		
 		Iterator<String> iter = acordes.iterator();
 		
@@ -257,14 +257,14 @@ public class FuncionesMusicales {
 		
 		//Preparacion de las notas para la reproduccion
 		
-		System.out.println("Frases sacadas");
+		//System.out.println("Frases sacadas");
 		
 		//Transformo los holds iniciales en silencios
 				
 		Integer recorrer = 0;
 		
 		while(recorrer < notasRep.size()){
-			System.out.println("Elimina hasta: " + recorrer);
+			//System.out.println("Elimina hasta: " + recorrer);
 			if(notasRep.get(recorrer) == -1){
 				notasRep.set(recorrer, Pitches.REST);
 			}
@@ -278,7 +278,7 @@ public class FuncionesMusicales {
 		
 		//Reproduccion
 		
-		System.out.println("**Inicia reproduccion");
+		//System.out.println("**Inicia reproduccion");
 				
 		recorrer = 0;//posicion actual
 		
@@ -418,15 +418,16 @@ public class FuncionesMusicales {
 				}	
 			}
 			
-			System.out.print(aux - 2 + ": ");
+			//System.out.print(aux - 2 + ": ");
 			
+			/** Impresion de notas
 			if(Note.getNote(notasRep.get(recorrer)) != "N/A"){
-				System.out.print(Note.getNote(notasRep.get(recorrer)) + " ");
+				//System.out.print(Note.getNote(notasRep.get(recorrer)) + " ");
 			}
 			else
-				System.out.print(notasRep.get(recorrer) + " ");
-			
-			System.out.println(auxDur);
+				//System.out.print(notasRep.get(recorrer) + " ");
+			*/
+			//System.out.println(auxDur);
 			
 			n = new Note(notasRep.get(recorrer),auxDur);
 						
@@ -436,7 +437,7 @@ public class FuncionesMusicales {
 			
 		}
 		
-		System.out.println();
+		//System.out.println();
 		
 		int[] pitchArray = {Pitches.c3,Pitches.g3,Pitches.b3,Pitches.e4}; 
 		phr.addChord(pitchArray, Durations.WHOLE_NOTE);

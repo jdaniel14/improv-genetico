@@ -60,7 +60,11 @@
                 else{
                     $("#validacion").hide("slow");
                     var cadena = $("#acordes").val();
-                    cadena = cadena.substr(0,cadena.length - 1);
+                    
+                    if( cadena[cadena.length - 1] == ','){
+                    	cadena = cadena.substr(0,cadena.length - 1);	
+                    }                    
+                    
                     $("#acordes").val(cadena);
 
                     var arr = $("#acordes").val().split(',');
@@ -85,7 +89,7 @@
                             console.log(data);
                             var archivos = data.split(",");
                             console.log(archivos[0]);
-                            //$(location).attr("href", archivos[0]);
+                            $(location).attr("href", archivos[0]);
                             
                         }
                     });
@@ -139,25 +143,17 @@
         <h5 style="font-family:avenir;">Suggested chords</h5>
 
         <table style="width:200px" align = "center">
-            <tr>
-              <td class = "chord_el">Cmaj7</td>
-              <td class = "chord_el">Dm7</td> 
-              <td class = "chord_el">Eb7</td>
+            <tr align = "center">
+              <td class = "chord_el">Autumn leaves</td>
             </tr>
-            <tr>
-              <td class = "chord_el">Fmaj7</td>
-              <td class = "chord_el">G7</td> 
-              <td class = "chord_el">Am7</td>
+            <tr align = "center">
+              <td class = "chord_el">Blues for Alice</td>
             </tr>
-            <tr>
-              <td class = "chord_el">Bm7b5</td>
-              <td class = "chord_el">Gm7</td> 
-              <td class = "chord_el">A7</td>
+            <tr align = "center">
+              <td class = "chord_el">Donna Lee</td>
             </tr>
-            <tr>
-              <td class = "chord_el">D7</td>
-              <td class = "chord_el">Em7</td> 
-              <td class = "chord_el">E7</td>
+            <tr align = "center">
+              <td class = "chord_el">Oleo</td>
             </tr>
         </table>
         <br>
