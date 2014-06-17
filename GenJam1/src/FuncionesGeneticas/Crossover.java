@@ -34,15 +34,15 @@ public class Crossover {
 		}
 		if(!tipo && (par_res.second == puntos[0].second) && puntos[0].second == puntos[1].second) {
 			tipo = true;
-			cad = "110";//110
+			cad = "100";//110
 		}
 		if(!tipo && (par_res.second == puntos[1].second) && puntos[1].second == puntos[2].second) {
 			tipo = true;
-			cad = "011";//011
+			cad = "010";//011
 		}
 		if(!tipo && (par_res.second == puntos[0].second) && puntos[0].second == puntos[2].second) {
 			tipo = true;
-			cad = "101";//101
+			cad = "110";//101
 		}
 	
 		System.out.println("CAD " + cad);
@@ -114,7 +114,7 @@ public class Crossover {
 	
 		if(tipo) {
 			l_msr1.add(frase1.measure_list.get(0));
-			l_msr2.add(frase1.measure_list.get(0));
+			l_msr2.add(frase2.measure_list.get(0));
 			for(int i = 0; i < 3; i++) {
 				if(cad.charAt(i) == '1'){
 					l_msr1.add(frase2.measure_list.get(i+1));
