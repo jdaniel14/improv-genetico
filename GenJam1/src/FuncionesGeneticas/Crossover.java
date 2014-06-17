@@ -2,7 +2,6 @@ package FuncionesGeneticas;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import Elements.Measures;
 import Elements.Pair;
@@ -12,6 +11,46 @@ import Elements.Phrases;
 public class Crossover {
 	public PhrasePopulation resultado_final = new PhrasePopulation();
 	
+	public void casar_hijos(Phrases frase1, Phrases frase2){
+		
+		Pair puntos[] = new Pair [3];
+		
+		Pair par_res = new Pair(-1, Integer.MAX_VALUE);
+
+		for ( int j = 0 ; j < 3; j++ ) {
+			Pair par_aux = calculaPunto( j, frase1, frase2) ;
+			puntos[j] = par_aux;
+			System.out.println("PUNTO " + j + " -> " + puntos[j].second);
+			if ( par_res.second > par_aux.second )
+				par_res = par_aux;
+		}
+		System.out.println("MINIMO " + par_res.first);
+		String cad= "";
+		boolean tipo = false;
+				
+		if(!tipo && (par_res.second == puntos[0].second) && puntos[0].second == puntos[1].second && puntos[1].second == puntos[2].second) {
+			tipo = true;
+			cad = "111";//111
+		}
+		if(!tipo && (par_res.second == puntos[0].second) && puntos[0].second == puntos[1].second) {
+			tipo = true;
+			cad = "110";//110
+		}
+		if(!tipo && (par_res.second == puntos[1].second) && puntos[1].second == puntos[2].second) {
+			tipo = true;
+			cad = "011";//011
+		}
+		if(!tipo && (par_res.second == puntos[0].second) && puntos[0].second == puntos[2].second) {
+			tipo = true;
+			cad = "101";//101
+		}
+	
+		System.out.println("CAD " + cad);
+		casamiento(par_res, frase1, frase2, tipo, cad);
+	
+	}
+	
+	/*
 	public void genera_frases(List <Phrases> lista_frases){
 		//PhrasePopulation poblacion_frases = new PhrasePopulation();
 		
@@ -24,16 +63,6 @@ public class Crossover {
 		for ( int k = 0; k < 3; k++ ) {
 			Pair par_res = new Pair(-1, Integer.MAX_VALUE);
 			for ( int i = 0; i < lista_frases.size(); i += 2 ) {
-				Random r = new Random();
-				int val = r.nextInt(100);
-				if(val < 5){
-					Measures meas_hemiola = hemolia_condition(lista_frases.get(i), lista_frases.get(i+1));
-					if ( meas_hemiola != null ) {
-						//Phrases frase_hemiola = creacion_hemiola_frase(); 
-						//lista_frases.add(frase_hemiola);
-						continue;
-					}
-				}
 
 				for ( int j = 0 ; j < 3; j++ ) {
 					Pair par_aux = calculaPunto( j, lista_frases.get(i), lista_frases.get(i + 1)) ;
@@ -76,8 +105,9 @@ public class Crossover {
 		System.out.println("FINAL " + resultado_final.populationP.size());
 
 	}
+	*/
 	
-	public List <Phrases> casamiento(Pair par_res, Phrases frase1, Phrases frase2, boolean tipo, String cad) {
+	public void casamiento(Pair par_res, Phrases frase1, Phrases frase2, boolean tipo, String cad) {
 		List <Phrases> lista = new ArrayList <Phrases>();
 		List <Measures> l_msr1 = new ArrayList <Measures>();
 		List <Measures> l_msr2 = new ArrayList <Measures>();
@@ -111,9 +141,19 @@ public class Crossover {
 		String genre = (frase1.genre == frase2.genre)? frase1.genre : "Fusion" ;
 		Phrases ph_1 = new Phrases(frase1.id*1000+frase2.id + par_res.first,l_msr1, genre);
 		Phrases ph_2 = new Phrases(frase2.id*1000+frase1.id + par_res.first,l_msr2, genre);
-		lista.add(ph_1);
-		lista.add(ph_2);
-		return lista;
+		
+		//lista.add(ph_1);
+		//lista.add(ph_2);
+		
+		frase1.id = ph_1.id;
+		frase1.measure_list = ph_1.measure_list;
+		frase2.id = ph_2.id;
+		frase2.measure_list = ph_2.measure_list;
+		/*System.out.println("ANTES");
+		Genetico.imprimirFraseNumeros(frase1);
+		Genetico.imprimirFraseNumeros(frase2);
+		System.out.println("DESPUES");*/
+		//return lista;
 	}
 
 	public static Pair calculaPunto(int pos, Phrases frase1, Phrases frase2) {
@@ -129,17 +169,20 @@ public class Crossover {
 		
 		inc = -1;
 		int msr0_not1 = get_nota_valida(msr0_f1, inicio_der, inc);
+		//System.out.println("msr0_not1 " + msr0_not1);
 		
 		inc = +1;
 		int msr1_not1 = get_nota_valida(msr1_f1, inicio_izq, inc);
+		//System.out.println("msr1_not1 " + msr1_not1);
 		
 		/*Hold. Rest, multiple croosover, measure pag 151*/
 		inc = -1;
-		int msr0_not2 = get_nota_valida(msr0_f1, inicio_der, inc);
+		int msr0_not2 = get_nota_valida(msr0_f2, inicio_der, inc);
+		//System.out.println("msr0_not2 " + msr0_not2);
 		
 		inc = +1;
-		int msr1_not2 = get_nota_valida(msr1_f1, inicio_izq, inc); 
-		
+		int msr1_not2 = get_nota_valida(msr1_f2, inicio_izq, inc); 
+		//System.out.println("msr1_not2 " + msr1_not2);
 		
 		int dif_par1 = (msr0_not1 - msr1_not1);
 		int dif_par2 = (msr0_not2 - msr1_not2);
@@ -153,19 +196,30 @@ public class Crossover {
 		//int dif_child1 = (msr0_f1.notas.get(7) - msr1_f2.notas.get(0));
 		//int dif_child2 = (msr0_f2.notas.get(7) - msr1_f1.notas.get(0));
 		
+		//System.out.println("dif_par1: " + dif_par1 + " , dif_par2: " + dif_par2);
+		//System.out.println("dif_child1: " + dif_child1 + " , dif_child1: " + dif_child2);
 		int diff1 = Math.abs(dif_par1 - dif_child1);
 		int diff2 = Math.abs(dif_par2 - dif_child2);
 		
+		//System.out.println("diff1: " + diff1 + " , diff2: " + diff2);
 		return new Pair(pos, Math.min(diff1, diff2));
 	}
 	
 	public static int get_nota_valida (Measures msr0_f1, int inicio, int inc) {
 		int ind  = inicio;
 		int nota = msr0_f1.notas.get(ind);
-		while ( (nota >= 15 || nota ==  0) && (ind < 15 && ind >=0) ) {
-			ind += inc;
-			System.out.println("IND : " + ind);
+		
+		/*System.out.println("ID " + msr0_f1.id);
+		for( int i = 0 ; i < msr0_f1.notas.size(); i++){
+			System.out.print(msr0_f1.notas.get(i)+ " ");
+		}
+		System.out.println();*/
+		
+		while ( (nota >= 15 || nota ==  0) && (ind <= 15 && ind >=0) ) {			
+			//System.out.println("IND : " + ind);
 			nota = msr0_f1.notas.get(ind);
+			//System.out.println("IND : " + ind + " , NOTA : " + nota);
+			ind += inc;
 		}
 		return nota;
 	}

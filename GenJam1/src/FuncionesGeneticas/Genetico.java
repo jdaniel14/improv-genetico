@@ -10,28 +10,27 @@ import Elements.PhrasePopulation;
 import Elements.Phrases;
 
 public class Genetico {	
-	
+	static final int PROB_MUTACION = 5;
+	static final int PROB_CRUCE = 30;
 	public static List<Phrases> AG(){
 		
 		Integer generacion = 0;
 		
 		System.out.println("****** Inicio del GA ******");
 		
-		//Inicializo la poblaci—n de frases
+		//Inicializo la poblaciï¿½n de frases
 		List<Phrases> poblacion = generarPoblacionInicial();
 		
-		System.out.println("-- Frase sin hemiola");
-		
+		Random ran = new Random();
+		Crossover cross = new Crossover();
+		imprimirFraseNumeros(poblacion.get(0));
 		imprimirFraseNumeros(poblacion.get(1));
-		
-		System.out.println("-- Frase con hemiola");
-		
-		Mutation.hemiola(poblacion.get(1));
+		cross.casar_hijos(poblacion.get(0) , poblacion.get(1) );
+		imprimirFraseNumeros(poblacion.get(0));
 		imprimirFraseNumeros(poblacion.get(1));
-		
-		
+		/*
 		do{
-			//Selecciono por torneo a los que ser‡n cruzados/mutados
+			//Selecciono por torneo a los que serï¿½n cruzados/mutados
 			List<Phrases> seleccion = seleccionTorneos(poblacion);
 			
 			//Aplico los operadores de mutacion
@@ -40,13 +39,13 @@ public class Genetico {
 			//Mi poblacion ahora es lo seleccionado
 			poblacion = seleccion;
 			
-			//Aumento el nœmero de la generaci—n en la que estoy
+			//Aumento el nï¿½mero de la generaciï¿½n en la que estoy
 			generacion++;
 			System.out.println("---------------------------------\n");
-			//Repito el proceso por un nœmero de iteraciones
+			//Repito el proceso por un nï¿½mero de iteraciones
 		} while(generacion < 3);
 		
-		
+		*/
 		
 		
 		System.out.println("****** Fin del GA ******");
@@ -58,17 +57,18 @@ public class Genetico {
 	public static void cruzarSeleccion(List<Phrases> seleccion){
 		
 		Crossover cross = new Crossover();
-		cross.genera_frases(seleccion);
-		/*
-		Random ran = new Random();
-		
-		Mutation.hemiola(seleccion.get(ran.nextInt(seleccion.size())));
-		Mutation.hemiola(seleccion.get(ran.nextInt(seleccion.size())));
-		Mutation.hemiola(seleccion.get(ran.nextInt(seleccion.size())));
-		Mutation.hemiola(seleccion.get(ran.nextInt(seleccion.size())));
-		Mutation.hemiola(seleccion.get(ran.nextInt(seleccion.size())));
-		*/
-		
+		//cross.genera_frases(seleccion);
+		for(int i = 0 ; i < seleccion.size(); i+=2) {
+			Random ran_cruce = new Random(100);
+			if( ran_cruce.nextInt() < PROB_CRUCE ) {
+					cross.casar_hijos(seleccion.get(i) , seleccion.get(i+1) );
+					Random ran_mut = new Random(100);
+					if ( ran_mut.nextInt() < PROB_MUTACION) 
+						Mutation.hemiola(seleccion.get(i));
+					if ( ran_mut.nextInt() < PROB_MUTACION)
+						Mutation.hemiola(seleccion.get(i+1));		         
+		    }
+		}
 	}
 	
 	public static List<Phrases> seleccionTorneos(List<Phrases> poblacion){
@@ -98,7 +98,7 @@ public class Genetico {
 	
 	public static void imprimirFraseNumeros(Phrases frase){
 		
-		System.out.println("INICIO -> Impresi—n nœmeros de la frase");
+		System.out.println("INICIO -> Impresiï¿½n nï¿½meros de la frase");
 		
 		System.out.println("Frase id: " + frase.id);
 		
@@ -121,7 +121,7 @@ public class Genetico {
 			
 		}
 		
-		System.out.println("FIN -> Impresi—n nœmeros de la frase");
+		System.out.println("FIN -> Impresiï¿½n nï¿½meros de la frase");
 		
 	}
 	
