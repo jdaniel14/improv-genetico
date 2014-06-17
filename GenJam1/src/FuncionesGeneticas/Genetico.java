@@ -23,12 +23,12 @@ public class Genetico {
 		
 		Random ran = new Random();
 		Crossover cross = new Crossover();
-		imprimirFraseNumeros(poblacion.get(0));
+		/*imprimirFraseNumeros(poblacion.get(0));
 		imprimirFraseNumeros(poblacion.get(1));
 		cross.casar_hijos(poblacion.get(0) , poblacion.get(1) );
 		imprimirFraseNumeros(poblacion.get(0));
-		imprimirFraseNumeros(poblacion.get(1));
-		/*
+		imprimirFraseNumeros(poblacion.get(1));*/
+		
 		do{
 			//Selecciono por torneo a los que ser�n cruzados/mutados
 			List<Phrases> seleccion = seleccionTorneos(poblacion);
@@ -45,7 +45,6 @@ public class Genetico {
 			//Repito el proceso por un n�mero de iteraciones
 		} while(generacion < 3);
 		
-		*/
 		
 		
 		System.out.println("****** Fin del GA ******");
