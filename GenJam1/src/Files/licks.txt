@@ -174,3 +174,113 @@ Dm7b5
 t g5 eb5 g5 t eb5 c5 eb5 t c5 ab4 c5 t ab4 f4 ab4
 G7
 t f5 d5 f5 t d5 b4 d5 t b4 ab4 b4 t ab4 f4 ab4
+
+471
+Jazz
+Cm7
+r r eb4 h g4 h bb4 h ab4 h c5 h f5 h d5 h
+Cm7
+eb5 h g5 h bb5 h d6 h db6 h b5 h c6 h b5 h
+Cm7
+bb5 h d6 h c6 h bb5 h ab5 h g5 h bb5 h f5 h
+Cm7
+fb5 h d5 h eb5 h c#5 h d5 h c#5 h c5 h bb4 h
+
+472
+Jazz
+Cm7
+ab4 h eb4 h bb4 h f4 h c5 h g4 h d5 h g4 h
+Cm7
+f5 h bb4 h g5 h c5 h g5 h ab5 h g5 h gb5 h
+Cm7
+f5 h c5 h ab4 h eb5 h bb4 h g4 h c5 h ab4 h
+Cm7
+f4 h g4 h eb4 h d4 h c4 h g4 h r r r r
+
+473
+Jazz
+Cm7
+g5 h ab5 h g5 h gb5 h f5 h a5 h g5 h f5 h
+Cm7
+e5 h d5 h eb5 h c#5 h d5 h ab4 h g4 h eb4 h
+Cm7
+d4 h f4 h fb4 h d4 h eb4 h g4 h ab4 h d5 h
+Cm7
+c5 h f5 h r r r r r r r r r r r r
+
+477
+Jazz
+Cm7
+c5 eb5 d5 b4 c5 h d5 h eb5 h f5 h g5 h ab5 h
+Cm7
+bb5 h d6 h ab5 h bb5 h g5 h eb5 h d5 h c5 h
+Cm7
+b4 h d5 h c5 h b4 h ab4 h g4 h f4 h fb4 h
+Cm7
+eb5 h g4 h d4 h db4 h c4 h h h h h h h
+
+509
+Jazz
+Cm7
+g4 h c4 h f4 h bb4 h eb5 h g5 h ab5 h d6 h
+Cm7
+c6 h g5 h f5 h bb5 h ab5 h eb5 h d5 h gb5 h
+Cm7
+f5 h c5 h bb4 h eb5 h d5 h ab5 h g4 h c5 h
+Cm7
+bb4 h f4 h d4 h ab4 h g4 h h h h h h h
+
+519
+Jazz
+Cm7
+g5 h h h c5 h g5 h gb5 h c5 h g5 h f5 h
+Cm7
+h h h h c5 h f5 h eb5 f5 eb5 c5 ab4 h gb4 h
+Cm7
+g4 h gb4 h f4 h c4 h f4 h fb4 h eb4 h d4 h
+Cm7
+db4 h g4 h c5 h eb5 h f5 h gb5 h eb5 h c5 h
+
+521
+Jazz
+Cm7
+c5 h bb4 h c5 h eb5 h f5 h g5 h ab5 h bb5 h
+Cm7
+g5 h f5 h eb5 h g5 h f5 h eb5 h d5 h bb4 h
+Cm7
+c5 h ab4 h g4 h f4 h bb4 h g4 h eb4 h c4 h
+Cm7
+d4 h eb4 h f4 h g4 h ab4 h c5 h eb5 h f5 h
+
+522
+Jazz
+Cm7
+r r c5 h eb5 h g5 h f5 h d5 h c5 h eb5 h
+Cm7
+d5 h bb4 h g4 h d5 h c5 h ab4 h f4 h g4 h
+Cm7
+bb4 h ab4 h g4 h ab4 h c5 h eb5 h f5 h g5 h
+Cm7
+ab5 h bb5 h g5 h eb5 h f5 h eb5 h c5 h bb5 h
+
+523
+Jazz
+Cm7
+eb4 h c4 h eb4 h g4 h f4 h d4 h f4 h ab4 h
+Cm7
+g4 h eb4 h g4 h bb4 h ab4 h f4 h ab4 h c5 h
+Cm7
+bb4 h g4 h bb4 h d5 h c5 h ab4 h c5 h eb5 h
+Cm7
+d5 h bb4 h d5 h f5 h eb5 h c5 h eb5 h ab5 h
+
+525
+Jazz
+Cm7
+g5 h ab5 h g5 h eb5 h f5 h g5 h f5 h d5 h
+Cm7
+eb5 h f5 h eb5 h c5 h d5 h eb5 h d5 h bb4 h
+Cm7
+c5 h d5 h c5 h ab4 h bb4 h c5 h bb4 h g4 h
+Cm7
+ab4 h bb4 h ab4 h f4 h g4 h h h eb4 h c4 h
