@@ -9,7 +9,7 @@ import Elements.PhrasePopulation;
 import Elements.Phrases;
 
 public class Crossover {
-	public PhrasePopulation resultado_final = new PhrasePopulation();
+	//public PhrasePopulation resultado_final = new PhrasePopulation();
 	
 	public void casar_hijos(Phrases frase1, Phrases frase2){
 		
@@ -30,7 +30,7 @@ public class Crossover {
 				
 		if(!tipo && (par_res.second == puntos[0].second) && puntos[0].second == puntos[1].second && puntos[1].second == puntos[2].second) {
 			tipo = true;
-			cad = "111";//111
+			cad = "101";//111
 		}
 		if(!tipo && (par_res.second == puntos[0].second) && puntos[0].second == puntos[1].second) {
 			tipo = true;
@@ -184,12 +184,17 @@ public class Crossover {
 		int msr1_not2 = get_nota_valida(msr1_f2, inicio_izq, inc); 
 		//System.out.println("msr1_not2 " + msr1_not2);
 		
-		int dif_par1 = (msr0_not1 - msr1_not1);
-		int dif_par2 = (msr0_not2 - msr1_not2);
+		int dif_par1 = Math.abs(Math.abs(msr0_not1) - Math.abs(msr1_not1));
+		int dif_par2 = Math.abs(Math.abs(msr0_not2) - Math.abs(msr1_not2));
 		
-		int dif_child1 = (msr0_not1 - msr1_not2);
-		int dif_child2 = (msr0_not2 - msr1_not1);
+		int dif_child1 = Math.abs(Math.abs(msr0_not1) - Math.abs(msr1_not2));
+		int dif_child2 = Math.abs(Math.abs(msr0_not2) - Math.abs(msr1_not1));
 		
+		System.out.println("dif_par1 : " + dif_par1);
+		System.out.println("dif_par2 : " + dif_par2);
+		System.out.println("---------------");
+		System.out.println("dif_child1 : " + dif_child1);
+		System.out.println("dif_child2 : " + dif_child2);
 		//int dif_par1 = (msr0_f1.notas.get(7) - msr1_f1.notas.get(0));
 		//int dif_par2 = (msr0_f2.notas.get(7) - msr1_f2.notas.get(0));
 		

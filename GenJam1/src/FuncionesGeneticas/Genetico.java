@@ -10,27 +10,32 @@ import Elements.PhrasePopulation;
 import Elements.Phrases;
 
 public class Genetico {	
+	
 	static final int PROB_MUTACION = 5;
-	static final int PROB_CRUCE = 30;
+	static final int PROB_CRUCE = 60;
+	
+	public static Crossover cross = new Crossover();
+	
 	public static List<Phrases> AG(){
 		
 		Integer generacion = 0;
 		
 		System.out.println("****** Inicio del GA ******");
 		
-		//Inicializo la poblaciï¿½n de frases
-		List<Phrases> poblacion = generarPoblacionInicial();
-		
-		Random ran = new Random();
-		Crossover cross = new Crossover();
-		/*imprimirFraseNumeros(poblacion.get(0));
-		imprimirFraseNumeros(poblacion.get(1));
-		cross.casar_hijos(poblacion.get(0) , poblacion.get(1) );
+		//Inicializo la poblaci—n de frases
+		List<Phrases> poblacion = generarPoblacionInicial();		
+		/*
 		imprimirFraseNumeros(poblacion.get(0));
-		imprimirFraseNumeros(poblacion.get(1));*/
+		imprimirFraseNumeros(poblacion.get(1));
+		
+		cross.casar_hijos(poblacion.get(0) , poblacion.get(1) );
+		
+		imprimirFraseNumeros(poblacion.get(0));
+		imprimirFraseNumeros(poblacion.get(1));
+		*/
 		
 		do{
-			//Selecciono por torneo a los que serï¿½n cruzados/mutados
+			//Selecciono por torneo a los que seran cruzados/mutados
 			List<Phrases> seleccion = seleccionTorneos(poblacion);
 			
 			//Aplico los operadores de mutacion
@@ -39,11 +44,11 @@ public class Genetico {
 			//Mi poblacion ahora es lo seleccionado
 			poblacion = seleccion;
 			
-			//Aumento el nï¿½mero de la generaciï¿½n en la que estoy
+			//Aumento el nï¿½mero de la generacion en la que estoy
 			generacion++;
-			System.out.println("---------------------------------\n");
-			//Repito el proceso por un nï¿½mero de iteraciones
-		} while(generacion < 3);
+			
+			//Repito el proceso por un numero de iteraciones
+		} while(generacion < 5);
 		
 		
 		
@@ -55,17 +60,24 @@ public class Genetico {
 	
 	public static void cruzarSeleccion(List<Phrases> seleccion){
 		
-		Crossover cross = new Crossover();
-		//cross.genera_frases(seleccion);
 		for(int i = 0 ; i < seleccion.size(); i+=2) {
-			Random ran_cruce = new Random(100);
-			if( ran_cruce.nextInt() < PROB_CRUCE ) {
+			
+			System.out.println("*-Nuevo par de frases-*");
+			
+			Random ran_cruce = new Random();
+			
+			if( ran_cruce.nextInt(100) < PROB_CRUCE ) {
+				
 					cross.casar_hijos(seleccion.get(i) , seleccion.get(i+1) );
-					Random ran_mut = new Random(100);
-					if ( ran_mut.nextInt() < PROB_MUTACION) 
+					
+					Random ran_mut = new Random();
+					
+					if ( ran_mut.nextInt(100) < PROB_MUTACION) 
 						Mutation.hemiola(seleccion.get(i));
-					if ( ran_mut.nextInt() < PROB_MUTACION)
-						Mutation.hemiola(seleccion.get(i+1));		         
+					
+					if ( ran_mut.nextInt(100) < PROB_MUTACION)
+						Mutation.hemiola(seleccion.get(i+1));
+					
 		    }
 		}
 	}
@@ -97,7 +109,7 @@ public class Genetico {
 	
 	public static void imprimirFraseNumeros(Phrases frase){
 		
-		System.out.println("INICIO -> Impresiï¿½n nï¿½meros de la frase");
+		System.out.println("INICIO -> Impresion numeros de la frase");
 		
 		System.out.println("Frase id: " + frase.id);
 		
@@ -120,7 +132,7 @@ public class Genetico {
 			
 		}
 		
-		System.out.println("FIN -> Impresiï¿½n nï¿½meros de la frase");
+		System.out.println("FIN -> Impresion numeros de la frase");
 		
 	}
 	
