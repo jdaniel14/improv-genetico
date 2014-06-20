@@ -111,6 +111,7 @@ if (typeof(MusicTheory) === "undefined") MusicTheory = {};
 	
 	root.tempoFromTap = function(that) {
 		function getName(v) {
+			/*
 			var tempo = { // wikipedia
 				200: 'Prestissimo',
 				168: 'Presto',
@@ -124,6 +125,20 @@ if (typeof(MusicTheory) === "undefined") MusicTheory = {};
 				40: 'Lento',
 				0: 'Larghissimo'
 			};
+			*/
+			var tempo = { // wikipedia
+					180: 'Prestissimo',
+					180: 'Presto',
+					180: 'Vivace',
+					180: 'Allegro',
+					180: 'Allegretto',
+					180: 'Moderato',
+					180: 'Andante',
+					180: 'Adagio',
+					180: 'Larghetto',
+					180: 'Lento',
+					180: 'Larghissimo'
+				};
 			for (var n = 0, name = ""; n < 250; n ++) {
 				if (tempo[n]) name = tempo[n];
 				if (v < n) return name;

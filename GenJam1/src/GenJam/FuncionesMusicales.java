@@ -27,7 +27,7 @@ import Elements.Teclado;
 public class FuncionesMusicales {
 	
 	private static Score s;
-	private static Part melodia = new Part("Melodia", JMC.PIANO ,0);
+	private static Part melodia = new Part("Melodia", JMC.RHODES ,0);
 	private static Part walkin = new Part("Walkin", JMC.BASS ,1);
 	private static Part ridePart = new Part("Drums",0,9);
 	private static Part snarePart = new Part("Drums 2", 0, 9);
@@ -98,6 +98,7 @@ public class FuncionesMusicales {
 		s = new Score("Euricide",tempo);
 		//debo mandarle una lista de Phrases
 		//System.out.println("SIZE: " + acordes.size());
+		
 		makeMelody(pobFrases,acordes);
 		makeBass(acordes);
 		makeDrums(acordes);

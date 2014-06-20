@@ -26,8 +26,9 @@
 	$old_path = getcwd();
 	
 	chdir('../../../bin');
-	
-	$res = exec('export DYLD_LIBRARY_PATH="";java -cp .:./../lib/mysql-connector-java-5.1.30-bin.jar:./../lib/jMusic1.6.4.jar GenJam.GenJam ./../src/View/euphony-master/datos.txt');
+	//echo "antes<br>";
+	$res = exec('export DYLD_LIBRARY_PATH="";java -cp .:./../lib/mysql-connector-java-5.1.30-bin.jar:./../lib/jMusic1.6.4.jar GenJam.GenJam ./../bin/View/euphony-master/datos.txt');
+	//echo $res;
 	chdir($old_path);
 	
 	$path_midi = "http://localhost/workspace eclipse/GenJam1/bin/out.midi,http://localhost/GenJam1/bin/out.midi";
