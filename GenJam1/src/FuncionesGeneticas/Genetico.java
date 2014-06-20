@@ -25,8 +25,10 @@ public class Genetico {
 		
 		System.out.println("****** Inicio del GA ******");
 		
-		//Inicializo la poblaci—n de frases
+
+		//Inicializo la poblaciï¿½n de frases
 		List<Phrases> poblacion = generarPoblacionInicial();		
+
 		
 		do{
 			//Selecciono por torneo a los que seran cruzados/mutados
@@ -40,12 +42,12 @@ public class Genetico {
 			
 			//Aumento el nï¿½mero de la generacion en la que estoy
 			generacion++;
-			
+	
 			//Repito el proceso por un numero de iteraciones
 		} while(generacion < 5);
 		
 		System.out.println("****** Fin del GA ******");
-		
+
 		return poblacion;
 	}
 	
@@ -104,6 +106,7 @@ public class Genetico {
 		
 		List<Measures> tempLM = new ArrayList<Measures>();
 		
+
 		Iterator<Measures> iterM = frase.measure_list.iterator();
 		
 		while(iterM.hasNext()){
@@ -134,9 +137,18 @@ public class Genetico {
 		
 		PhrasePopulation poblacion_inicial = new PhrasePopulation();
 		List<Phrases> poblacion = poblacion_inicial.populationP;
-		
-		
-		
+		List<Phrases> lista_aux = new ArrayList<Phrases>();
+		Crossover cross = new Crossover();
+		for(int i = 0; i < poblacion.size(); i+=2) {
+			Phrases ph1 = clonarPhrases(poblacion.get(i));
+			Phrases ph2 = clonarPhrases(poblacion.get(i+1));
+			cross.casar_hijos(ph1, ph2);
+			lista_aux.add(ph1);
+			lista_aux.add(ph2);
+		}
+		System.out.println("----------------size : " + lista_aux.size());
+		poblacion.addAll(lista_aux);
+		System.out.println("----------------size : " + poblacion.size());
 		return poblacion;
 	}
 	
