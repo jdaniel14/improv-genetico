@@ -11,10 +11,13 @@ import Elements.Phrases;
 
 public class Genetico {	
 	
-	static final int PROB_MUTACION = 5;
-	static final int PROB_CRUCE = 60;
+	static final int PROB_MUTACION = 0;
+	static final int PROB_CRUCE = 70;
+	static final int POBLACION = 16;
 	
 	public static Crossover cross = new Crossover();
+	
+	public static Random randoms = new Random();
 	
 	public static List<Phrases> AG(){
 		
@@ -24,15 +27,6 @@ public class Genetico {
 		
 		//Inicializo la poblaci—n de frases
 		List<Phrases> poblacion = generarPoblacionInicial();		
-		/*
-		imprimirFraseNumeros(poblacion.get(0));
-		imprimirFraseNumeros(poblacion.get(1));
-		
-		cross.casar_hijos(poblacion.get(0) , poblacion.get(1) );
-		
-		imprimirFraseNumeros(poblacion.get(0));
-		imprimirFraseNumeros(poblacion.get(1));
-		*/
 		
 		do{
 			//Selecciono por torneo a los que seran cruzados/mutados
@@ -50,10 +44,8 @@ public class Genetico {
 			//Repito el proceso por un numero de iteraciones
 		} while(generacion < 5);
 		
-		
-		
 		System.out.println("****** Fin del GA ******");
-				
+		
 		return poblacion;
 	}
 	
@@ -62,21 +54,26 @@ public class Genetico {
 		
 		for(int i = 0 ; i < seleccion.size(); i+=2) {
 			
+			imprimirFraseNumeros(seleccion.get(i));
+			imprimirFraseNumeros(seleccion.get(i+1));
+			
 			System.out.println("*-Nuevo par de frases-*");
 			
-			Random ran_cruce = new Random();
-			
-			if( ran_cruce.nextInt(100) < PROB_CRUCE ) {
+			if( randoms.nextInt(100) < PROB_CRUCE ) {
 				
 					cross.casar_hijos(seleccion.get(i) , seleccion.get(i+1) );
+					 
+					imprimirFraseNumeros(seleccion.get(i));
+					imprimirFraseNumeros(seleccion.get(i+1));
 					
-					Random ran_mut = new Random();
-					
-					if ( ran_mut.nextInt(100) < PROB_MUTACION) 
+					if ( randoms.nextInt(100) < PROB_MUTACION){
 						Mutation.hemiola(seleccion.get(i));
+					}
+						
 					
-					if ( ran_mut.nextInt(100) < PROB_MUTACION)
+					if ( randoms.nextInt(100) < PROB_MUTACION){
 						Mutation.hemiola(seleccion.get(i+1));
+					}
 					
 		    }
 		}
@@ -84,23 +81,59 @@ public class Genetico {
 	
 	public static List<Phrases> seleccionTorneos(List<Phrases> poblacion){
 		
+		//Copiar las frases a seleccion
 		List<Phrases> seleccion = new ArrayList<Phrases>();
-		seleccion = poblacion;
 		
+		for(int i = 0; i < poblacion.size(); i++){
+			
+			seleccion.add(clonarPhrases(poblacion.get(i)));
+						
+		}
 		
+		java.util.Collections.shuffle(seleccion);
 		
+		return seleccion;
+	}
+	
+	public static Phrases clonarPhrases(Phrases frase){
 		
+		Phrases temp = new Phrases();
 		
+		temp.genre = frase.genre;
+		temp.id = frase.id;
 		
+		List<Measures> tempLM = new ArrayList<Measures>();
 		
-		return poblacion;
+		Iterator<Measures> iterM = frase.measure_list.iterator();
+		
+		while(iterM.hasNext()){
+			Measures itemM = iterM.next();
+			
+			Measures tempM = new Measures();
+			
+			tempM.id = itemM.id;
+			
+			List<Integer> tempLI = new ArrayList<Integer>();
+			
+			for(int i = 0; i < itemM.notas.size(); i++){
+				tempLI.add(itemM.notas.get(i));
+			}
+			
+			tempM.notas = tempLI;
+			
+			tempLM.add(tempM);
+			
+		}
+		
+		temp.measure_list = tempLM;
+		
+		return temp;
 	}
 	
 	public static List<Phrases> generarPoblacionInicial(){
 		
 		PhrasePopulation poblacion_inicial = new PhrasePopulation();
 		List<Phrases> poblacion = poblacion_inicial.populationP;
-		
 		
 		
 		
