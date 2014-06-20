@@ -1,6 +1,7 @@
 package FuncionesGeneticas;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -13,7 +14,6 @@ public class Genetico {
 	
 	static final int PROB_MUTACION = 0;
 	static final int PROB_CRUCE = 70;
-	static final int POBLACION = 16;
 	
 	public static Crossover cross = new Crossover();
 	
@@ -44,9 +44,11 @@ public class Genetico {
 			generacion++;
 	
 			//Repito el proceso por un numero de iteraciones
-		} while(generacion < 5);
+		} while(generacion < 4);
 		
 		System.out.println("****** Fin del GA ******");
+		
+		Collections.shuffle(poblacion);
 
 		return poblacion;
 	}
@@ -89,7 +91,7 @@ public class Genetico {
 		for(int i = 0; i < poblacion.size(); i++){
 			
 			seleccion.add(clonarPhrases(poblacion.get(i)));
-						
+
 		}
 		
 		java.util.Collections.shuffle(seleccion);

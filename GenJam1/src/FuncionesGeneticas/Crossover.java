@@ -186,26 +186,26 @@ public class Crossover {
 		int msr1_not2 = get_nota_valida(msr1_f2, inicio_izq, inc); 
 		//System.out.println("msr1_not2 " + msr1_not2);
 		
-		
+		/*
 		int dif_par1 = Math.abs(Math.abs(msr0_not1) - Math.abs(msr1_not1));
 		int dif_par2 = Math.abs(Math.abs(msr0_not2) - Math.abs(msr1_not2));
+		
+		int dif_child1 = Math.abs(Math.abs(msr0_not1) - Math.abs(msr1_not2));
+		int dif_child2 = Math.abs(Math.abs(msr0_not2) - Math.abs(msr1_not1));
+		*/
+		
 		
 		int dif_child1 = Math.abs(Math.abs(msr0_not1) - Math.abs(msr1_not2));
 		int dif_child2 = Math.abs(Math.abs(msr0_not2) - Math.abs(msr1_not1));
 		
 		
 		/*
-		int dif_child1 = Math.abs(Math.abs(msr0_not1) - Math.abs(msr1_not2));
-		int dif_child2 = Math.abs(Math.abs(msr0_not2) - Math.abs(msr1_not1));
-		*/
-		
-		
 		int diff1 = Math.abs(dif_par1 - dif_child1);
 		int diff2 = Math.abs(dif_par2 - dif_child2);
+		*/
 		
-		
-		return new Pair(pos, Math.min(diff1, diff2));
-		//return new Pair(pos, Math.min(dif_child1, dif_child2));
+		//return new Pair(pos, Math.min(diff1, diff2));
+		return new Pair(pos, Math.min(dif_child1, dif_child2));
 	}
 	
 	public static int get_nota_valida (Measures msr0_f1, int inicio, int inc) {

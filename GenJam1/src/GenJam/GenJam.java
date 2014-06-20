@@ -21,18 +21,21 @@ public class GenJam {
 	
 	public static void main(String[] args) {
 		
+		System.out.println("Bemvindo ao Euricide");
 		List<String> acordes;
 		Integer tempo = 180;
 		
 		// ** Lectura de datos desde el PHP **
-		/* 
+		
+		
 		acordes = FuncionesArchivos.leeAcordes(args[0]);
 		for(int i = 0 ; i < acordes.size(); i++)
 			System.out.println(acordes.get(i));
 		tempo = FuncionesArchivos.leeTempo(args[0]);
-		*/
+		System.out.println(tempo);
 		
 		/** Inicializacion de Datos de prueba***/
+		/*
 		List<String> acordesOrnithology = new ArrayList<String>();
 
 		acordesOrnithology.add("Gmaj7");
@@ -72,27 +75,28 @@ public class GenJam {
 		acordesAlice.add("G7");
 		acordesAlice.add("Em7");
 		acordesAlice.add("Dm7");
-		
+		acordesAlice.add("Dm7");
+		acordesAlice.add("G7");
+		acordesAlice.add("Cmaj7");
+		acordesAlice.add("Fmaj7");
+		acordesAlice.add("Bm7b5");
+		acordesAlice.add("E7");
+		acordesAlice.add("Am7");
+		acordesAlice.add("Eb7");
+		acordesAlice.add("Dm7");
+		acordesAlice.add("G7");
+		acordesAlice.add("Em7");
+		acordesAlice.add("Am7");
+		acordesAlice.add("Dm7");
+		acordesAlice.add("G7");
+		acordesAlice.add("Em7");
+		acordesAlice.add("Dm7");
 		
 		acordes = acordesAlice;
-		
-		
-		
-		// ** Inicializacion de la pobblaci—n de frases
-		//PhrasePopulation poblacionFrases = new PhrasePopulation();
+		*/
 		
 		List<Phrases> frasesGeneradas = Genetico.AG();
-		
-		
-		/** Crossover **
-		Crossover cross = new Crossover();
-		cross.genera_frases(poblacionFrases.populationP);
-		
-		Collections.reverse(cross.resultado_final.populationP);
-		
-		FuncionesMusicales.crearComposicion(cross.resultado_final, acordes, tempo);
-		 */
-		
+		//pancho 
 		FuncionesMusicales.crearComposicion(frasesGeneradas, acordes,tempo);
 		
 
