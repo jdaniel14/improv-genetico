@@ -137,17 +137,25 @@ public class Genetico {
 		
 		PhrasePopulation poblacion_inicial = new PhrasePopulation();
 		List<Phrases> poblacion = poblacion_inicial.populationP;
-		List<Phrases> lista_aux = new ArrayList<Phrases>();
+		List<Phrases> lista_aux_cross = new ArrayList<Phrases>();
+		List<Phrases> lista_aux_hem = new ArrayList<Phrases>();
 		Crossover cross = new Crossover();
 		for(int i = 0; i < poblacion.size(); i+=2) {
 			Phrases ph1 = clonarPhrases(poblacion.get(i));
 			Phrases ph2 = clonarPhrases(poblacion.get(i+1));
 			cross.casar_hijos(ph1, ph2);
-			lista_aux.add(ph1);
-			lista_aux.add(ph2);
+			lista_aux_cross.add(ph1);
+			lista_aux_cross.add(ph2);
 		}
-		System.out.println("----------------size : " + lista_aux.size());
-		poblacion.addAll(lista_aux);
+		for(int i = 0; i < poblacion.size(); i++) {
+			Phrases ph3 = clonarPhrases(poblacion.get(i));
+			Mutation.hemiola(ph3);
+			lista_aux_hem.add(ph3);
+		}
+		System.out.println("----------------size : " + poblacion.size());
+		poblacion.addAll(lista_aux_cross);
+		System.out.println("----------------size : " + poblacion.size());
+		poblacion.addAll(lista_aux_hem);
 		System.out.println("----------------size : " + poblacion.size());
 		return poblacion;
 	}
