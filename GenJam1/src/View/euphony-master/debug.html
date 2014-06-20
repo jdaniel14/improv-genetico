@@ -96,11 +96,36 @@
                 }
             
             });
-            $(".chord_el").click(function(){
-                var cadena = $("#acordes").val();
-                cadena += $(this)[0].innerHTML + ",";
-                $("#acordes").val(cadena);
+            
+            
+            $("#autumn").click(function(){
+            	var cadena = $("#acordes").val();
+            	var acordes = "Am7,D7,Gmaj7,Cmaj7,F#m7b5,B7,Em7,Em7,Am7,D7,Gmaj7,Cmaj7,F#m7b5,B7,Em7,Em7,F#m7b5,B7b9,Em7,Em7,Am7,D7,Gmaj7,Gmaj7,F#m7b5,B7b9,Em7,Dm7,Cmaj7,B7b9,Em7,Em7,";
+            	cadena += acordes;
+            	$("#acordes").val(cadena);
             });
+            
+            $("#alice").click(function(){
+            	var cadena = $("#acordes").val();
+            	var acordes = "Dm7,G7,Cmaj7,Fmaj7,Bm7b5,E7,Am7,Eb7,Dm7,G7,Em7,Am7,Dm7,G7,Em7,Dm7,Dm7,G7,Cmaj7,Fmaj7,Bm7b5,E7,Am7,Eb7,Dm7,G7,Em7,Am7,Dm7,G7,Cmaj7,Am7,";
+            	cadena += acordes;
+            	$("#acordes").val(cadena);
+            });
+            
+            $("#autumn").click(function(){
+            	var cadena = $("#acordes").val();
+            	var acordes = "Am7,D7,Gmaj7,Cmaj7,F#m7b5,B7,Em7,Em7,Am7,D7,Gmaj7,Cmaj7,F#m7b5,B7,Em7,Em7,F#m7b5,B7b9,Em7,Em7,Am7,D7,Gmaj7,Gmaj7,F#m7b5,B7b9,Em7,Dm7,Cmaj7,B7b9,Em7,Em7";
+            	cadena += acordes;
+            	$("#acordes").val(cadena);
+            });
+            
+            $("#autumn").click(function(){
+            	var cadena = $("#acordes").val();
+            	var acordes = "Am7,D7,Gmaj7,Cmaj7,F#m7b5,B7,Em7,Em7,Am7,D7,Gmaj7,Cmaj7,F#m7b5,B7,Em7,Em7,F#m7b5,B7b9,Em7,Em7,Am7,D7,Gmaj7,Gmaj7,F#m7b5,B7b9,Em7,Dm7,Cmaj7,B7b9,Em7,Em7";
+            	cadena += acordes;
+            	$("#acordes").val(cadena);
+            });
+            
 
             $("#limpiar").click(function(){
                 $("#acordes").val("");
@@ -144,16 +169,16 @@
 
         <table style="width:200px" align = "center">
             <tr align = "center">
-              <td class = "chord_el">Autumn leaves</td>
+              <td id = "autumn">Autumn leaves</td>
             </tr>
             <tr align = "center">
-              <td class = "chord_el">Blues for Alice</td>
+              <td id = "alice">Blues for Alice</td>
             </tr>
             <tr align = "center">
-              <td class = "chord_el">Donna Lee</td>
+              <td id = "donna">Donna Lee</td>
             </tr>
             <tr align = "center">
-              <td class = "chord_el">Oleo</td>
+              <td id = "oleo">Oleo</td>
             </tr>
         </table>
         <br>
