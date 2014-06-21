@@ -66,7 +66,7 @@ function Replayer(midiFile, timeWarp, eventProcessor) {
 			}
 			var time = secondsToGenerate * 1000 * timeWarp || 0;
 			//temporal.push([ midiEvent, time]);
-			var tempoView = ($("#tempo").val() - 50) / 100;
+			var tempoView = ($("#tempo").val() - 30) / 100;
 			//console.log(tempoView);
 			temporal.push([ midiEvent, time/tempoView]);
 			midiEvent = getNextEvent();

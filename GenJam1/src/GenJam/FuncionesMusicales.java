@@ -14,6 +14,7 @@ import jm.util.View;
 import jm.util.Write;
 import jm.JMC;
 
+import Elements.Bajo;
 import Elements.BassNote;
 import Elements.ChordvsScale;
 import Elements.MapBassNotes;
@@ -150,7 +151,7 @@ public class FuncionesMusicales {
 
 		//WALKIN
 		Phrase phr2 = new Phrase();
-		Teclado keyboard = new Teclado();
+		Bajo keyboard = new Bajo();
 		MapNotevsSound sonidos = new MapNotevsSound();
 		MapBassNotes notasBass = new MapBassNotes();
 		
@@ -178,6 +179,8 @@ public class FuncionesMusicales {
 			}
 						
 			for (int i = 0; i < keyboard.notas.size(); i++){
+				
+				//System.out.println("Nota: " + nota);
 				
 				if(inicioBass(keyboard.notas.get(i), nota)){
 //					System.out.println(keyboard.notas.get(i).get(0));

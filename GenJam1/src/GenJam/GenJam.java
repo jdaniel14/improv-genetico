@@ -93,8 +93,8 @@ public class GenJam {
 		acordesAlice.add("Dm7");
 		
 		acordes = acordesAlice;
-		*/
 		
+		*/
 		List<Phrases> frasesGeneradas = Genetico.AG();
 		//pancho 
 		FuncionesMusicales.crearComposicion(frasesGeneradas, acordes,tempo);

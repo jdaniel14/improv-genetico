@@ -112,21 +112,13 @@
             	$("#acordes").val(cadena);
             });
             
-            $("#autumn").click(function(){
+            $("#error").click(function(){
             	var cadena = $("#acordes").val();
-            	var acordes = "Am7,D7,Gmaj7,Cmaj7,F#m7b5,B7,Em7,Em7,Am7,D7,Gmaj7,Cmaj7,F#m7b5,B7,Em7,Em7,F#m7b5,B7b9,Em7,Em7,Am7,D7,Gmaj7,Gmaj7,F#m7b5,B7b9,Em7,Dm7,Cmaj7,B7b9,Em7,Em7";
+            	var acordes = "Eb7Bl,Ab7Bl,Eb7Bl,Eb7Bl,Ab7Bl,Ab7Bl,Eb7Bl,Eb7Bl,Bb7Bl,Ab7Bl,Eb7Bl,Bb7Bl,";
             	cadena += acordes;
             	$("#acordes").val(cadena);
             });
-            
-            $("#autumn").click(function(){
-            	var cadena = $("#acordes").val();
-            	var acordes = "Am7,D7,Gmaj7,Cmaj7,F#m7b5,B7,Em7,Em7,Am7,D7,Gmaj7,Cmaj7,F#m7b5,B7,Em7,Em7,F#m7b5,B7b9,Em7,Em7,Am7,D7,Gmaj7,Gmaj7,F#m7b5,B7b9,Em7,Dm7,Cmaj7,B7b9,Em7,Em7";
-            	cadena += acordes;
-            	$("#acordes").val(cadena);
-            });
-            
-
+     
             $("#limpiar").click(function(){
                 $("#acordes").val("");
             });
@@ -172,13 +164,10 @@
               <td id = "autumn">Autumn leaves</td>
             </tr>
             <tr align = "center">
-              <td id = "alice">Blues for Alice</td>
+              <td id = "alice">Alice in wonderland</td>
             </tr>
             <tr align = "center">
-              <td id = "donna">Donna Lee</td>
-            </tr>
-            <tr align = "center">
-              <td id = "oleo">Oleo</td>
+              <td id = "error">Error</td>
             </tr>
         </table>
         <br>
