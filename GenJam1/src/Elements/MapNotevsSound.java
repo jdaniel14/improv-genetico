@@ -8,7 +8,28 @@ public class MapNotevsSound {
 	public HashMap<String, Integer> NvsS = new HashMap<String, Integer>();
 	
 	public MapNotevsSound(){
-		
+		NvsS.put("A1",Pitches.A1);
+		NvsS.put("A#1",Pitches.AS1);
+		NvsS.put("Bb1",Pitches.BF1);
+		NvsS.put("B1",Pitches.B1);
+		NvsS.put("B#1",Pitches.BS1);
+		NvsS.put("Cb2",Pitches.CF2);
+		NvsS.put("C2",Pitches.C2);
+		NvsS.put("C#2",Pitches.CS2);
+		NvsS.put("Db2",Pitches.DF2);
+		NvsS.put("D2",Pitches.D2);
+		NvsS.put("D#2",Pitches.DS2);
+		NvsS.put("Eb2",Pitches.EF2);
+		NvsS.put("E2",Pitches.E2);
+		NvsS.put("E#2",Pitches.ES2);
+		NvsS.put("Fb2",Pitches.FF2);
+		NvsS.put("F2",Pitches.F2);
+		NvsS.put("F#2",Pitches.FS2);
+		NvsS.put("Gb2",Pitches.GF2);
+		NvsS.put("G2",Pitches.G2);
+		NvsS.put("G#2",Pitches.GS2);
+		NvsS.put("Ab2",Pitches.AF2);
+				
 		NvsS.put("A2",Pitches.A2);
 		NvsS.put("A#2",Pitches.AS2);
 		NvsS.put("Bb2",Pitches.BF2);
