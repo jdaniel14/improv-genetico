@@ -17,6 +17,7 @@ import jm.JMC;
 import Elements.Bajo;
 import Elements.BassNote;
 import Elements.ChordvsScale;
+import Elements.DatosArchivo;
 import Elements.MapBassNotes;
 import Elements.MapChordvsScale;
 import Elements.MapNotevsSound;
@@ -37,7 +38,40 @@ public class FuncionesMusicales {
 	private static Random randoms = new Random();
 	private static int cortes = 0;
 	private static int tonalidad = 0;
+	private static int comenzando = 0;
+	private static int dondecortoVoicings = 10;
+	private static int dondecortoBajo = 10;
 
+	public static List<Phrases> poblacionVacia(){
+		
+		List<Phrases> dev = new ArrayList<Phrases>();
+		
+		for(int i = 0; i < 48; i++){
+			
+			Phrases frase = new Phrases();
+			frase.genre = "Jazz";
+			frase.id = 0;
+			frase.measure_list = new ArrayList<Measures>();
+			
+			for(int j = 0; j < 4; j++){
+				Measures measure = new Measures();
+				
+				measure.id = 0;
+				measure.notas = new ArrayList<Integer>();
+				
+				for(int z = 0; z< 16; z++){
+					measure.notas.add(0);
+				}
+				frase.measure_list.add(measure);
+				
+			}
+			
+			dev.add(frase);
+		}
+		
+		return dev;
+	}
+	
 	public static List<Integer> notasDelCompas(Measures fraseRep,String acorde){
 		List<Integer> dev = new ArrayList<Integer>();
 		//List<String> devNotas = new ArrayList<String>();
@@ -99,9 +133,32 @@ public class FuncionesMusicales {
 	}
 	
 	
-	public static void crearComposicion(List<Phrases> pobFrases, List<String> acordes, Integer tempo){
+	public static void crearComposicion(List<Phrases> pobFrases, List<String> acordes, DatosArchivo datosArchivo){
 		
-		s = new Score("Euricide",tempo);
+		s = new Score(datosArchivo.nombreArchivo,datosArchivo.tempo);
+		melodia = new Part("Melodia", JMC.RHODES ,0);
+		walkin = new Part("Walkin", JMC.BASS ,1);
+		voicings = new Part("Voicings", JMC.RHODES, 2);
+		ridePart = new Part("Drums",0,9);
+		snarePart = new Part("Drums 2", 0, 9);
+		
+		
+		if(datosArchivo.cortes2.equalsIgnoreCase("true")){
+			dondecortoVoicings = 10;
+			dondecortoBajo = 10;
+		}
+		if(datosArchivo.cortes4.equalsIgnoreCase("true")){
+			dondecortoVoicings = 8;
+			dondecortoBajo = 8;
+		}
+		if((datosArchivo.cortes4.equalsIgnoreCase("false")) && (datosArchivo.cortes2.equalsIgnoreCase("false"))){
+			dondecortoVoicings = 35655;
+			dondecortoBajo = 35655;
+		}
+		
+		if(datosArchivo.voicings.equalsIgnoreCase("false")){
+			dondecortoVoicings = 0;
+		}
 		
 		cortes = 0;
 		makeVoicings(acordes);
@@ -113,7 +170,7 @@ public class FuncionesMusicales {
 		
 		generaPartitura();
 		
-		Write.midi(s,"out.midi");
+		Write.midi(s,datosArchivo.nombreArchivo);
 	}
 		
 	public static void makeDrums(List<String> acordes){
@@ -225,11 +282,15 @@ public class FuncionesMusicales {
 		            int[] pitchArray = {n1,n2,n3,n4};
 		            int[] restArray = {Pitches.REST};
 		            
-		            int ritmo = randoms.nextInt(3);
+		            int ritmo = randoms.nextInt(5);
 		            
-		            if(cortes < 10){
+		            if(cortes < dondecortoVoicings){
 		            
-			            if(ritmo == 0){
+		            	
+		            	if((ritmo == 2) || (ritmo == 3) || (comenzando < 4)){
+			            	phr3.addChord(pitchArray, Durations.WHOLE_NOTE);
+			            }
+		            	else if (ritmo == 0){
 			            	phr3.addChord(restArray, Durations.QUARTER_NOTE_TRIPLET);
 			            	phr3.addChord(pitchArray, Durations.EIGHTH_NOTE_TRIPLET);
 				    		phr3.addChord(restArray, Durations.QUARTER_NOTE);
@@ -237,15 +298,14 @@ public class FuncionesMusicales {
 			            	phr3.addChord(pitchArray, Durations.EIGHTH_NOTE_TRIPLET);
 				    		phr3.addChord(restArray, Durations.QUARTER_NOTE);
 			            }
-			            if(ritmo == 1){
+		            	else if((ritmo == 1)|| (ritmo == 4)){
 			            	phr3.addChord(pitchArray, Durations.HALF_NOTE);
 			            	phr3.addChord(restArray, Durations.QUARTER_NOTE_TRIPLET);
 				    		phr3.addChord(pitchArray, Durations.EIGHTH_NOTE_TRIPLET);
 				    		phr3.addChord(restArray, Durations.QUARTER_NOTE);
 			            }
-			            if(ritmo == 2){
-			            	phr3.addChord(pitchArray, Durations.WHOLE_NOTE);
-			            }
+		            	comenzando++;
+			            
 
 		            }
 		            else{
@@ -325,7 +385,7 @@ public class FuncionesMusicales {
 						root = bajo.notas.get(i).get(0);
 					}
 					
-					if(cortes < 10){
+					if(cortes < dondecortoBajo){
 					
 						n = new Note(sonidos.NvsS.get(bajo.notas.get(i).get(0)), Durations.QUARTER_NOTE);
 			            phr2.addNote(n);
@@ -621,6 +681,10 @@ public class FuncionesMusicales {
 	 		phr.addNote(new Note(snare, 0.33, (int)(Math.random()*60)));
 	 	}
 		return phr;
+	}
+	
+	public static void generaSugerencias(){
+		
 	}
 	
 	public static void generaPartitura(){
