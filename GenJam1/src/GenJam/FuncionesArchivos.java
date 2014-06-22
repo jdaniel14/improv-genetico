@@ -357,6 +357,75 @@ public class FuncionesArchivos {
 		}
 	}
 	
+	public static void insertarVoicings(String alteracion, Integer voz1, Integer voz2, Integer voz3, Integer voz4){
+		Conexion conexion = new Conexion();
+		
+		try{
+			conexion.abrirConexion();
+			
+			String sql = " INSERT INTO Voicings (alteracion" +
+						",voz1,voz2,voz3,voz4) VALUES ('" +
+						alteracion + "'," + voz1 + "," + voz2 + "," + 
+						voz3 + "," + voz4 + ") ";
+			
+			PreparedStatement pst = conexion.conn.prepareStatement(sql);
+			
+			pst.execute();
+			conexion.conn.commit();
+			
+			conexion.cerrarConexion();
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
+	}
+	
+	public static void initVoicings(){
+		BufferedReader br = null;
+		
+		try{
+						
+			br = new BufferedReader(new FileReader("bin/Files/voicings.txt"));
+			
+			while(br.readLine() != null){
+				
+				//1)Leo la alteracion
+				String alteracion = br.readLine();
+				
+				//2)Leo la primera voz del voicing
+				Integer voz1 = Integer.parseInt(br.readLine());
+				
+				//3)Leo la segunda voz del voicing
+				Integer voz2 = Integer.parseInt(br.readLine());
+				
+				//4)Leo la tercera voz del voicing
+				Integer voz3 = Integer.parseInt(br.readLine());
+				
+				//5)Leo la cuarta voz del voicing
+				Integer voz4 = Integer.parseInt(br.readLine());
+				
+				insertarVoicings(alteracion, voz1, voz2, voz3, voz4);
+				
+			}
+			
+			System.out.println("Carga de voicings.txt exitosa");
+			
+		}
+		catch(Exception e){
+			System.out.println(e.toString());
+		}
+		finally {
+			try {
+				if (br != null) br.close();
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+		}	
+	}
+	
+	
+	
+	
 	public static void initBassNotes(){
 		BufferedReader br = null;
 		
