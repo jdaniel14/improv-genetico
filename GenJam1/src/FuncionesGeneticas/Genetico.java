@@ -20,7 +20,7 @@ public class Genetico {
 	
 	public static Random randoms = new Random();
 	
-	public static List<Phrases> AG(){
+	public static List<Phrases> AG(PhrasePopulation pobinicial, String ordenar){
 		
 		Integer generacion = 0;
 		
@@ -28,7 +28,7 @@ public class Genetico {
 		
 
 		//Inicializo la poblaci�n de frases
-		List<Phrases> poblacion = generarPoblacionInicial();		
+		List<Phrases> poblacion = generarPoblacionInicial(pobinicial);		
 
 		
 		do{
@@ -50,8 +50,11 @@ public class Genetico {
 		System.out.println("****** Fin del GA ******");
 		
 		Collections.shuffle(poblacion);
-		poblacion = Ordenamiento.ordenar(poblacion);
 		
+		if(ordenar.equalsIgnoreCase("true")){
+			poblacion = Ordenamiento.ordenar(poblacion);
+			System.out.println("> Se realizo el ordenamiento inteligente");
+		}		
 
 		return poblacion;
 	}
@@ -137,9 +140,10 @@ public class Genetico {
 		return temp;
 	}
 	
-	public static List<Phrases> generarPoblacionInicial(){
+	public static List<Phrases> generarPoblacionInicial(PhrasePopulation pobinicial){
 		
-		PhrasePopulation poblacion_inicial = new PhrasePopulation();
+		//PhrasePopulation poblacion_inicial = new PhrasePopulation();
+		PhrasePopulation poblacion_inicial = pobinicial;
 		List<Phrases> poblacion = poblacion_inicial.populationP;
 		List<Phrases> lista_aux_cross = new ArrayList<Phrases>();
 		List<Phrases> lista_aux_hem = new ArrayList<Phrases>();
