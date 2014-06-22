@@ -48,10 +48,28 @@
     <script src="./src/compiled/Main.js" type="text/javascript"></script>
     <script>
         $(document).ready(function(){
+        	
             $(".nano").hide();
+            //$("#descargas").hide();
             $("#validacion").hide();
             $(".player-prev").hide();
             $(".player-next").hide();
+            
+            $("#cortes2").click(function() {
+            	if($(this).is(":checked") == "true"){
+            		$(this).attr("checked", false);
+            	}
+           	  	$("#cortes4").attr("checked", false); //uncheck all checkboxes
+           	  	
+            });
+            
+            $("#cortes4").click(function() {
+            	if($(this).is(":checked") == "true"){
+            		$(this).attr("checked", false);
+            	}
+             	$("#cortes2").attr("checked", false); //uncheck all checkboxes
+             	
+            });            
 
             $("#improvisa").click(function(){
                 if( ($("#acordes").val() == "") || ($("#tempo").val() == "") ){
@@ -72,7 +90,11 @@
 
                     var enviar = {
                         lista_acordes: arr, 
-                        tempo : $("#tempo").val()
+                        tempo : $("#tempo").val(),
+                        voicings : $("#voicings").is(":checked").toString(),
+                        cortes2: $("#cortes2").is(":checked").toString(),
+                        cortes4: $("#cortes4").is(":checked").toString(),
+                        ordenamiento: $("#ordenamiento").is(":checked").toString()
                     };
 
                     var jsonData = JSON.stringify(enviar);
@@ -89,7 +111,10 @@
                             console.log(data);
                             var archivos = data.split(",");
                             console.log(archivos[0]);
-                            $(location).attr("href", archivos[0]);
+                            
+                            $("#descargas").hide();
+                            $("#descargas").show("slow");
+                            //$(location).attr("href", archivos[0]);
                             
                         }
                     });
@@ -107,20 +132,21 @@
             
             $("#alice").click(function(){
             	var cadena = $("#acordes").val();
-            	var acordes = "Dm7,G7,Cmaj7,Fmaj7,Bm7b5,E7,Am7,Eb7,Dm7,G7,Em7,Am7,Dm7,G7,Em7,Dm7,Dm7,G7,Cmaj7,Fmaj7,Bm7b5,E7,Am7,Eb7,Dm7,G7,Em7,Am7,Dm7,G7,Cmaj7,Am7,";
+            	var acordes = "Dm7,G7,Cmaj7,Fmaj7,Bm7b5,E7,Am7,Eb7,Dm7,G7,Em7,Am7,Dm7,G7,Em7,Dm7,Dm7,G7,Cmaj7,Fmaj7,Bm7b5,E7,Am7,Eb7,Dm7,G7,Em7,Am7,Dm7,G7,Cmaj7,G7,";
             	cadena += acordes;
             	$("#acordes").val(cadena);
             });
             
-            $("#error").click(function(){
+            $("#fly").click(function(){
             	var cadena = $("#acordes").val();
-            	var acordes = "Eb7Bl,Ab7Bl,Eb7Bl,Eb7Bl,Ab7Bl,Ab7Bl,Eb7Bl,Eb7Bl,Bb7Bl,Ab7Bl,Eb7Bl,Bb7Bl,";
+            	var acordes = "Am7,Dm7,G7,Cmaj7,Fmaj7,Bm7b5,E7,Am7,Dm7,G7,Em7,A7,Dm7,G7,Cmaj7,E7,Am7,Dm7,G7,Cmaj7,Fmaj7,Bm7b5,E7,Am7,Dm7,G7,Em7b5,A7,Dm7,G7,Cmaj7,E7,Am7,Dm7,G7,Cmaj7,Fmaj7,Bm7b5,E7,Am7,Dm7,G7,Cmaj7,C7,Fmaj7,G7,Cmaj7,Cmaj7";
             	cadena += acordes;
             	$("#acordes").val(cadena);
             });
      
             $("#limpiar").click(function(){
                 $("#acordes").val("");
+                $("#descargas").hide("slow");
             });
         });
     </script>
@@ -147,8 +173,8 @@
 
       <div class = "genjam" align = "center">
         <br>
-        <h4 style="font-family:avenir;">Type your chords</h4>
-        <input id = "acordes" size = "54">
+        <span style="font-family:avenir;">Type your chords</span>
+        <textarea id = "acordes" cols = "24" rows = "5"></textarea>
         <br>
         <br>
         <span style="font-family:avenir;">Tempo</span>
@@ -156,23 +182,53 @@
 
         <h5 id = "validacion" style = "color:red;font-family:avenir;">Type your values<h5>
         <input id = "improvisa" type = "button" value = "Play me something!">
-        <br>
-        <h5 style="font-family:avenir;">Suggested chords</h5>
+        <br><br>
+        
+        <span style="font-family:avenir;">Example songs:</span>
 
+		<br>
         <table style="width:200px" align = "center">
             <tr align = "center">
-              <td id = "autumn">Autumn leaves</td>
+              <td id = "autumn"><a href= "#">Autumn leaves</a></td>
             </tr>
             <tr align = "center">
-              <td id = "alice">Alice in wonderland</td>
+              <td id = "alice"><a href = "#">Alice in wonderland</a></td>
             </tr>
             <tr align = "center">
-              <td id = "error">Error</td>
+              <td id = "fly"><a href = "#">Fly me to the moon</a></td>
             </tr>
         </table>
         <br>
         <input id = "limpiar" type = "button" value = "Clean me!">
-
+		<br><br>
+		
+		
+		<div align = "left" style = "margin-left:6em;">
+			
+			<input id = "voicings" type = "checkbox" checked>Voicings<br>
+			
+			<input id = "cortes2" type = "checkbox" checked>Cortes de 2<br>
+			
+			<input id = "cortes4" type = "checkbox">Cortes de 4<br>
+			
+			<input id = "ordenamiento" type = "checkbox" checked>Ordenamiento Inteligente<br>
+			
+		</div>
+		<br>
+		<div id = "descargas">
+		<span>Descargas:</span>
+		<br>
+		
+			<a href = "../../acompanhamiento.midi">Acompañamiento</a>
+			<br><br>
+			<a href = "../../pobinicial.midi">Población inicial</a>
+			<br><br>
+			<a href = "../../musicagenerada.midi">Música Generada</a>
+			<br><br>
+			<a href = "#">Partitura</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href = "#">Sugerencias</a>
+		</div>
       </div>
       <!-- Fin del panel bar de al lado-->
 

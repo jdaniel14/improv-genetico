@@ -4,7 +4,10 @@
 	//{"usuario":"panxito", "password":"1234"} este es el json que llega
 	$lista_acordes = $data['lista_acordes']; //sacamos la info
 	$tempo = $data['tempo']; //sacamos la info
-	
+	$voicings = $data['voicings']."";
+	$cortes2 = $data['cortes2']."";
+	$cortes4 = $data['cortes4']."";
+	$ordenamiento = $data['ordenamiento']."";
 	
 	$filename = "datos.txt";
 	$file = fopen( $filename, "w" );
@@ -15,6 +18,10 @@
 	}
 	else {
 		fwrite($file, $tempo."\n");
+		fwrite($file, $voicings."\n");
+		fwrite($file, $cortes2."\n");
+		fwrite($file, $cortes4."\n");
+		fwrite($file, $ordenamiento."\n");
 		for($i = 0; $i < count($lista_acordes); $i++) {
 			//echo $lista_acordes[$i];
 			fwrite( $file, $lista_acordes[$i]."\n" );
