@@ -35,6 +35,8 @@ public class FuncionesMusicales {
 	private static Part ridePart = new Part("Drums",0,9);
 	private static Part snarePart = new Part("Drums 2", 0, 9);
 	private static Random randoms = new Random();
+	private static int cortes = 0;
+	private static int tonalidad = 0;
 
 	public static List<Integer> notasDelCompas(Measures fraseRep,String acorde){
 		List<Integer> dev = new ArrayList<Integer>();
@@ -100,13 +102,15 @@ public class FuncionesMusicales {
 	public static void crearComposicion(List<Phrases> pobFrases, List<String> acordes, Integer tempo){
 		
 		s = new Score("Euricide",tempo);
-		//debo mandarle una lista de Phrases
-		//System.out.println("SIZE: " + acordes.size());
+		
+		cortes = 0;
+		makeVoicings(acordes);
 		
 		makeMelody(pobFrases,acordes);
+		cortes = 0;
 		makeBass(acordes);
 		makeDrums(acordes);
-		makeVoicings(acordes);
+		
 		generaPartitura();
 		
 		Write.midi(s,"out.midi");
@@ -193,16 +197,22 @@ public class FuncionesMusicales {
 					}
 					
 					//solo entra una vez para cargar la tonalidad en root
-					if(inicio){
+					if(inicio && (acorde.equalsIgnoreCase("maj7"))){
 						inicio = false;
 						
-
+						int tonalidad = sonidos.NvsS.get(teclado.notas.get(i).get(0));
+						
+						while(tonalidad > 47){
+							tonalidad = tonalidad - 12;
+						}
+						
+						int bajisimo = tonalidad;
 						int n1 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz1).get(0));
 						int n2 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz2).get(0));
 						int n3 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz3).get(0));
 						int n4 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz4).get(0));
 						
-						int[] aux = {n1,n2,n3,n4};
+						int[] aux = {bajisimo,n1,n2,n3,n4};
 						rootArray = aux;
 					}
 					
@@ -212,34 +222,37 @@ public class FuncionesMusicales {
 					int n3 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz3).get(0));
 					int n4 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz4).get(0)); 
 					
-					
 		            int[] pitchArray = {n1,n2,n3,n4};
 		            int[] restArray = {Pitches.REST};
 		            
 		            int ritmo = randoms.nextInt(3);
 		            
-		            if(ritmo == 3){
-		            	phr3.addChord(restArray, Durations.EIGHTH_NOTE);
-			    		phr3.addChord(restArray, Durations.SIXTEENTH_NOTE);
-		            	phr3.addChord(pitchArray, Durations.SIXTEENTH_NOTE);
-			    		phr3.addChord(restArray, Durations.QUARTER_NOTE);
-			    		phr3.addChord(restArray, Durations.HALF_NOTE);
-		            }
-		            if(ritmo == 3){
-		            	phr3.addChord(pitchArray, Durations.HALF_NOTE);
-			    		phr3.addChord(restArray, Durations.EIGHTH_NOTE);
-			    		phr3.addChord(restArray, Durations.SIXTEENTH_NOTE);
-			    		phr3.addChord(pitchArray, Durations.SIXTEENTH_NOTE);
-			    		phr3.addChord(restArray, Durations.QUARTER_NOTE);
-		            }
-		            if((ritmo == 2) || (ritmo == 0)){
-		            	phr3.addChord(pitchArray, Durations.WHOLE_NOTE);
-		            }
-		            if(ritmo == 1){
-		            	phr3.addChord(restArray, Durations.WHOLE_NOTE);
-		            }
+		            if(cortes < 10){
+		            
+			            if(ritmo == 0){
+			            	phr3.addChord(restArray, Durations.QUARTER_NOTE_TRIPLET);
+			            	phr3.addChord(pitchArray, Durations.EIGHTH_NOTE_TRIPLET);
+				    		phr3.addChord(restArray, Durations.QUARTER_NOTE);
+				    		phr3.addChord(restArray, Durations.QUARTER_NOTE_TRIPLET);
+			            	phr3.addChord(pitchArray, Durations.EIGHTH_NOTE_TRIPLET);
+				    		phr3.addChord(restArray, Durations.QUARTER_NOTE);
+			            }
+			            if(ritmo == 1){
+			            	phr3.addChord(pitchArray, Durations.HALF_NOTE);
+			            	phr3.addChord(restArray, Durations.QUARTER_NOTE_TRIPLET);
+				    		phr3.addChord(pitchArray, Durations.EIGHTH_NOTE_TRIPLET);
+				    		phr3.addChord(restArray, Durations.QUARTER_NOTE);
+			            }
+			            if(ritmo == 2){
+			            	phr3.addChord(pitchArray, Durations.WHOLE_NOTE);
+			            }
 
-		    		
+		            }
+		            else{
+						phr3.addChord(restArray,Durations.WHOLE_NOTE);
+						if(cortes == 11) cortes = -1;
+					}
+					cortes++;
 		    		
 					break;
 				}//fin if
@@ -312,24 +325,38 @@ public class FuncionesMusicales {
 						root = bajo.notas.get(i).get(0);
 					}
 					
+					if(cortes < 10){
 					
-					n = new Note(sonidos.NvsS.get(bajo.notas.get(i).get(0)), Durations.QUARTER_NOTE);
-		            phr2.addNote(n);
-		            n = new Note(sonidos.NvsS.get(bajo.notas.get(i + itemNotaB.tercera).get(0)), Durations.QUARTER_NOTE);
-		            phr2.addNote(n);
-		            n = new Note(sonidos.NvsS.get(bajo.notas.get(i + itemNotaB.cuarta).get(0)), Durations.QUARTER_NOTE);
-		            phr2.addNote(n);
-		            n = new Note(sonidos.NvsS.get(bajo.notas.get(i + itemNotaB.quinta).get(0)), Durations.QUARTER_NOTE);
-		            phr2.addNote(n);
+						n = new Note(sonidos.NvsS.get(bajo.notas.get(i).get(0)), Durations.QUARTER_NOTE);
+			            phr2.addNote(n);
+			            n = new Note(sonidos.NvsS.get(bajo.notas.get(i + itemNotaB.tercera).get(0)), Durations.QUARTER_NOTE);
+			            phr2.addNote(n);
+			            n = new Note(sonidos.NvsS.get(bajo.notas.get(i + itemNotaB.cuarta).get(0)), Durations.QUARTER_NOTE);
+			            phr2.addNote(n);
+			            n = new Note(sonidos.NvsS.get(bajo.notas.get(i + itemNotaB.quinta).get(0)), Durations.QUARTER_NOTE);
+			            phr2.addNote(n);
+			            
+					}
+					else{
+						n = new Note(JMC.REST,Durations.WHOLE_NOTE);
+						phr2.add(n);
+						if(cortes == 11) cortes = -1;
+					}
+					cortes++;
 					
+		            
+		            
 					break;
+					
+					
+					
 				}//fin if
 				
 			}//fin for
 			
 		}
         
-        n = new Note(sonidos.NvsS.get(root),Durations.WHOLE_NOTE);
+        n = new Note(tonalidad,Durations.WHOLE_NOTE);
         phr2.add(n); 
         
 		walkin.add(phr2);
@@ -560,6 +587,13 @@ public class FuncionesMusicales {
 		
 		//int[] pitchArray = {Pitches.c3,Pitches.g3,Pitches.b3,Pitches.e4}; 
 		//phr.addChord(pitchArray, Durations.WHOLE_NOTE);
+		
+		while(tonalidad < 68){
+			tonalidad = tonalidad + 12;
+		}
+		
+		Note fin = new Note(tonalidad,Durations.WHOLE_NOTE);
+		phr.add(fin);
 		
 		melodia.add(phr);
 		s.add(melodia);
