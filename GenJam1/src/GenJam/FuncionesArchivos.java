@@ -10,6 +10,7 @@ import java.util.List;
 
 import DataBase.Conexion;
 import Elements.ChordvsScale;
+import Elements.DatosArchivo;
 import Elements.MapChordvsScale;
 import Elements.Teclado;
 
@@ -476,7 +477,13 @@ public class FuncionesArchivos {
 		
 		try{
 			br = new BufferedReader(new FileReader(nombreArchivo));
+			
+			//Me salto los 4 primeros valores
 			String next = br.readLine();
+			next = br.readLine();
+			next = br.readLine();
+			next = br.readLine();
+			next = br.readLine();			
 			
 			if(next != null){
 				next = br.readLine();
@@ -508,16 +515,20 @@ public class FuncionesArchivos {
 		
 	}
 	
-	public static Integer leeTempo(String nombreArchivo){
+	public static DatosArchivo leeDatosArchivo(String nombreArchivo){
 		
 		BufferedReader br = null;
 		
-		Integer devolver;
+		DatosArchivo devolver = new DatosArchivo();
 		
 		try{
 			br = new BufferedReader(new FileReader(nombreArchivo));
 			
-			devolver = Integer.parseInt(br.readLine());
+			devolver.tempo = Integer.parseInt(br.readLine());
+			devolver.voicings = br.readLine();
+			devolver.cortes2 = br.readLine();
+			devolver.cortes4 = br.readLine();
+			devolver.ordenamiento = br.readLine();
 			
 			System.out.println("Carga de " + nombreArchivo + " exitosa");
 			return devolver;
@@ -525,7 +536,7 @@ public class FuncionesArchivos {
 		}
 		catch(Exception e){
 			System.out.println(e.toString());
-			return 0;
+			return new DatosArchivo();
 		}
 		finally {
 			try {
