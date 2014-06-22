@@ -42,15 +42,15 @@ public class Teclado {
 //		aux.add("F#2");
 //		aux.add("Gb2");
 //		notas.add(aux);
-//		
-//		aux = new ArrayList<String>();
-//		aux.add("G2");
-//		notas.add(aux);
-//		
-//		aux = new ArrayList<String>();
-//		aux.add("G#2");		
-//		aux.add("Ab2");
-//		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("G2");
+		notas.add(aux);
+		
+		aux = new ArrayList<String>();
+		aux.add("G#2");		
+		aux.add("Ab2");
+		notas.add(aux);
 		
 		aux = new ArrayList<String>();
 		aux.add("A2");
