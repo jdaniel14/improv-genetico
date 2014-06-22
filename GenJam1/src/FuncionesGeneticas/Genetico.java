@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 import Elements.Measures;
+import Elements.Pair;
 import Elements.PhrasePopulation;
 import Elements.Phrases;
 
@@ -49,10 +50,11 @@ public class Genetico {
 		System.out.println("****** Fin del GA ******");
 		
 		Collections.shuffle(poblacion);
+		poblacion = Ordenamiento.ordenar(poblacion);
+		
 
 		return poblacion;
 	}
-	
 	
 	public static void cruzarSeleccion(List<Phrases> seleccion){
 		
