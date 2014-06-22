@@ -1,38 +1,30 @@
 package GenJam;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Iterator;
 
-import jm.music.data.Phrase;
-
-import Elements.BassNote;
-import Elements.MapBassNotes;
+import Elements.DatosArchivo;
 import Elements.PhrasePopulation;
 import Elements.Phrases;
-import Elements.Teclado;
-import FuncionesGeneticas.Crossover;
 import FuncionesGeneticas.Genetico;
 
 public class GenJam {
-
-	
 	
 	public static void main(String[] args) {
 		
+		String rutaHardcode = "/Applications/XAMPP/htdocs/workspace eclipse/GenJam1/bin/View/euphony-master/datos.txt"; 
+		
 		System.out.println("Bemvindo ao Euricide");
 		List<String> acordes;
-		Integer tempo = 180;
+		DatosArchivo datosArchivo = new DatosArchivo();
 		
 		// ** Lectura de datos desde el PHP **
 		
 		
-		acordes = FuncionesArchivos.leeAcordes(args[0]);
+		acordes = FuncionesArchivos.leeAcordes(rutaHardcode);
 		for(int i = 0 ; i < acordes.size(); i++)
 			System.out.println(acordes.get(i));
-		tempo = FuncionesArchivos.leeTempo(args[0]);
-		System.out.println(tempo);
+		datosArchivo = FuncionesArchivos.leeDatosArchivo(rutaHardcode);
+		
 		
 		/** Inicializacion de Datos de prueba***/
 		/*
@@ -93,20 +85,36 @@ public class GenJam {
 		acordesAlice.add("Dm7");
 		
 		acordes = acordesAlice;
-		
 		*/
-		List<Phrases> frasesGeneradas = Genetico.AG();
-		//pancho 
-		FuncionesMusicales.crearComposicion(frasesGeneradas, acordes,tempo);
 		
-
+		PhrasePopulation pobinicial = new PhrasePopulation();
 		
+		List<Phrases> frasesGeneradas = Genetico.AG(pobinicial, datosArchivo.ordenamiento);
+		List<Phrases> frasesNulas = FuncionesMusicales.poblacionVacia();
+		
+		datosArchivo.nombreArchivo = "musicagenerada.midi";
+		FuncionesMusicales.crearComposicion(frasesGeneradas, acordes,datosArchivo);
+		
+		datosArchivo.cortes2 = "false";
+		datosArchivo.cortes4 = "false";
+		datosArchivo.voicings = "true";
+		datosArchivo.nombreArchivo = "acompanhamiento.midi";
+		
+		FuncionesMusicales.crearComposicion(frasesNulas, acordes,datosArchivo);
+		
+		datosArchivo.cortes2 = "false";
+		datosArchivo.cortes4 = "false";
+		datosArchivo.voicings = "false";
+		datosArchivo.nombreArchivo = "pobinicial.midi";
+		
+		FuncionesMusicales.crearComposicion(pobinicial.populationP, acordes,datosArchivo);
 		
 		
 		//	** Inicializaci—n de estructuras de la BD **
 		//		FuncionesArchivos.initChordvsScaleBD();
 		//		FuncionesArchivos.initMeasureBD();
-		//		FuncionesArchivos.initBassNotes();		
+		//		FuncionesArchivos.initBassNotes();
+		//		FuncionesArchivos.initVoicings();
 		
 
 	} 
