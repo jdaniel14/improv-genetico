@@ -3,6 +3,7 @@ package GenJam;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 import jm.constants.Durations;
 import jm.constants.Pitches;
@@ -10,7 +11,6 @@ import jm.music.data.Note;
 import jm.music.data.Part;
 import jm.music.data.Phrase;
 import jm.music.data.Score;
-import jm.util.View;
 import jm.util.Write;
 import jm.JMC;
 
@@ -20,18 +20,21 @@ import Elements.ChordvsScale;
 import Elements.MapBassNotes;
 import Elements.MapChordvsScale;
 import Elements.MapNotevsSound;
+import Elements.MapVoicingNotes;
 import Elements.Measures;
 import Elements.Phrases;
-import Elements.PhrasePopulation;
 import Elements.Teclado;
+import Elements.VoicingNote;
 
 public class FuncionesMusicales {
 	
 	private static Score s;
 	private static Part melodia = new Part("Melodia", JMC.RHODES ,0);
 	private static Part walkin = new Part("Walkin", JMC.BASS ,1);
+	private static Part voicings = new Part("Voicings", JMC.RHODES, 2);
 	private static Part ridePart = new Part("Drums",0,9);
 	private static Part snarePart = new Part("Drums 2", 0, 9);
+	private static Random randoms = new Random();
 
 	public static List<Integer> notasDelCompas(Measures fraseRep,String acorde){
 		List<Integer> dev = new ArrayList<Integer>();
@@ -103,13 +106,14 @@ public class FuncionesMusicales {
 		makeMelody(pobFrases,acordes);
 		makeBass(acordes);
 		makeDrums(acordes);
+		makeVoicings(acordes);
 		generaPartitura();
 		
 		Write.midi(s,"out.midi");
 	}
 		
 	public static void makeDrums(List<String> acordes){
-		
+				
 		for(int fff = 0; fff < acordes.size(); fff++){
 			ridePart.addPhrase(swingTime());
 			snarePart.addPhrase(swingAccents());
@@ -121,11 +125,7 @@ public class FuncionesMusicales {
 		
 	}
 	
-	public static void makeVoicings(List<String> acordes){
-		
-	}
-	
-	public static boolean inicioBass(List<String> lista, String nota){
+	public static boolean inicioNotaEnTeclado(List<String> lista, String nota){
 		
 		Iterator<String> iterTeclado = lista.iterator();
 		
@@ -147,11 +147,121 @@ public class FuncionesMusicales {
 		return false;
 	}
 	
+	public static void makeVoicings(List<String> acordes){
+		Phrase phr3 = new Phrase();
+		Teclado teclado = new Teclado();
+		MapNotevsSound sonidos = new MapNotevsSound();
+		MapVoicingNotes notasVoicings = new MapVoicingNotes();
+		
+		Iterator<String> iter = acordes.iterator();
+		
+		
+		boolean inicio = true;
+		String root = "";
+		int[] rootArray = null;
+		
+		while(iter.hasNext()){
+			String item = iter.next();
+			String nota = "";
+			String acorde = "";
+			
+			if(item.substring(0, 2).contains("#") || item.substring(0, 2).contains("b")){
+				nota = item.substring(0, 2);
+				acorde = item.substring(2,item.length());
+				
+			}
+			else{
+				nota = item.substring(0,1);
+				acorde = item.substring(1,item.length());
+			}
+			
+			for (int i = 0; i < teclado.notas.size(); i++){
+				
+				//System.out.println("Nota: " + nota);
+				
+				if(inicioNotaEnTeclado(teclado.notas.get(i), nota)){
+//					System.out.println(keyboard.notas.get(i).get(0));
+					
+					Iterator<VoicingNote> itNotasB = notasVoicings.lista_voicings.iterator();
+					VoicingNote itemNotaB = null;
+					
+					while(itNotasB.hasNext()){
+						itemNotaB = itNotasB.next();
+						
+						if(itemNotaB.alteracion.equalsIgnoreCase(acorde)) break;
+						
+					}
+					
+					//solo entra una vez para cargar la tonalidad en root
+					if(inicio){
+						inicio = false;
+						
+
+						int n1 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz1).get(0));
+						int n2 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz2).get(0));
+						int n3 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz3).get(0));
+						int n4 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz4).get(0));
+						
+						int[] aux = {n1,n2,n3,n4};
+						rootArray = aux;
+					}
+					
+					
+					int n1 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz1).get(0));
+					int n2 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz2).get(0));
+					int n3 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz3).get(0));
+					int n4 = sonidos.NvsS.get(teclado.notas.get(i + itemNotaB.voz4).get(0)); 
+					
+					
+		            int[] pitchArray = {n1,n2,n3,n4};
+		            int[] restArray = {Pitches.REST};
+		            
+		            int ritmo = randoms.nextInt(3);
+		            
+		            if(ritmo == 3){
+		            	phr3.addChord(restArray, Durations.EIGHTH_NOTE);
+			    		phr3.addChord(restArray, Durations.SIXTEENTH_NOTE);
+		            	phr3.addChord(pitchArray, Durations.SIXTEENTH_NOTE);
+			    		phr3.addChord(restArray, Durations.QUARTER_NOTE);
+			    		phr3.addChord(restArray, Durations.HALF_NOTE);
+		            }
+		            if(ritmo == 3){
+		            	phr3.addChord(pitchArray, Durations.HALF_NOTE);
+			    		phr3.addChord(restArray, Durations.EIGHTH_NOTE);
+			    		phr3.addChord(restArray, Durations.SIXTEENTH_NOTE);
+			    		phr3.addChord(pitchArray, Durations.SIXTEENTH_NOTE);
+			    		phr3.addChord(restArray, Durations.QUARTER_NOTE);
+		            }
+		            if((ritmo == 2) || (ritmo == 0)){
+		            	phr3.addChord(pitchArray, Durations.WHOLE_NOTE);
+		            }
+		            if(ritmo == 1){
+		            	phr3.addChord(restArray, Durations.WHOLE_NOTE);
+		            }
+
+		    		
+		    		
+					break;
+				}//fin if
+				
+			}//fin for
+			
+			
+		}
+		
+		
+		phr3.addChord(rootArray, Durations.WHOLE_NOTE);
+        
+		voicings.add(phr3);
+		s.add(voicings);
+		
+	}
+	
 	public static void makeBass(List<String> acordes){
 
 		//WALKIN
 		Phrase phr2 = new Phrase();
-		Bajo keyboard = new Bajo();
+		Bajo bajo = new Bajo();
 		MapNotevsSound sonidos = new MapNotevsSound();
 		MapBassNotes notasBass = new MapBassNotes();
 		
@@ -162,6 +272,7 @@ public class FuncionesMusicales {
 		Note n = null;
 		boolean inicio = true;
 		String root = "";
+		
 		
 		while(iter.hasNext()){
 			String item = iter.next();
@@ -178,11 +289,11 @@ public class FuncionesMusicales {
 				acorde = item.substring(1,item.length());
 			}
 						
-			for (int i = 0; i < keyboard.notas.size(); i++){
+			for (int i = 0; i < bajo.notas.size(); i++){
 				
 				//System.out.println("Nota: " + nota);
 				
-				if(inicioBass(keyboard.notas.get(i), nota)){
+				if(inicioNotaEnTeclado(bajo.notas.get(i), nota)){
 //					System.out.println(keyboard.notas.get(i).get(0));
 					
 					Iterator<BassNote> itNotasB = notasBass.lista_bajo.iterator();
@@ -195,24 +306,27 @@ public class FuncionesMusicales {
 						
 					}
 					
+					//solo entra una vez para cargar la tonalidad en root
 					if(inicio){
 						inicio = false;
-						root = keyboard.notas.get(i).get(0);
+						root = bajo.notas.get(i).get(0);
 					}
 					
 					
-					n = new Note(sonidos.NvsS.get(keyboard.notas.get(i).get(0)), Durations.QUARTER_NOTE);
+					n = new Note(sonidos.NvsS.get(bajo.notas.get(i).get(0)), Durations.QUARTER_NOTE);
 		            phr2.addNote(n);
-		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.tercera).get(0)), Durations.QUARTER_NOTE);
+		            n = new Note(sonidos.NvsS.get(bajo.notas.get(i + itemNotaB.tercera).get(0)), Durations.QUARTER_NOTE);
 		            phr2.addNote(n);
-		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.cuarta).get(0)), Durations.QUARTER_NOTE);
+		            n = new Note(sonidos.NvsS.get(bajo.notas.get(i + itemNotaB.cuarta).get(0)), Durations.QUARTER_NOTE);
 		            phr2.addNote(n);
-		            n = new Note(sonidos.NvsS.get(keyboard.notas.get(i + itemNotaB.quinta).get(0)), Durations.QUARTER_NOTE);
+		            n = new Note(sonidos.NvsS.get(bajo.notas.get(i + itemNotaB.quinta).get(0)), Durations.QUARTER_NOTE);
 		            phr2.addNote(n);
 					
 					break;
-				}
-			}
+				}//fin if
+				
+			}//fin for
+			
 		}
         
         n = new Note(sonidos.NvsS.get(root),Durations.WHOLE_NOTE);
@@ -235,6 +349,7 @@ public class FuncionesMusicales {
 		Phrase phr = new Phrase();
 		
 		List<Integer> notasRep = new ArrayList<Integer>();
+		
 		
 		while(itFrases.hasNext()){
 			
@@ -443,8 +558,8 @@ public class FuncionesMusicales {
 		
 		//System.out.println();
 		
-		int[] pitchArray = {Pitches.c3,Pitches.g3,Pitches.b3,Pitches.e4}; 
-		phr.addChord(pitchArray, Durations.WHOLE_NOTE);
+		//int[] pitchArray = {Pitches.c3,Pitches.g3,Pitches.b3,Pitches.e4}; 
+		//phr.addChord(pitchArray, Durations.WHOLE_NOTE);
 		
 		melodia.add(phr);
 		s.add(melodia);
