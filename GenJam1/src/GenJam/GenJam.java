@@ -18,15 +18,12 @@ public class GenJam {
 		System.out.println("Bemvindo ao Euricide");
 		List<String> acordes;
 		DatosArchivo datosArchivo = new DatosArchivo();
-		
 		// ** Lectura de datos desde el PHP **
-		
 		
 		acordes = FuncionesArchivos.leeAcordes(rutaHardcode);
 		for(int i = 0 ; i < acordes.size(); i++)
 			System.out.println(acordes.get(i));
 		datosArchivo = FuncionesArchivos.leeDatosArchivo(rutaHardcode);
-		
 		
 		/** Inicializacion de Datos de prueba***/
 		/*
@@ -88,6 +85,8 @@ public class GenJam {
 		
 		acordes = acordesAlice;
 		*/
+		
+		
 		PhrasePopulation pobinicial = new PhrasePopulation();
 		
 		List<Phrases> frasesGeneradas = Genetico.AG(pobinicial, datosArchivo.ordenamiento);
@@ -203,9 +202,10 @@ public class GenJam {
 			System.out.println(e.toString());
 		}
 		
+		
 		//	** Inicializacion de estructuras de la BD **
 		//		FuncionesArchivos.initChordvsScaleBD();
-		//		FuncionesArchivos.initMeasureBD();
+//				FuncionesArchivos.initMeasureBD();
 		//		FuncionesArchivos.initBassNotes();
 		//		FuncionesArchivos.initVoicings();
 		
