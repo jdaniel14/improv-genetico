@@ -227,6 +227,8 @@ public class FuncionesArchivos {
 				//Voy a ir almacenando los idMeasures en frase
 				String frase = "";
 				
+				System.out.println(idPhrase);
+				
 				//3) Leo los 4 acordes con sus 4 measures
 				for(int z = 0; z < 4; z++){
 					
@@ -243,6 +245,10 @@ public class FuncionesArchivos {
 					for(Integer j = 0; j <= 15; j++){
 						
 						compas += numeroDeLaNota(acorde, notasLeidas[j]);
+						
+						if(compas.contains("?")){
+							System.out.println("****** FALLA ******");
+						}
 						
 						if (j != 15) compas += " "; //para dejar espacio entre cada numero				
 						

@@ -341,7 +341,7 @@ public class FuncionesMusicales {
 		phr3.addChord(rootArray, Durations.WHOLE_NOTE);
         
 		voicings.add(phr3);
-		voicings.setDynamic(70);
+		voicings.setDynamic(50);
 		s.add(voicings);
 		
 	}
