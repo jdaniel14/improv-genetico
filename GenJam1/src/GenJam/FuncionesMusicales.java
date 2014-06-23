@@ -163,6 +163,10 @@ public class FuncionesMusicales {
 			dondecortoVoicings = 0;
 		}
 		
+		if(datosArchivo.bajo.equalsIgnoreCase("false")){
+			dondecortoBajo = 0;
+		}
+		
 		cortes = 0;
 		makeVoicings(acordes);
 		
