@@ -20,15 +20,15 @@ public class GenJam {
 		
 		// ** Lectura de datos desde el PHP **
 		
-		/*
+		
 		acordes = FuncionesArchivos.leeAcordes(rutaHardcode);
 		for(int i = 0 ; i < acordes.size(); i++)
 			System.out.println(acordes.get(i));
 		datosArchivo = FuncionesArchivos.leeDatosArchivo(rutaHardcode);
 		
-		*/
-		/** Inicializacion de Datos de prueba***/
 		
+		/** Inicializacion de Datos de prueba***/
+		/*
 		List<String> acordesOrnithology = new ArrayList<String>();
 
 		acordesOrnithology.add("Gmaj7");
@@ -86,18 +86,20 @@ public class GenJam {
 		acordesAlice.add("Dm7");
 		
 		acordes = acordesAlice;
-		
+		*/
 		PhrasePopulation pobinicial = new PhrasePopulation();
 		
 		List<Phrases> frasesGeneradas = Genetico.AG(pobinicial, datosArchivo.ordenamiento);
 		List<Phrases> frasesNulas = FuncionesMusicales.poblacionVacia();
 		
+		datosArchivo.generacionOriginal = 1;
 		datosArchivo.nombreArchivo = "musicagenerada.midi";
 		FuncionesMusicales.crearComposicion(frasesGeneradas, acordes,datosArchivo);
 		
 		datosArchivo.cortes2 = "false";
 		datosArchivo.cortes4 = "false";
 		datosArchivo.voicings = "true";
+		datosArchivo.generacionOriginal = 0;
 		datosArchivo.nombreArchivo = "acompanhamiento.midi";
 		
 		FuncionesMusicales.crearComposicion(frasesNulas, acordes,datosArchivo);
@@ -105,23 +107,25 @@ public class GenJam {
 		datosArchivo.cortes2 = "false";
 		datosArchivo.cortes4 = "false";
 		datosArchivo.voicings = "false";
+		datosArchivo.generacionOriginal = 0;
 		datosArchivo.nombreArchivo = "pobinicial.midi";
 		
 		FuncionesMusicales.crearComposicion(pobinicial.populationP, acordes,datosArchivo);
 		
+		try{
+			
+			FuncionesArchivos.Sugerencia(acordes);
+			
+		}catch(Exception e){
+			System.out.println(e.toString());
+		}
 		
-		//	** Inicializaci�n de estructuras de la BD **
+		//	** Inicializacion de estructuras de la BD **
 		//		FuncionesArchivos.initChordvsScaleBD();
 		//		FuncionesArchivos.initMeasureBD();
 		//		FuncionesArchivos.initBassNotes();
 		//		FuncionesArchivos.initVoicings();
-		try{
-			System.out.println("++++++++++++++++++++++++++++++++++++++++");
-			FuncionesArchivos.Sugerencia(acordes);
-			System.out.println("++++++++++++++++++++++++++++++++++++++++");
-		}catch(Exception e){
-			System.out.println(e.toString());
-		}
+		
 	} 
 	
 	
