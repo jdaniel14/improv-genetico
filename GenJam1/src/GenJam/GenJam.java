@@ -1,6 +1,7 @@
 package GenJam;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import Elements.DatosArchivo;
@@ -92,43 +93,112 @@ public class GenJam {
 		List<Phrases> frasesGeneradas = Genetico.AG(pobinicial, datosArchivo.ordenamiento);
 		List<Phrases> frasesNulas = FuncionesMusicales.poblacionVacia();
 		
+		//Improvisacion generada
 		datosArchivo.generacionOriginal = 1;
 		datosArchivo.bajo = "true";
 		datosArchivo.nombreArchivo = "musicagenerada.midi";
 		FuncionesMusicales.crearComposicion(frasesGeneradas, acordes,datosArchivo);
 		
+		datosArchivo.generacionOriginal = 0;
+		
+		//El acompanhamiento
 		datosArchivo.cortes2 = "false";
 		datosArchivo.cortes4 = "false";
 		datosArchivo.voicings = "true";
-		datosArchivo.bajo = "true";
-		datosArchivo.generacionOriginal = 0;
+		datosArchivo.bajo = "true";		
 		datosArchivo.nombreArchivo = "acompanhamiento.midi";
 		
 		FuncionesMusicales.crearComposicion(frasesNulas, acordes,datosArchivo);
 		
+		//Poblacion Inicial
 		datosArchivo.cortes2 = "false";
 		datosArchivo.cortes4 = "false";
 		datosArchivo.voicings = "false";
 		datosArchivo.bajo = "true";
-		datosArchivo.generacionOriginal = 0;
 		datosArchivo.nombreArchivo = "pobinicial.midi";
 		
 		FuncionesMusicales.crearComposicion(pobinicial.populationP, acordes,datosArchivo);
 		
+		//Solo la improvisacion
 		datosArchivo.cortes2 = "false";
 		datosArchivo.cortes4 = "false";
 		datosArchivo.voicings = "false";
 		datosArchivo.bajo = "false";
-		datosArchivo.generacionOriginal = 0;
 		datosArchivo.nombreArchivo = "solo.midi";
 		
 		FuncionesMusicales.crearComposicion(frasesGeneradas, acordes,datosArchivo);
 		
+		//PlayAlong
+		datosArchivo.cortes2 = "false";
+		datosArchivo.cortes4 = "false";
+		datosArchivo.voicings = "true";
+		datosArchivo.bajo = "true";
+		datosArchivo.nombreArchivo = "playalong.midi";
 		
+		List<Phrases> frasesPlayAlong = new ArrayList<Phrases>();
+		List<String> acordesPlayAlong = new ArrayList<String>();
+		
+		for(int i =0; i < acordes.size(); i++){
+			if((i+1)%4 == 0){
+				frasesPlayAlong.add(frasesNulas.get(i));
+			}
+			acordesPlayAlong.add(acordes.get(i));
+		}
+		
+		for(int i =0; i < acordes.size(); i++){
+			//System.out.println("#: " + i);
+			//Genetico.imprimirFraseNumeros(frasesGeneradas.get(i));
+			if((i+1)%4 == 0){
+				frasesPlayAlong.add(frasesGeneradas.get(i));
+			}
+			acordesPlayAlong.add(acordes.get(i));
+		}
+		
+		for(int i =0; i < acordes.size(); i++){
+			if((i+1)%4 == 0){
+				frasesPlayAlong.add(frasesNulas.get(i));
+			}
+			acordesPlayAlong.add(acordes.get(i));
+		}
+		
+		Collections.shuffle(frasesGeneradas);
+		int turno = 0;
+		
+		for(int i =0; i < acordes.size(); i++){
+			if((i+1)%4 == 0){
+				if(turno == 0){
+					frasesPlayAlong.add(frasesGeneradas.get(i));
+					turno = 1;
+				}
+				else{
+					frasesPlayAlong.add(frasesNulas.get(i));
+					turno = 0;
+				}
+			}
+			acordesPlayAlong.add(acordes.get(i));
+		}
+		
+		for(int i =0; i < acordes.size(); i++){
+			if((i+1)%4 == 0){
+				frasesPlayAlong.add(frasesNulas.get(i));
+			}
+			acordesPlayAlong.add(acordes.get(i));
+		}
+		
+		FuncionesMusicales.crearComposicion(frasesPlayAlong, acordesPlayAlong,datosArchivo);
+		
+		//PlayAlong piano
+		datosArchivo.cortes2 = "false";
+		datosArchivo.cortes4 = "false";
+		datosArchivo.voicings = "false";
+		datosArchivo.bajo = "true";
+		datosArchivo.nombreArchivo = "playalongpiano.midi";
+				
+		FuncionesMusicales.crearComposicion(frasesPlayAlong, acordesPlayAlong,datosArchivo);
+		
+		//Creacion de las sugerencias
 		try{
-			
 			FuncionesArchivos.Sugerencia(acordes);
-			
 		}catch(Exception e){
 			System.out.println(e.toString());
 		}

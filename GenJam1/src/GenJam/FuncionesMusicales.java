@@ -29,6 +29,9 @@ import Elements.VoicingNote;
 
 public class FuncionesMusicales {
 	
+	//dynamics de 0 hasta 127
+	private static MapVoicingNotes notasVoicings = new MapVoicingNotes();
+	private static MapBassNotes notasBass = new MapBassNotes();
 	private static Score s;
 	private static Score partitura;
 	private static Part improvisacionOriginal = new Part("Improvisacion", JMC.PIANO ,3);
@@ -224,7 +227,7 @@ public class FuncionesMusicales {
 		Phrase phr3 = new Phrase();
 		Teclado teclado = new Teclado();
 		MapNotevsSound sonidos = new MapNotevsSound();
-		MapVoicingNotes notasVoicings = new MapVoicingNotes();
+		
 		
 		Iterator<String> iter = acordes.iterator();
 		
@@ -338,6 +341,7 @@ public class FuncionesMusicales {
 		phr3.addChord(rootArray, Durations.WHOLE_NOTE);
         
 		voicings.add(phr3);
+		voicings.setDynamic(70);
 		s.add(voicings);
 		
 	}
@@ -348,7 +352,7 @@ public class FuncionesMusicales {
 		Phrase phr2 = new Phrase();
 		Bajo bajo = new Bajo();
 		MapNotevsSound sonidos = new MapNotevsSound();
-		MapBassNotes notasBass = new MapBassNotes();
+		
 		
 		//System.out.println("bass");
 		
@@ -432,6 +436,7 @@ public class FuncionesMusicales {
         phr2.add(n); 
         
 		walkin.add(phr2);
+		walkin.setDynamic(90);
 		s.add(walkin);
 	}
 	
@@ -680,7 +685,7 @@ public class FuncionesMusicales {
 			*/
 			//System.out.println(auxDur);
 			
-			n = new Note(notasRep.get(recorrer),auxDur);
+			n = new Note(notasRep.get(recorrer),auxDur,randoms.nextInt(60) + 60);
 						
 			phr.add(n);
 			
@@ -709,6 +714,7 @@ public class FuncionesMusicales {
 		phrOri.add(fin);
 		
 		melodia.add(phr);
+		//melodia.setDynamic(120);
 		improvisacionOriginal.add(phrOri);
 		
 		partitura.add(improvisacionOriginal);
@@ -735,7 +741,7 @@ public class FuncionesMusicales {
 	 	int snare = 38;
 		for (int i=0;i<4;i++) {
 	 		phr.addNote(new Note(Pitches.REST, 0.67));
-	 		phr.addNote(new Note(snare, 0.33, (int)(Math.random()*60)));
+	 		phr.addNote(new Note(snare, 0.33, (int)(Math.random()*80)));
 	 	}
 		return phr;
 	}

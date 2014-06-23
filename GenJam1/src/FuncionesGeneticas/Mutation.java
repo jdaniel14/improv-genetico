@@ -12,6 +12,16 @@ public class Mutation {
 	
 	//Convenio para id's de hijos mutados: 2000 + id_original
 	
+	//Resta una octava (-6) a las frases
+	public static void octave(Phrases frase){
+		
+	}
+	
+	//Transpone una 3era abajo (-2) a las frases que se encuentran en el limite 14
+	public static void transpose2(Phrases frase){
+		
+	}
+	
 	public static void hemiola(Phrases frase){
 		
 		//Busco 3 pares de corcheas juntas de acuedo al siguiente criterio
