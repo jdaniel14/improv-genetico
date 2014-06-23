@@ -35,11 +35,13 @@
 	chdir('../../../bin');
 	//echo "antes<br>";
 	$res = exec('export DYLD_LIBRARY_PATH="";java -cp .:./../lib/mysql-connector-java-5.1.30-bin.jar:./../lib/jMusic1.6.4.jar GenJam.GenJam ./../bin/View/euphony-master/datos.txt');
-	//echo $res;
+	$res = exec('/Applications/MuseScore.app/Contents/MacOS/mscore -I partitura.midi -o partitura.pdf');
+	
 	chdir($old_path);
 	
 	$path_midi = "http://localhost/workspace eclipse/GenJam1/bin/out.midi,http://localhost/GenJam1/bin/out.midi";
 
 	header("Content-Type: text/html;charset=utf-8"); //esto es para las ñ y acentos
-	print json_encode($path_midi); //json_encode, serializa un arreglo a un formato JSON. (lo que devolvemos) 
+	print json_encode($res);
+	//print json_encode($path_midi); //json_encode, serializa un arreglo a un formato JSON. (lo que devolvemos) 
 ?>
