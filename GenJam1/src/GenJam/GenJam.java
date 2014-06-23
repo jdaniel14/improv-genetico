@@ -21,10 +21,10 @@ public class GenJam {
 		// ** Lectura de datos desde el PHP **
 		
 		
-		acordes = FuncionesArchivos.leeAcordes(rutaHardcode);
+		acordes = FuncionesArchivos.leeAcordes(args[0]);
 		for(int i = 0 ; i < acordes.size(); i++)
 			System.out.println(acordes.get(i));
-		datosArchivo = FuncionesArchivos.leeDatosArchivo(rutaHardcode);
+		datosArchivo = FuncionesArchivos.leeDatosArchivo(args[0]);
 		
 		
 		/** Inicializacion de Datos de prueba***/
