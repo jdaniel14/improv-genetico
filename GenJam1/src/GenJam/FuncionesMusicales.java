@@ -30,6 +30,8 @@ import Elements.VoicingNote;
 public class FuncionesMusicales {
 	
 	private static Score s;
+	private static Score partitura;
+	private static Part improvisacionOriginal = new Part("Improvisacion", JMC.PIANO ,3);
 	private static Part melodia = new Part("Melodia", JMC.RHODES ,0);
 	private static Part walkin = new Part("Walkin", JMC.BASS ,1);
 	private static Part voicings = new Part("Voicings", JMC.RHODES, 2);
@@ -136,6 +138,7 @@ public class FuncionesMusicales {
 	public static void crearComposicion(List<Phrases> pobFrases, List<String> acordes, DatosArchivo datosArchivo){
 		
 		s = new Score(datosArchivo.nombreArchivo,datosArchivo.tempo);
+		partitura = new Score("partitura.midi",datosArchivo.tempo);
 		melodia = new Part("Melodia", JMC.RHODES ,0);
 		walkin = new Part("Walkin", JMC.BASS ,1);
 		voicings = new Part("Voicings", JMC.RHODES, 2);
@@ -171,6 +174,11 @@ public class FuncionesMusicales {
 		generaPartitura();
 		
 		Write.midi(s,datosArchivo.nombreArchivo);
+		
+		if(datosArchivo.generacionOriginal == 1){
+			Write.midi(partitura,"partitura.midi");
+		}
+		
 	}
 		
 	public static void makeDrums(List<String> acordes){
@@ -434,6 +442,7 @@ public class FuncionesMusicales {
 		Integer cont = 0;
 		
 		Phrase phr = new Phrase();
+		Phrase phrOri = new Phrase();
 		
 		List<Integer> notasRep = new ArrayList<Integer>();
 		
@@ -489,6 +498,7 @@ public class FuncionesMusicales {
 		recorrer = 0;//posicion actual
 		
 		double auxDur = 0.75;
+		double duracionOriginal;
 		
 		int iniciaTriplets = 0;
 		int iniciaCorchea = 0;
@@ -498,10 +508,15 @@ public class FuncionesMusicales {
 			
 			Note n = null;
 			
+			if(notasRep.get(recorrer) == -2){
+				
+			}
+			
 			Integer aux = recorrer + 1;
 			//auxDur = duration;
 			
 			auxDur = 0;
+			duracionOriginal = 0;
 			
 			//Determino el tipo de destructura que voy a imprimir
 			if(notasRep.get(recorrer) == -2){
@@ -527,7 +542,18 @@ public class FuncionesMusicales {
 			if(iniciaTriplets > 0){
 				
 				auxDur = Durations.EIGHTH_NOTE_TRIPLET;
-				iniciaTriplets++;
+				
+				if(iniciaTriplets == 1){
+					duracionOriginal = Durations.SIXTEENTH_NOTE;
+				}
+				else if(iniciaTriplets == 2){
+					duracionOriginal = Durations.EIGHTH_NOTE;
+				}
+				else if(iniciaTriplets == 3){
+					duracionOriginal = Durations.SIXTEENTH_NOTE;
+				}
+				
+				iniciaTriplets++;				
 				
 				if(iniciaTriplets == 4){
 					//termino el triplet
@@ -538,6 +564,16 @@ public class FuncionesMusicales {
 				while((aux < notasRep.size()) && (notasRep.get(aux) == -1) && (iniciaTriplets != 0)){
 					
 					auxDur += Durations.EIGHTH_NOTE_TRIPLET;
+					
+					if(iniciaTriplets == 1){
+						duracionOriginal += Durations.SIXTEENTH_NOTE;
+					}
+					else if(iniciaTriplets == 2){
+						duracionOriginal += Durations.EIGHTH_NOTE;
+					}
+					else if(iniciaTriplets == 3){
+						duracionOriginal += Durations.SIXTEENTH_NOTE;
+					}
 					
 					iniciaTriplets++;
 					
@@ -550,12 +586,14 @@ public class FuncionesMusicales {
 			}
 			else if(iniciaSemi > 0){
 				auxDur = Durations.SIXTEENTH_NOTE;
+				duracionOriginal = Durations.SIXTEENTH_NOTE;
 				iniciaSemi++;
 				if (iniciaSemi == 5) iniciaSemi = 0;
 				
 				
 				while((aux < notasRep.size()) && (notasRep.get(aux) == -1) && (iniciaSemi != 0)){
 					auxDur += Durations.SIXTEENTH_NOTE;
+					duracionOriginal += Durations.SIXTEENTH_NOTE;
 					iniciaSemi++;
 					if (iniciaSemi == 5) iniciaSemi = 0;
 					aux++;					
@@ -564,9 +602,11 @@ public class FuncionesMusicales {
 			else if(iniciaCorchea > 0){
 				if(iniciaCorchea == 1){
 					auxDur = Durations.QUARTER_NOTE_TRIPLET;
+					duracionOriginal = Durations.EIGHTH_NOTE; 
 				}
 				else{
 					auxDur = Durations.EIGHTH_NOTE_TRIPLET;
+					duracionOriginal = Durations.EIGHTH_NOTE;
 				}
 				iniciaCorchea++;
 				if(iniciaCorchea == 3) iniciaCorchea = 0;
@@ -575,9 +615,11 @@ public class FuncionesMusicales {
 				while((aux < notasRep.size()) && (notasRep.get(aux) == -1) && (iniciaCorchea != 0)){
 					if(iniciaCorchea == 1){
 						auxDur += Durations.QUARTER_NOTE_TRIPLET;
+						duracionOriginal += Durations.EIGHTH_NOTE;
 					}
 					else{
 						auxDur += Durations.EIGHTH_NOTE_TRIPLET;
+						duracionOriginal += Durations.EIGHTH_NOTE;
 					}
 					iniciaCorchea++;
 					if(iniciaCorchea == 3) iniciaCorchea = 0;
@@ -603,6 +645,7 @@ public class FuncionesMusicales {
 					else{
 						if(iniciaSemi > 0){
 							auxDur += Durations.SIXTEENTH_NOTE;
+							duracionOriginal += Durations.SIXTEENTH_NOTE;
 							iniciaSemi++;
 							if (iniciaSemi == 5) iniciaSemi = 0;
 							aux++;		
@@ -611,9 +654,11 @@ public class FuncionesMusicales {
 						else if(iniciaCorchea > 0){
 							if(iniciaCorchea == 1){
 								auxDur += Durations.QUARTER_NOTE_TRIPLET;
+								duracionOriginal += Durations.EIGHTH_NOTE;
 							}
 							else{
 								auxDur += Durations.EIGHTH_NOTE_TRIPLET;
+								duracionOriginal += Durations.EIGHTH_NOTE;
 							}
 							iniciaCorchea++;
 							if(iniciaCorchea == 3) iniciaCorchea = 0;
@@ -639,6 +684,11 @@ public class FuncionesMusicales {
 						
 			phr.add(n);
 			
+			n = new Note(notasRep.get(recorrer),duracionOriginal);
+			n.setDuration(duracionOriginal);
+			phrOri.add(n);			
+			
+			
 			recorrer = aux;
 			
 		}
@@ -654,9 +704,16 @@ public class FuncionesMusicales {
 		
 		Note fin = new Note(tonalidad,Durations.WHOLE_NOTE);
 		phr.add(fin);
+		duracionOriginal = Durations.WHOLE_NOTE;
+		fin.setDuration(duracionOriginal);
+		phrOri.add(fin);
 		
 		melodia.add(phr);
+		improvisacionOriginal.add(phrOri);
+		
+		partitura.add(improvisacionOriginal);
 		s.add(melodia);
+		
 		
 	}
 		
