@@ -47,6 +47,7 @@ public class MapChordvsScale {
 				
 				temp.chord = rs.getString(2);
 				temp.scale = rs.getString(3);
+				temp.notasTeoricas = separarNotasEnUnaCadena(rs.getString(4));
 				temp.notes = separarNotasEnUnaCadena(rs.getString(5));
 				
 				CvsS.add(temp);
