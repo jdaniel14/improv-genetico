@@ -1,5 +1,6 @@
 package GenJam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Elements.DatosArchivo;
@@ -19,15 +20,15 @@ public class GenJam {
 		
 		// ** Lectura de datos desde el PHP **
 		
-		
+		/*
 		acordes = FuncionesArchivos.leeAcordes(rutaHardcode);
 		for(int i = 0 ; i < acordes.size(); i++)
 			System.out.println(acordes.get(i));
 		datosArchivo = FuncionesArchivos.leeDatosArchivo(rutaHardcode);
 		
-		
+		*/
 		/** Inicializacion de Datos de prueba***/
-		/*
+		
 		List<String> acordesOrnithology = new ArrayList<String>();
 
 		acordesOrnithology.add("Gmaj7");
@@ -85,7 +86,6 @@ public class GenJam {
 		acordesAlice.add("Dm7");
 		
 		acordes = acordesAlice;
-		*/
 		
 		PhrasePopulation pobinicial = new PhrasePopulation();
 		
@@ -110,13 +110,18 @@ public class GenJam {
 		FuncionesMusicales.crearComposicion(pobinicial.populationP, acordes,datosArchivo);
 		
 		
-		//	** Inicializaci—n de estructuras de la BD **
+		//	** Inicializaciï¿½n de estructuras de la BD **
 		//		FuncionesArchivos.initChordvsScaleBD();
 		//		FuncionesArchivos.initMeasureBD();
 		//		FuncionesArchivos.initBassNotes();
 		//		FuncionesArchivos.initVoicings();
-		
-
+		try{
+			System.out.println("++++++++++++++++++++++++++++++++++++++++");
+			FuncionesArchivos.Sugerencia(acordes);
+			System.out.println("++++++++++++++++++++++++++++++++++++++++");
+		}catch(Exception e){
+			System.out.println(e.toString());
+		}
 	} 
 	
 	

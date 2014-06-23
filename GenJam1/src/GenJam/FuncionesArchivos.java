@@ -1,7 +1,10 @@
 package GenJam;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -548,21 +551,23 @@ public class FuncionesArchivos {
 		}	
 	}
 	
-	public static void Sugerencia(List<String> acordes){
+	public static void Sugerencia(List<String> acordes) throws FileNotFoundException, UnsupportedEncodingException{
 		MapChordvsScale msc = new MapChordvsScale();
 		HashMap <String, Integer> map = new HashMap<String, Integer>();
 		for(int i = 0 ; i < msc.CvsS.size(); i++){
 			map.put(msc.CvsS.get(i).chord, i);
 		}
 		
+		PrintWriter writer = new PrintWriter("sugerencia.txt", "UTF-8");
+		writer.println("Sugerencias sobre la Improvisación");
 		for(int i = 0 ; i < acordes.size(); i++){
 			int pos = map.get(acordes.get(i));
-			System.out.print("Chord : " + msc.CvsS.get(pos).chord + " - Scale : " + msc.CvsS.get(pos).scale + " - Notes : ");
+			writer.print("Chord : " + msc.CvsS.get(pos).chord + " - Scale : " + msc.CvsS.get(pos).scale + " - Notes : ");
 			for(int j =0 ; j < msc.CvsS.get(pos).notes.size(); j++)
-				System.out.print(msc.CvsS.get(pos).notes.get(j) + " ");
-			System.out.println();
+				writer.print(msc.CvsS.get(pos).notes.get(j) + " ");
+			writer.println();
 		}
-		
+		writer.close();
 	} 
 	
 	
