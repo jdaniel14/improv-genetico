@@ -15,10 +15,85 @@ public class Mutation {
 	//Resta una octava (-6) a las frases
 	public static void octave(Phrases frase){
 		
+		Iterator<Measures> iterM = frase.measure_list.iterator();
+		boolean mutado = false;
+		
+		while(iterM.hasNext()){
+			Measures item = iterM.next();
+			
+			List<Integer> lista_notas = item.notas;
+			
+			for(int i = 1; i < lista_notas.size(); i++){
+				
+				int difOriginal;
+				int difSubir;
+				int difBajar;
+				
+				difOriginal = Math.abs(lista_notas.get(i) - lista_notas.get(i-1));
+				
+				difSubir =  Math.abs((lista_notas.get(i) + 6) - lista_notas.get(i-1));
+				
+				difBajar =  Math.abs((lista_notas.get(i) - 6) - lista_notas.get(i-1));
+
+				if((difBajar < difOriginal) && (lista_notas.get(i) > 6)){
+					lista_notas.set(i, lista_notas.get(i) - 6);
+					mutado = true;
+				}
+				else if((difSubir < difOriginal) && (lista_notas.get(i) < 9)){
+					lista_notas.set(i, lista_notas.get(i) + 6);
+					mutado = true;
+				}
+			}
+		}
+		
+		if(mutado){
+			System.out.println("> Se realizo un octave");
+		}
+		
 	}
 	
 	//Transpone una 3era abajo (-2) a las frases que se encuentran en el limite 14
 	public static void transpose2(Phrases frase){
+		
+		boolean transponer = true;
+		int cantidad_en_limite = 0;
+		
+		Iterator<Measures> iterM = frase.measure_list.iterator();
+		
+		while(iterM.hasNext()){
+			Measures item = iterM.next();
+			
+			List<Integer> lista_notas = item.notas;
+			
+			for(int i = 0; i < lista_notas.size(); i++){
+				if ((lista_notas.get(i) < 3) && (lista_notas.get(i) != 0)){
+					transponer = false;
+				}
+				
+				if(lista_notas.get(i) > 12){
+					cantidad_en_limite++;
+				}
+			}
+		}
+		
+		if(transponer && (cantidad_en_limite > 10)){
+			Iterator<Measures> reemplazador = frase.measure_list.iterator();
+			
+			while(reemplazador.hasNext()){
+				Measures item = reemplazador.next();
+				
+				List<Integer> lista_notas = item.notas;
+				
+				for(int i = 0; i < lista_notas.size(); i++){
+					if((lista_notas.get(i) != 15) && (lista_notas.get(i) != 0)){
+						lista_notas.set(i, lista_notas.get(i) - 2);
+					}
+				}
+			}
+			
+
+			System.out.println("> Se realizo un transpose2");
+		}
 		
 	}
 	
