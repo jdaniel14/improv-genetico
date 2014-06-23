@@ -563,8 +563,8 @@ public class FuncionesArchivos {
 		for(int i = 0 ; i < acordes.size(); i++){
 			int pos = map.get(acordes.get(i));
 			writer.print("Chord : " + msc.CvsS.get(pos).chord + " - Scale : " + msc.CvsS.get(pos).scale + " - Notes : ");
-			for(int j =0 ; j < msc.CvsS.get(pos).notes.size(); j++)
-				writer.print(msc.CvsS.get(pos).notes.get(j) + " ");
+			for(int j =0 ; j < msc.CvsS.get(pos).notasTeoricas.size(); j++)
+				writer.print(msc.CvsS.get(pos).notasTeoricas.get(j) + " ");
 			writer.println();
 		}
 		writer.close();
