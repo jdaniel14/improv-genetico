@@ -21,10 +21,10 @@ public class GenJam {
 		// ** Lectura de datos desde el PHP **
 		
 		
-		acordes = FuncionesArchivos.leeAcordes(args[0]);
+		acordes = FuncionesArchivos.leeAcordes(rutaHardcode);
 		for(int i = 0 ; i < acordes.size(); i++)
 			System.out.println(acordes.get(i));
-		datosArchivo = FuncionesArchivos.leeDatosArchivo(args[0]);
+		datosArchivo = FuncionesArchivos.leeDatosArchivo(rutaHardcode);
 		
 		
 		/** Inicializacion de Datos de prueba***/
@@ -93,12 +93,14 @@ public class GenJam {
 		List<Phrases> frasesNulas = FuncionesMusicales.poblacionVacia();
 		
 		datosArchivo.generacionOriginal = 1;
+		datosArchivo.bajo = "true";
 		datosArchivo.nombreArchivo = "musicagenerada.midi";
 		FuncionesMusicales.crearComposicion(frasesGeneradas, acordes,datosArchivo);
 		
 		datosArchivo.cortes2 = "false";
 		datosArchivo.cortes4 = "false";
 		datosArchivo.voicings = "true";
+		datosArchivo.bajo = "true";
 		datosArchivo.generacionOriginal = 0;
 		datosArchivo.nombreArchivo = "acompanhamiento.midi";
 		
@@ -107,10 +109,21 @@ public class GenJam {
 		datosArchivo.cortes2 = "false";
 		datosArchivo.cortes4 = "false";
 		datosArchivo.voicings = "false";
+		datosArchivo.bajo = "true";
 		datosArchivo.generacionOriginal = 0;
 		datosArchivo.nombreArchivo = "pobinicial.midi";
 		
 		FuncionesMusicales.crearComposicion(pobinicial.populationP, acordes,datosArchivo);
+		
+		datosArchivo.cortes2 = "false";
+		datosArchivo.cortes4 = "false";
+		datosArchivo.voicings = "false";
+		datosArchivo.bajo = "false";
+		datosArchivo.generacionOriginal = 0;
+		datosArchivo.nombreArchivo = "solo.midi";
+		
+		FuncionesMusicales.crearComposicion(frasesGeneradas, acordes,datosArchivo);
+		
 		
 		try{
 			
