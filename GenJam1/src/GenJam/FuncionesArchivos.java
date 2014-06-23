@@ -559,15 +559,16 @@ public class FuncionesArchivos {
 		}
 		
 		PrintWriter writer = new PrintWriter("sugerencia.txt", "UTF-8");
-		writer.println("Sugerencias sobre la Improvisación");
+		writer.println("Sugerencias sobre la Improvisacion");
 		for(int i = 0 ; i < acordes.size(); i++){
 			int pos = map.get(acordes.get(i));
-			writer.print("Chord : " + msc.CvsS.get(pos).chord + " - Scale : " + msc.CvsS.get(pos).scale + " - Notes : ");
+			writer.print("Para el acorde : " + msc.CvsS.get(pos).chord + " se le recomienda usar la escala : " + msc.CvsS.get(pos).scale + " la cual esta conformada por las notas : ");
 			for(int j =0 ; j < msc.CvsS.get(pos).notasTeoricas.size(); j++)
 				writer.print(msc.CvsS.get(pos).notasTeoricas.get(j) + " ");
 			writer.println();
 		}
 		writer.close();
+		System.out.println("> Se imprimieron las sugerencias");
 	} 
 	
 	
