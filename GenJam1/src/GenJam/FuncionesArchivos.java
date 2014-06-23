@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -216,7 +217,7 @@ public class FuncionesArchivos {
 				
 				
 				
-				//2) Leo el gŽnero
+				//2) Leo el gï¿½nero
 				
 				String genre = br.readLine();
 				
@@ -292,7 +293,7 @@ public class FuncionesArchivos {
 		
 	}
 	
-	//Funci—n para cargar el archivo ChordvsScale.txt a la Base de Datos
+	//Funciï¿½n para cargar el archivo ChordvsScale.txt a la Base de Datos
 	public static void initChordvsScaleBD(){
 		
 		BufferedReader br = null;
@@ -546,6 +547,25 @@ public class FuncionesArchivos {
 			}
 		}	
 	}
+	
+	public static void Sugerencia(List<String> acordes){
+		MapChordvsScale msc = new MapChordvsScale();
+		HashMap <String, Integer> map = new HashMap<String, Integer>();
+		for(int i = 0 ; i < msc.CvsS.size(); i++){
+			map.put(msc.CvsS.get(i).chord, i);
+		}
+		
+		for(int i = 0 ; i < acordes.size(); i++){
+			int pos = map.get(acordes.get(i));
+			System.out.print("Chord : " + msc.CvsS.get(pos).chord + " - Scale : " + msc.CvsS.get(pos).scale + " - Notes : ");
+			for(int j =0 ; j < msc.CvsS.get(pos).notes.size(); j++)
+				System.out.print(msc.CvsS.get(pos).notes.get(j) + " ");
+			System.out.println();
+		}
+		
+	} 
+	
+	
 	
 	
 }
