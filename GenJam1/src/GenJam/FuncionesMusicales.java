@@ -507,11 +507,7 @@ public class FuncionesMusicales {
 		while(recorrer < notasRep.size()){
 			
 			Note n = null;
-			
-			if(notasRep.get(recorrer) == -2){
-				
-			}
-			
+						
 			Integer aux = recorrer + 1;
 			//auxDur = duration;
 			
