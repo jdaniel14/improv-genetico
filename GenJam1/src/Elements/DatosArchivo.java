@@ -7,4 +7,5 @@ public class DatosArchivo {
 	public String cortes4 = "";
 	public String ordenamiento = "";
 	public String nombreArchivo = "";
+	public int generacionOriginal = 1;
 }
