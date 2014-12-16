@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Euricides</title>
+    <title>Euphony</title>
 
     <!-- css -->
     <link href="./css/font-awesome.css" rel="stylesheet" />
@@ -33,6 +33,7 @@
     <script src="./lib/jquery.easing.js" type="text/javascript"></script>
     <script src="./lib/jquery.nanoscroller.min.js" type="text/javascript"></script>
     <script src="./lib/Three.js" type="text/javascript"></script>
+    <script src="./lib/OrbitControls.js" type="text/javascript"></script>
     <script src="./lib/state-machine.min.js" type="text/javascript"></script>
     <script src="./lib/spin.min.js" type="text/javascript"></script>
     <script src="./lib/async.min.js" type="text/javascript"></script>
@@ -46,7 +47,9 @@
     <script src="./src/compiled/PlayerWidget.js" type="text/javascript"></script>
     <script src="./src/compiled/Euphony.js" type="text/javascript"></script>
     <script src="./src/compiled/Main.js" type="text/javascript"></script>
-    <script>
+
+
+	<script>
         $(document).ready(function(){
         	
             $(".nano").hide();
@@ -152,10 +155,11 @@
             
         });
     </script>
+
   </head>
   <body>
 
-    <div id="canvas"></div>
+<div id="canvas"></div>
 
     <div id="player">
       <ul class="player-controls">
@@ -175,18 +179,18 @@
 
       <div class = "genjam" align = "center">
         <br>
-        <span style="font-family:avenir;">Type your chords</span>
+        <span style="font-family:avenir;">Escriba sus acordes</span>
         <textarea id = "acordes" cols = "24" rows = "5"></textarea>
         <br>
         <br>
         <span style="font-family:avenir;">Tempo</span>
         <input id = "tempo" value = "180">
 
-        <h5 id = "validacion" style = "color:red;font-family:avenir;">Type your values<h5>
-        <input id = "improvisa" type = "button" value = "Play me something!">
+        <h5 id = "validacion" style = "color:red;font-family:avenir;">Escriba los valores<h5>
+        <input id = "improvisa" type = "button" value = "A tocar!">
         <br><br>
         
-        <span style="font-family:avenir;">Example songs:</span>
+        <span style="font-family:avenir;">Canciones ejemplo:</span>
 
 		<br>
         <table style="width:200px" align = "center">
@@ -201,7 +205,7 @@
             </tr>
         </table>
         <br>
-        <input id = "limpiar" type = "button" value = "Clean me!">
+        <input id = "limpiar" type = "button" value = "Limpiar!">
 		<br><br>
 		
 		
@@ -227,9 +231,9 @@
 			<br><br>
 			<a href = "../../musicagenerada.midi">Musica Generada</a>
 			<br><br>
-			<a href = "../../playalong.midi">PlayAlong</a>
+			<a href = "../../playalong.midi">Play Along</a>
 			<br><br>
-			<a href = "../../playalongpiano.midi">PlayAlong Piano</a>
+			<a href = "../../playalongpiano.midi">Play Along para Piano</a>
 			<br><br>
 			<a href = "../../solo.midi">Solo improvisacion</a>
 			<br><br>
@@ -250,8 +254,9 @@
 
     <footer id="about">
       
-      Drag &amp; drop your MIDI files to play
+      Arraste &amp; suelte su archivo MIDI para tocar!
     </footer>
+
 
   </body>
 </html>
